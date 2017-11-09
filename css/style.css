@@ -1,0 +1,698 @@
+body, html {
+  width: 100%;
+  min-height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #E9EFF2; /*DFE7EB;*/
+
+  font-family: "Fira Sans", "Arial", sans-serif;
+  color: #1E3D54;
+
+  -webkit-font-smoothing: antialiased;
+  font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+
+* { box-sizing: border-box; }
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+figure {
+  margin: 0;
+}
+figure img {
+  display: block;
+  max-width: 100%;
+}
+
+::-moz-selection {
+  background-color: #1E3D54;
+  color: rgba(0, 0, 0, 0.2);
+}
+::selection {
+  background-color: #1E3D54;
+  color: rgba(0, 0, 0, 0.2);
+}
+
+
+
+
+
+
+section {
+  min-height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  text-align: center;
+}
+@media screen and (min-width: 30rem) {
+  section {
+    padding: 10vh;
+  }
+}
+
+
+
+
+/* Owl Carousel: Spacing */
+.owl-carousel {
+  width: calc(100% + 2rem);
+  max-width: 46rem;
+  margin-bottom: 2rem;
+  margin-left: -1rem;
+  margin-right: -1rem;
+}
+.owl-stage {
+  margin-left: 0.5rem;
+}
+.owl-item {
+  max-width: calc(100vw - 2rem);
+}
+.owl-item .card {
+  margin: 0 0.5rem;
+}
+@media screen and (min-width: 30rem) {
+  .owl-stage {
+    margin-left: 3.5rem;
+  }
+  .owl-item .card {
+    margin: 0 1.5rem;
+  }
+}
+
+/* Owl Carousel: Opacity of active item */
+.owl-carousel .owl-item .card,
+.owl-carousel .active + .active .card {
+  opacity: 0.25;
+  transition: all 0.5s ease;
+}
+.owl-carousel .owl-item .card > *,
+.owl-carousel .active + .active .card > * {
+  opacity: 0;
+  transition: all 0.5s ease;
+}
+.owl-carousel .active .card,
+.owl-carousel .active .card > * {
+  opacity: 1;
+}
+
+/* Owl Carousel: Nav */
+.owl-dots {
+  display: flex;
+  justify-content: center;
+  margin-top: 1rem;
+}
+.owl-dot {
+  width: 3rem;
+  height: 0.5rem;
+  margin: 0.25rem;
+  border-radius: 0.25rem;
+  background: rgba(20, 36, 51, 0.15);
+  /*#009EEB;*/
+}
+.owl-dot.active {
+  background: rgba(20, 36, 51, 0.5);;
+}
+
+
+
+
+
+.card {
+  display: block;
+  /*flex: 0 0 30rem;*/
+  max-width: 36rem;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.05);
+  border-radius: 0.5rem;
+  background: white;
+  overflow: hidden;
+
+  transition: all 3s ease;
+}
+@media screen and (min-width: 30rem) {
+  .card {
+    box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); /*#142433*/
+  }
+}
+.card.isAnswered {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0.5rem rgba(20, 36, 51, 0.1); /*#142433*/
+}
+.zoom-overlay-open .card {
+  overflow: visible;
+}
+
+.card__header {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-between;
+  padding: 0.75rem 2rem;
+  text-align: left;
+  font-size: 0.875rem;
+}
+.card__header > * {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: -0.5rem;
+}
+.card__header--right {
+  margin-right: -1.5rem;
+}
+.card__header a {
+  padding: 0.5rem;
+  opacity: 0.5;
+}
+.card__header .card__header--right a {
+  opacity: 0.2;
+}
+.card__header .date {
+  font-size: 0.75rem;
+  letter-spacing: 0.02rem;
+  line-height: 1rem;
+  opacity: 0.3;
+}
+
+
+.card__category {
+  height: 0.25rem;
+}
+
+
+.card__question {
+  position: relative;
+}
+.card__question figure {
+  max-height: 40vh;
+  overflow: hidden;
+  transition: all 0.5s ease;
+}
+.isAnswered .card__question figure {
+  /* 6rem = height of 'follow up container' */
+  max-height: calc(40vh - 6rem);
+  transition-delay: 1.5s; /*Follow-up transition*/
+}
+.card__question.isExpanded figure {
+  padding-bottom: 9rem;
+  max-height: 80vh;
+  transition-delay: 0;
+}
+.card__question.isExpanded .card__question-cover {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 70%, rgba(255, 255, 255, 0) 100%);
+}
+.card__question--toggle {
+  position: absolute;
+  top: 0.5rem;
+  right: 0.5rem;
+  display: inline-block;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  background-color: rgba(30, 61, 84, 0.25);
+}
+.card__question--toggle:hover {
+  background-color: rgba(30, 61, 84, 0.35);
+}
+.card__question.isExpanded .card__question--toggle img {
+  display: none !important;
+}
+.card__question.isExpanded .card__question--toggle img.close {
+  display: block !important;
+}
+
+.zoom-overlay-open .card__question figure {
+  overflow: visible;
+}
+.card__question figure img {
+  width: 100%;
+}
+.card__question-cover {
+  position: absolute;
+  top: 0;
+  left: 0;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  width: 100%;
+  height: 100%;
+  padding: 1rem;
+
+  pointer-events: none;
+
+  /*background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
+  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);*/
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0.9) 100%);
+  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 255, 255, 0)', endColorstr='rgba(255, 255, 255, 0.75)',GradientType=0 );*/
+
+  text-align: left;
+  text-shadow: 0 0 4rem white;
+
+  transition: all 0.5s ease;
+}
+@media screen and (min-width: 30rem) {
+  .card__question-cover {
+    padding: 1rem 2rem;
+  }
+}
+.card__question h3 {
+  margin: 0;
+  letter-spacing: 0.02rem;
+  font-size: 1.25rem;
+}
+.card__question .h3--small {
+  font-size: 1.125rem;
+}
+
+
+.card__answer {
+  position: relative;
+  display: flex;
+  padding: 1rem 1rem;
+  justify-content: center;
+  align-items: center;
+}
+@media screen and (min-width: 30rem) {
+  .card__answer {
+    padding: 1rem 2rem;
+  }
+}
+.card__answer--yn > * {
+  flex: 0 0 calc(50% - 1rem);
+}
+.card__answer--mctext {
+  flex-direction: column;
+  justify-content: flex-start;
+  flex: 0 0 100%;
+}
+.card__answer--mctext > * {
+  width: 100%;
+  flex: 0 0 100%;
+  text-align: left;
+}
+.card__answer--mcimage {
+  // padding-left: 0;
+  // padding-right: 0;
+  flex-wrap: wrap;
+}
+.card__answer--mcimage .button {
+  min-width: calc(33.3333% - 2rem);
+  max-width: 8.5rem;
+  width: 100%;
+  // flex: 0 0 33.3333%;
+  // flex-basis: auto;
+  // flex-grow: 1;
+}
+
+
+.card__followup {
+  height: 6rem;
+  max-height: 0;
+  transition: all 0.5s ease;
+  transition-delay: 1.5s; /*Follow-up transition*/
+  overflow: hidden;
+
+  background-color: #fff;
+}
+.isAnswered .card__followup {
+  max-height: 6rem;
+}
+.card__followup--content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transition-delay: 1.5s; /*Follow-up transition*/
+}
+.card.card--embed .card__followup--content {
+}
+@media screen and (min-width: 30rem) {
+  .card__followup--content {
+    flex-direction: row;
+    padding: 1.75rem 2rem;
+  }
+  .card.card--embed .card__followup--content {
+    padding: 1rem 2rem;
+  }
+}
+.isAnswered .card__followup--content {
+  opacity: 1;
+}
+.card__followup--content--left {
+  text-align: left;
+}
+.card__followup--content--left strong {
+  display: inline-block;
+  font-size: 1.125rem;
+}
+.card__followup--content--left .card__colophon {
+  display: inline-block;
+  margin-top: 0.25rem;
+  margin-bottom: -0.75rem;
+  font-size: 0.875rem;
+  opacity: 0.25;
+}
+.card__followup--content--left .card__colophon img {
+  margin-left: 0.125rem;
+  height: 1.25rem;
+  vertical-align: middle;
+}
+.card__followup--actions {
+  display: flex;
+  margin-left: -0.5rem; /*Cancelling out the first button's margin left*/
+}
+.card__followup--actions button {
+  margin-left: 0.5rem;
+}
+
+
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 2rem;
+  /*background: #F0F5F7;*/
+  border-top: 1px solid #F0F5F7; /*#DDE7EB;*/
+  transition: all 0.5s ease;
+  transition-delay: 1.5s; /*Follow-up transition*/
+}
+.isAnswered .card__footer {
+  background: #F0F5F7;
+}
+.card__footer > * {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 -0.5rem;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.isAnswered .card__footer > *,
+.card__footer:hover > * {
+  opacity: 1;
+}
+
+
+
+
+a.link--icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+
+  line-height: 0.75rem;
+
+  opacity: 0.5;
+}
+a.link--icon:hover {
+  color: #009EEB;
+  opacity: 1;
+  /*text-shadow: 0 0 0.5rem #009EEB;*/
+}
+a.link--icon .value {
+}
+a.link--icon img {
+  width: 1.5rem;
+  margin-right: 0.25rem;
+}
+.owl-carousel .owl-item a.link--icon img {
+  width: 1.5rem;
+}
+
+
+
+
+
+.button {
+  position: relative;
+  display: inline-block;
+  /*height: 2.5rem;*/
+  padding: 0.5rem 1rem;
+  appearance: none;
+  border: none;
+
+  border-radius: 0.5rem;
+  background: #DDE7EB;
+  cursor: pointer;
+  overflow: hidden;
+
+  font: inherit;
+  font-size: 1rem;
+  font-weight: 500;
+  line-height: 1rem;
+  letter-spacing: 0.02rem;
+  color: inherit;
+
+  transition: all 0.5s ease;
+
+  animation: inActiveBump 0.3s ease-in-out;
+}
+.button:hover {
+  background-color: white;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2);
+}
+.button:focus {
+  outline: none;
+  animation: activeBump 0.5s ease-in-out;
+}
+.isAnswered .button--answer:not(.isSelected) {
+  background: rgba(0, 0, 0, 0.02);
+  background: transparent;
+  color: rgba(30, 61, 84, 0.75);
+}
+.button.isSelected {
+  background: rgba(0, 158, 235, 1);
+  color: white;
+}
+.button.button--answer {
+  margin: 0.5rem 1rem;
+  padding: 0.5rem 1.5rem 0.25rem;
+}
+.button.button--image {
+  padding: 0;
+}
+.button.button--image figure {
+  position: relative;
+  height: 0;
+  padding-bottom: 100%;
+}
+.button.button--image figure img {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center;
+}
+.button.button--image .button__stat {
+  position: absolute;
+  bottom: 0.5rem;
+  left: 0.5rem;
+  width: calc(100% - 1rem);
+  opacity: 1;
+}
+.button.button--image.isSelected figure img {
+  opacity: 0.75;
+  mix-blend-mode: multiply;
+}
+.isAnswered .button:not(.isSelected) figure img {
+  opacity: 0.5;
+}
+.button--square {
+  padding: 0.5rem;
+}
+.button.button--facebook {
+  background-color: #3b5998;
+  color: #fff;
+}
+.button.button--twitter {
+  background-color: #55acee;
+  color: #fff;
+}
+.button.button--outline {
+  background-color: transparent;
+  border: 1px solid currentColor;
+  opacity: 0.5;
+}
+.button.button--outline:hover {
+  opacity: 1;
+}
+
+.button__text {
+  display: inline-block;
+  padding-top: 0.25rem;
+  font-size: 1rem;
+  line-height: 1rem;
+  transform-origin: top left;
+  transition: transform 0.5s ease, padding 0.5s ease;
+}
+.isAnswered .button__text {
+  transform: scale(0.875);
+  transition-delay: 0.5s;
+}
+.button .button__stat {
+  display: block;
+  height: 0.25rem;
+  margin: 0.125rem 1.5rem 0.25rem 0;
+  background-color: rgba(0, 0, 0, 0);
+  border-radius: 0.125rem;
+  opacity: 0.5;
+  transition: background 1.5s ease;
+}
+.isAnswered .button .button__stat {
+  background-color: rgba(0, 0, 0, 0.1);
+}
+.button .button__stat span {
+  display: block;
+  height: 0.25rem;
+  max-width: 0;
+  background-color: currentColor;
+  border-radius: 0.125rem;
+  transition: max-width 1.5s cubic-bezier(1, 0, 0, 1), margin-top 0.5s ease;
+}
+.isAnswered .button .button__stat span {
+  max-width: 60%;
+  transition-delay: 0.5s;
+}
+.button .button__stat b {
+  position: absolute;
+  right: 0.5rem;
+  bottom: 0.25rem;
+  font-size: 0.875rem;
+  transform: translateX(2.5rem);
+  transition: transform 0.5s cubic-bezier(0, 0, 0.2, 1);
+  transition-delay: 0.5s;
+}
+.isAnswered .button .button__stat b {
+  transform: translateX(0);
+}
+
+
+
+/* https://codepen.io/ayoisaiah/pen/GWwabJ */
+/*.ink styles - the elements which will create the ripple effect. The size and position of these elements will be set by the JS code. Initially these elements will be scaled down to 0% and later animated to large fading circles on user click.*/
+.ink {
+  display: block;
+  position: absolute;
+  z-index: 2;
+  background: rgba(30, 61, 84, 0.5);
+  border-radius: 100%;
+  transform: scale(0);
+}
+.button--answer .ink {
+  background: rgba(0, 119, 179, 1);
+}
+/*animation effect*/
+.ink.animate {animation: ripple 0.5s linear;}
+
+
+
+
+.hasTooltip {
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  background: rgba(30, 61, 84, 0.75);
+  color: white;
+  font-size: 0.875rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.hasTooltip:hover .tooltip {
+  opacity: 1;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  border: 0.25rem solid transparent;
+  border-top-color: rgba(30, 61, 84, 0.75);
+}
+
+.hasDropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 3;
+  display: block;
+  min-width: 10rem;
+  background-color: white;
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.05);
+  border-radius: 0.25rem;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.dropdown:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 1rem;
+  z-index: 2;
+  border: 0.5rem solid transparent;
+  border-bottom-color: white;
+}
+.hasDropdown.isActive .dropdown {
+  max-height: 9rem;
+  opacity: 1;
+  pointer-events: all;
+}
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+.dropdown li a {
+  display: block;
+  padding: 0.35rem 1rem;
+  white-space: nowrap;
+}
+.dropdown li a:hover {
+  opacity: 1;
+}
+
+
+
+
+
+@keyframes ripple {
+  /*scale the element to 250% to safely cover the entire link and fade it out*/
+  100% {opacity: 0; transform: scale(2.5);}
+}
+@keyframes activeBump {
+    0% {-webkit-transform: scale(1);}
+   50% {-webkit-transform: scale(1.05);}
+  100% {-webkit-transform: scale(1);}
+}
+@keyframes inActiveBump {
+    0% {-webkit-transform: scale(1);}
+   50% {-webkit-transform: scale(0.85;}
+  100% {-webkit-transform: scale(1);}
+}
