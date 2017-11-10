@@ -381,11 +381,16 @@ section {
 .card__footer {
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem 2rem;
+  padding: 0.25rem 1rem;
   /*background: #F0F5F7;*/
   border-top: 1px solid #F0F5F7; /*#DDE7EB;*/
   transition: all 0.5s ease;
   transition-delay: 1.5s; /*Follow-up transition*/
+}
+@media screen and (min-width: 30rem) {
+  .card__footer {
+    padding: 0.25rem 2rem;
+  }
 }
 .isAnswered .card__footer {
   background: #F0F5F7;
