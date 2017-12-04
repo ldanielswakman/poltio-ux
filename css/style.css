@@ -437,11 +437,9 @@ a.link--icon img {
 .owl-carousel .owl-item a.link--icon img {
   width: 1.5rem;
 }
-.showOnActive {
-  display: none;
-}
-a.link--icon.isActive + .showOnActive {
-  display: block;
+
+a.link--icon.isActive img[src*="toggle"] {
+  opacity: 1;
 }
 
 
@@ -655,11 +653,11 @@ a.link--icon.isActive + .showOnActive {
   line-height: 1.5rem;
   font: inherit;
   font-size: 0.875rem;
-  color: ;
+  transition: all 0.5s ease;
 }
 .field:focus {
   outline: none;
-  box-shadow: 0 0 0.5rem rgba(200, 200, 200, 0.25);
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2);
   border-color: rgba(0, 158, 235, 1);
 }
 
@@ -720,7 +718,7 @@ a.link--icon.isActive + .showOnActive {
   display: block;
   min-width: 10rem;
   background-color: white;
-  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.05);
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.1);
   border-radius: 0.25rem;
   max-height: 0;
   opacity: 0;
@@ -735,6 +733,20 @@ a.link--icon.isActive + .showOnActive {
   z-index: 2;
   border: 0.5rem solid transparent;
   border-bottom-color: white;
+}
+.dropdown.dropdown--onTopLeft {
+  right: auto;
+  top: auto;
+  left: 0;
+  bottom: 100%;
+}
+.dropdown.dropdown--onTopLeft:after {
+  right: auto;
+  left: 1rem;
+  bottom: auto;
+  top: 100%;
+  border-bottom-color: transparent;
+  border-top-color: white;
 }
 .hasDropdown.isActive .dropdown {
   max-height: 9rem;

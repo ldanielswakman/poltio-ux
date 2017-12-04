@@ -54,7 +54,7 @@
                 <img src="images/icons/more.svg" alt="" />
               </a>
 
-              <div class="dropdown isActive">
+              <div class="dropdown">
                 <ul>
                   <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
                   <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
@@ -105,20 +105,27 @@
         <div class="card__followup">
           <div class="card__followup--content">
             <div class="card__followup--content--left">
-              <strong>31% thinks the same!</strong><br>
+              <strong>69% thinks the same!</strong><br>
               <!-- <small style="opacity: 0.25;">Discuss your vote below</small> -->
-              <a href="#" style="padding: 0;" class="link--icon">
-                <img src="images/icons/toggle_outline.svg" alt="" style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
-                <small>Notify me of the result when poll ends</small>
-              </a>
-              <div class="showOnActive">
-                <div style="display: flex;">
-                  <input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
-                  <button class="button">
-                    Send
-                  </button>
+              <div class="hasDropdown">
+
+                <a href="#" style="padding: 0;" class="link--icon">
+                  <img src="images/icons/toggle_outline.svg" alt="" style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+                  <small>Notify me of the result when poll ends</small>
+                </a>
+
+                <div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+                  <div style="display: flex;">
+                    <input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+                    <a href="javascript:$(this).closest('.hasDropdown').removeClass('isActive')" class="button">Send</button>
+                    <a href="javascript:$(this).closest('.hasDropdown').removeClass('isActive')">
+                      <img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+                    </a>
+                  </div>
                 </div>
+
               </div>
+
             </div>
             <div class="card__followup--actions">
               <span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
@@ -202,7 +209,7 @@
                   <img src="images/icons/more.svg" alt="" />
                 </a>
 
-                <div class="dropdown isActive">
+                <div class="dropdown">
                   <ul>
                     <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
                     <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
@@ -302,7 +309,7 @@
                   <img src="images/icons/more.svg" alt="" />
                 </a>
 
-                <div class="dropdown isActive">
+                <div class="dropdown">
                   <ul>
                     <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
                     <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
@@ -398,7 +405,7 @@
                   <img src="images/icons/more.svg" alt="" />
                 </a>
 
-                <div class="dropdown isActive">
+                <div class="dropdown">
                   <ul>
                     <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
                     <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
@@ -498,7 +505,7 @@
                   <img src="images/icons/more.svg" alt="" />
                 </a>
 
-                <div class="dropdown isActive">
+                <div class="dropdown">
                   <ul>
                     <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
                     <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
