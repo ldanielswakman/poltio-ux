@@ -32,10 +32,22 @@
 
         <div class="card__header">
 
-          <a href="#">Vildan Ay</a>
+          <a href="#">
+            <div class="badge badge--small" style="margin-left: -0.25rem;">
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+            </div>
+            Vildan Ay
+          </a>
 
           <div class="card__header--right">
-            <a href="#" class="date">yesterday</a>
+            <span class="hasTooltip">
+              <a href="#" class="date">yesterday</a>
+              <small class="tooltip tooltip--onBottom">25 Nov 14:53</small>
+            </span>
+            <span style="display: inline-block; padding: 0.25rem; border-radius: 0.25rem; background-color: #fff6d9; color: #ffc000; font-weight: 500;" class="hasTooltip">
+              <img src="images/icons/clock_outline_yellow.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> 19 hours
+              <small class="tooltip tooltip--onBottom">Poll ends on 28 Nov 9:00</small>
+            </span>
             <div class="hasDropdown">
 
               <a href="#" class="link--icon">
@@ -94,29 +106,40 @@
           <div class="card__followup--content">
             <div class="card__followup--content--left">
               <strong>31% thinks the same!</strong><br>
-              <small style="opacity: 0.25;">Discuss your vote below</small>
+              <!-- <small style="opacity: 0.25;">Discuss your vote below</small> -->
+              <a href="#" style="padding: 0;" class="link--icon">
+                <img src="images/icons/toggle_outline.svg" alt="" style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+                <small>Notify me of the result when poll ends</small>
+              </a>
+              <div class="showOnActive">
+                <div style="display: flex;">
+                  <input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+                  <button class="button">
+                    Send
+                  </button>
+                </div>
+              </div>
             </div>
             <div class="card__followup--actions">
-              <button class="button button--facebook">
+              <span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+              <button class="button button--square button--facebook">
                 <img src="images/icons/facebook_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
-                Share
               </button>
-              <button class="button button--twitter">
+              <button class="button button--square button--twitter">
                 <img src="images/icons/twitter_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
-                Share
               </button>
               <span class="hasTooltip">
                 <button class="button button--outline button--square">
-                  <img src="images/icons/link.svg" alt="" style="display: block; width: 1.25rem;" />
+                  <img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
                 </button>
-                <span class="tooltip">Copy link</span>
+                <span class="tooltip">View Geo Split</span>
               </span>
-              <span class="hasTooltip">
+              <!-- <span class="hasTooltip">
                 <button class="button button--outline button--square">
-                  <img src="images/icons/code.svg" alt="" style="display: block; width: 1.25rem;" />
+                  <img src="images/icons/bell_outline.svg" alt="" style="display: block; width: 1.25rem;" />
                 </button>
-                <span class="tooltip">Embed question</span>
-              </span>
+                <span class="tooltip">Be notified of result</span>
+              </span> -->
             </div>
           </div>
         </div>
@@ -141,7 +164,18 @@
             <span class="hasTooltip">
               <a href="#" class="link--icon">
                 <img src="images/icons/person_vote_outline.svg" alt="" />
-                <span class="value">4976</span>
+
+                <div class="badge badge--tiny">
+                  <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+                </div>
+                <div class="badge badge--tiny badge--overlap">
+                  <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
+                </div>
+                <div class="badge badge--tiny badge--overlap">
+                  <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
+                </div>
+
+                <span class="value">+4976</span>
               </a>
               <span class="tooltip">Vote count</span>
             </span>

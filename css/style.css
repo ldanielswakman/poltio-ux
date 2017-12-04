@@ -268,6 +268,7 @@ section {
   margin: 0;
   letter-spacing: 0.02rem;
   font-size: 1.25rem;
+  font-weight: 500;
 }
 .card__question .h3--small {
   font-size: 1.125rem;
@@ -436,11 +437,17 @@ a.link--icon img {
 .owl-carousel .owl-item a.link--icon img {
   width: 1.5rem;
 }
+.showOnActive {
+  display: none;
+}
+a.link--icon.isActive + .showOnActive {
+  display: block;
+}
 
 
 
 
-
+/* --- Button --- */
 .button {
   position: relative;
   display: inline-block;
@@ -605,6 +612,61 @@ a.link--icon img {
 
 
 
+
+/* --- Badge --- */
+.badge {
+  display: inline-block;
+  width: 2rem;
+  height: 2rem;
+  margin-right: 0.5rem;
+  background-color: #E9EFF2;
+  border-radius: 50%;
+  overflow: hidden;
+  border: 1px solid white;
+}
+.badge img {
+  max-width: 100%;
+}
+.badge.badge--small {
+  width: 1.75rem;
+  height: 1.75rem;
+}
+.badge.badge--tiny {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+.badge.badge--overlap {
+  margin-left: -1rem;
+}
+
+
+
+
+
+/* --- Field --- */
+.field {
+  appearance: none;
+  display: inline-block;
+  min-width: 12rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: white;
+  line-height: 1.5rem;
+  font: inherit;
+  font-size: 0.875rem;
+  color: ;
+}
+.field:focus {
+  outline: none;
+  box-shadow: 0 0 0.5rem rgba(200, 200, 200, 0.25);
+  border-color: rgba(0, 158, 235, 1);
+}
+
+
+
+
+/* --- Tooltip --- */
 .hasTooltip {
   position: relative;
 }
@@ -634,6 +696,16 @@ a.link--icon img {
   right: 1rem;
   border: 0.25rem solid transparent;
   border-top-color: rgba(30, 61, 84, 0.75);
+}
+.tooltip.tooltip--onBottom {
+  bottom: auto;
+  top: 100%;
+}
+.tooltip.tooltip--onBottom:after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: rgba(30, 61, 84, 0.75);
 }
 
 .hasDropdown {

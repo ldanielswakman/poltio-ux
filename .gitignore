@@ -1,2 +1,2 @@
-
-poltio-ux.sublime-workspace
+*.sublime-workspace
+.DS_Store
