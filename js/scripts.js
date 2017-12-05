@@ -142,3 +142,12 @@ $(document).ready(function() {
 });
 
 
+
+
+
+// Notify answer toggle
+function toggleNotify($clicked) {
+  $container = $clicked.closest('.hasDropdown');
+  $container.removeClass('isActive');
+  $container.find('.link--icon').removeClass('isActive');
+}
