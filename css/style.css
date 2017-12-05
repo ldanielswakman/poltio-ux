@@ -148,9 +148,6 @@ section {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 0.5rem rgba(20, 36, 51, 0.1); /*#142433*/
 }
-.zoom-overlay-open .card {
-  overflow: visible;
-}
 
 .card__header {
   display: flex;
@@ -226,9 +223,6 @@ section {
   display: block !important;
 }
 
-.zoom-overlay-open .card__question figure {
-  overflow: visible;
-}
 .card__question figure img {
   width: 100%;
 }
