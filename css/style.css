@@ -190,19 +190,14 @@ section {
   position: relative;
 }
 .card__question figure {
-  min-height: 9rem;
+  min-height: 6rem;
   max-height: 18rem;
   overflow: hidden;
   transition: all 0.5s ease;
 }
-.card__question figure.figure__empty {
-  background-color: #DDE7EB;
-  background-image: url('../images/poltio-logo-monogram.svg');
-  background-size: 3rem;
-}
 .isAnswered .card__question figure {
   /* 6rem = height of 'follow up container' */
-  min-height: calc(9rem - 6rem);
+  min-height: 0;
   max-height: calc(18rem - 6rem);
   transition-delay: 1.5s; /*Follow-up transition*/
 }
