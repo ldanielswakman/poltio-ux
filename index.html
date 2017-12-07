@@ -108,17 +108,18 @@
 
                 <a href="#" style="padding: 0;" class="link--icon">
                   <img src="images/icons/toggle_outline.svg" alt="" style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
-                  <small>Notify me of the result when poll ends</small>
+                  <small>Notify me of the result when poll ends <span style="color: #ffc000;">(19 hours)</span></small>
                 </a>
 
                 <div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
                   <div style="display: flex;">
                     <input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
-                    <a href="javascript:toggleNotify($(this))" class="button">Send</button>
-                    <a href="javascript:toggleNotify($(this))">
+                    <a href="javascript:toggleNotify($(this))" class="button">Send</a>
+                    <!-- <a href="javascript:toggleNotify($(this))">
                       <img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
-                    </a>
+                    </a> -->
                   </div>
+                  <input class="field--checkbox" type="checkbox" id="notify_email_tnc" name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the <a href="https://en.wikipedia.org/wiki/Contractual_term" target="_blank">T&amp;C</a></label>
                 </div>
 
               </div>

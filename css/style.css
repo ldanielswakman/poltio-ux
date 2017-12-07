@@ -674,6 +674,25 @@ a.link--icon.isActive img[src*="toggle"] {
   border-color: rgba(0, 158, 235, 1);
 }
 
+.field--checkbox {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.field--checkbox + label {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  color: #B8C6CC;
+  font-size: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+input:checked + label {
+  color: rgba(0, 158, 235, 1);
+}
+.field--checkbox + label a {
+  text-decoration: underline;
+}
 
 
 
