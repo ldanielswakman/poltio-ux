@@ -117,7 +117,13 @@ $(document).ready(function() {
 // Dropdown Click
 $(document).ready(function() {
   $('.hasDropdown a').click(function() {
-    $(this).closest('.hasDropdown').toggleClass('isActive');;
+    $wrapper = $(this).closest('.hasDropdown');
+
+    $wrapper.toggleClass('isActive');
+    // Add
+    if($wrapper.hasClass('isActive')) {
+      $wrapper.find('input, textarea').first().focus();
+    }
   });
 });
 
