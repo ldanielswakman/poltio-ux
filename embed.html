@@ -1,0 +1,226 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <title>Poltio interaction test</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body style="background: #fff;">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Feed</a></li>
+        <li><a href="embed.html" class="isActive">Embeds</a></li>
+      </ul>
+    </nav>
+
+    <section>
+
+      <!-- <h4 style="letter-spacing: 0.15rem; opacity: 0.25; font-weight: normal; margin-bottom: 2rem;">EMBEDDED CARD</h4> -->
+
+      <div class="card card--embed">
+
+        <div class="card__question">
+          <figure>
+            <img src="images/content/question-sports-image.png" alt="" />
+          </figure>
+          <div class="card__question-cover">
+            <div class="card__question-cover__content">
+              <h3 class="h3--small">Başakşehir karşılaşmasında kötü bir performans sergilediği için taraftar tarafından ıslıklanan Volkan Demirel'in Fenerbahçe'den ayrılma kararı aldığı belirtildi. Bu ayrılışı destekliyor musunuz?</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__answer card__answer--yn">
+
+          <button class="button button--answer">
+            <span class="button__text">Evet</span>
+            <span class="button__stat"">
+              <span style="width: 69%"></span>
+              <b>69%</b>
+            </span>
+          </button>
+          <button class="button button--answer">
+            <span class="button__text">Hayır</span>
+            <span class="button__stat"">
+              <span style="width: 31%"></span>
+              <b>31%</b>
+            </span>
+          </button>
+
+        </div>
+
+        <div class="card__followup">
+          <div class="card__followup--content">
+            <div class="card__followup--content--left">
+              <strong>69% thinks the same!</strong><br>
+              <!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+              <div class="hasDropdown">
+
+                <a href="#" style="padding: 0;" class="link--icon">
+                  <img src="images/icons/toggle_outline.svg" alt="" style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+                  <small>Notify me of the final result <span style="opacity: 0.5;">(19 hours left)</span></small>
+                </a>
+
+                <div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+                  <div style="display: flex;">
+                    <input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+                    <a href="javascript:toggleNotify($(this))" class="button">Send</a>
+                    <!-- <a href="javascript:toggleNotify($(this))">
+                      <img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+                    </a> -->
+                  </div>
+                  <input class="field--checkbox" type="checkbox" id="notify_email_tnc" name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the <a href="https://en.wikipedia.org/wiki/Contractual_term" target="_blank">T&amp;C</a></label>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="card__followup--actions">
+              <span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+              <button class="button button--square button--facebook">
+                <img src="images/icons/facebook_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+              </button>
+              <button class="button button--square button--twitter">
+                <img src="images/icons/twitter_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+              </button>
+              <span class="hasTooltip">
+                <button class="button button--outline button--square">
+                  <img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+                </button>
+                <span class="tooltip">View Geo Split</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__footer">
+          <div>
+            <a href="https://poltio.com" target="_blank" style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+          </div>
+          <div>
+            <span class="hasTooltip">
+              <small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+                Şu ana kadar 
+                <strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+                kez oylandı.
+              </a></small>
+              <span class="tooltip">Vote count</span>
+            </span>
+          </div>
+        </div>
+
+      </div><!-- end card -->
+
+      <div class="card card--embed">
+
+        <div class="card__question">
+          <figure></figure>
+          <div class="card__question-cover">
+            <div class="card__question-cover__content">
+              <h3>Sizce Reza Zarrab'ın davası Ebru Gündeş'in kariyerini etkiler mi?</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__answer card__answer--yn">
+
+          <button class="button button--answer">
+            <span class="button__text">Evet</span>
+            <span class="button__stat"">
+              <span style="width: 69%"></span>
+              <b>69%</b>
+            </span>
+          </button>
+          <button class="button button--answer">
+            <span class="button__text">Hayır</span>
+            <span class="button__stat"">
+              <span style="width: 31%"></span>
+              <b>31%</b>
+            </span>
+          </button>
+
+        </div>
+
+        <div class="card__followup">
+          <div class="card__followup--content">
+            <div class="card__followup--content--left">
+              <strong>69% thinks the same!</strong><br>
+              <!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+              <div class="hasDropdown">
+
+                <a href="#" style="padding: 0;" class="link--icon">
+                  <img src="images/icons/toggle_outline.svg" alt="" style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+                  <small>Notify me of the final result <span style="opacity: 0.5;">(19 hours left)</span></small>
+                </a>
+
+                <div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+                  <div style="display: flex;">
+                    <input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+                    <a href="javascript:toggleNotify($(this))" class="button">Send</a>
+                    <!-- <a href="javascript:toggleNotify($(this))">
+                      <img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+                    </a> -->
+                  </div>
+                  <input class="field--checkbox" type="checkbox" id="notify_email_tnc" name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the <a href="https://en.wikipedia.org/wiki/Contractual_term" target="_blank">T&amp;C</a></label>
+                </div>
+
+              </div>
+
+            </div>
+            <div class="card__followup--actions">
+              <span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+              <button class="button button--square button--facebook">
+                <img src="images/icons/facebook_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+              </button>
+              <button class="button button--square button--twitter">
+                <img src="images/icons/twitter_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+              </button>
+              <span class="hasTooltip">
+                <button class="button button--outline button--square">
+                  <img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+                </button>
+                <span class="tooltip">View Geo Split</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__footer">
+          <div>
+            <a href="https://poltio.com" target="_blank" style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+          </div>
+          <div>
+            <span class="hasTooltip">
+              <small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+                Şu ana kadar 
+                <strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+                kez oylandı.
+              </a></small>
+              <span class="tooltip">Vote count</span>
+            </span>
+          </div>
+        </div>
+
+      </div><!-- end card -->
+
+
+    </section>
+
+  </body>
+
+</html>

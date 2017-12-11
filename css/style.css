@@ -40,6 +40,37 @@ figure img {
 
 
 
+nav ul {
+  display: flex;
+  margin: 0;
+  padding: 0;
+  justify-content: center;
+  list-style: none;
+}
+nav a {
+  display: inline-block;
+  margin: 1rem 0.5rem;
+  padding: 0.5rem 1rem;
+  border-radius: 0.5rem;
+  text-transform: uppercase;
+  // background-color: rgba(30, 61, 84, 0.05);
+  font-weight: 500;
+  letter-spacing: 0.1rem;
+  color: rgba(30, 61, 84, 0.4);
+  opacity: 0.6;
+}
+nav a:hover {
+  opacity: 0.8;
+}
+nav a.isActive {
+  background-color: rgba(30, 61, 84, 0.1);
+  font-weight: bold;
+  color: rgba(30, 61, 84, 0.5);
+  opacity: 1;
+}
+
+
+
 
 
 section {
@@ -148,12 +179,15 @@ section {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 0.5rem rgba(20, 36, 51, 0.1); /*#142433*/
 }
+.card--embed {
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.1); /* because of white bg */
+}
 
 .card__header {
   display: flex;
   flex: 0 0 100%;
   justify-content: space-between;
-  padding: 0.75rem 2rem;
+  padding: 0.75rem 1rem;
   text-align: left;
   font-size: 0.875rem;
 }
@@ -164,7 +198,15 @@ section {
   margin: -0.5rem;
 }
 .card__header--right {
-  margin-right: -1.5rem;
+  margin-right: -1rem;
+}
+@media screen and (min-width: 30rem) {
+  .card__header {
+    padding: 0.75rem 2rem;
+  }
+  .card__header--right {
+    margin-right: -1.5rem;
+  }
 }
 .card__header a {
   padding: 0.5rem;
