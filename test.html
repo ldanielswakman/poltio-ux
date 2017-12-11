@@ -1,0 +1,86 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <title>Poltio interaction test</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <!-- <link rel="stylesheet" href="css/style.css" /> -->
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+    <style>
+      body {
+        font-family: -apple-system, BlinkMacSystemFont, 'Roboto', 'Helvetica Neue', Helvetica, Arial, sans-serif;
+      }
+      .container {
+        max-width: 500px;
+        /*border: 1px solid lime;*/
+      }
+      .card {
+        display: flex;
+        /*border: 1px solid red;*/
+        overflow: hidden;
+      }
+      .box {
+        position: relative;
+        min-width: 100%;
+        width: 100%;
+        flex-basis: 100%;
+        flex-grow: 1;
+      }
+      .box--image {
+        z-index: 1;
+        overflow: hidden;
+      }
+      .box--image.box--heightrestricted {
+        max-height: 300px;
+      }
+      .box--text {
+        z-index: 2;
+        margin-left: -100%;
+        display: flex;
+        flex-direction: column;
+        justify-content: flex-end;
+        color: red;
+      }
+      .box--text h3 {
+        margin: 0;
+        padding: 1rem;
+      }
+    </style>
+
+  </head>
+
+  <body>
+
+    <div class="container">
+
+      <button onclick="document.getElementById('imagebox').classList.toggle('box--heightrestricted')">toggle image max-height</button>
+      <br><br>
+
+      <div class="card">
+
+        <div id="imagebox" class="box box--image box--heightrestricted">
+          <img src="https://placeimg.com/640/640/4" alt="" />
+        </div>
+
+        <div class="box box--text">
+          <h3>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris in urna porta, maximus velit vitae, suscipit eros. Praesent eleifend est at nisi laoreet auctor. Nunc molestie fringilla magna et dictum. Nam ac massa nec erat consequat lacinia in in leo. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Maecenas sollicitudin nibh nisl, sed molestie lorem lobortis in. Nulla eget purus a risus scelerisque cursus. Praesent nisl dolor, varius eget faucibus sit amet, rutrum non lorem. Ut elementum sapien sed facilisis tempus. Morbi nec ipsum sed lacus vulputate sodales quis ut velit. Quisque id ante quis leo pharetra efficitur nec at mauris. Praesent dignissim hendrerit posuere. Vestibulum venenatis urna faucibus facilisis sodales. Suspendisse potenti. Proin a magna elit. Aenean vitae aliquam est, quis fringilla lectus.</h3>
+        </div>
+
+      </div>
+
+    </div>
+
+  </body>
+
+</html>
