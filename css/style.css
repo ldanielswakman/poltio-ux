@@ -327,6 +327,9 @@ section {
 .card__question .h3--small {
   font-size: 1.125rem;
 }
+.card__question .h3--large {
+  font-size: 1.5rem;
+}
 
 
 .card__answer {

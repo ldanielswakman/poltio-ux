@@ -17,6 +17,16 @@
     <script src="js/owl.carousel.min.js"></script>
     <script src="js/scripts.js"></script>
 
+    <style>
+      .card-context {
+        width: 100%;
+        max-width: 36rem;
+        margin-bottom: 1rem;
+        opacity: 0.25;
+        text-align: left;
+      }
+    </style>
+
   </head>
 
   <body style="background: #fff;">
@@ -30,35 +40,57 @@
 
     <section>
 
-      <!-- <h4 style="letter-spacing: 0.15rem; opacity: 0.25; font-weight: normal; margin-bottom: 2rem;">EMBEDDED CARD</h4> -->
+      
+      <div class="card-context">
+        <small>
+          Card type: Poll<br>
+          Question type: Title + Cover image<br>
+          Answer types: MC Text<br>
+          Options: End date NO, Hidden NO, Show vote count YES, Display percentages YES
+        </small>
+      </div>
 
-      <div class="card card--embed">
+      <div class="card card--embed"><!-- start card -->
 
         <div class="card__question">
           <figure>
-            <img src="images/content/question-sports-image.png" alt="" />
+            <img src="images/content/question-food-image-2.png" alt="" />
           </figure>
           <div class="card__question-cover">
             <div class="card__question-cover__content">
-              <h3 class="h3--small">Başakşehir karşılaşmasında kötü bir performans sergilediği için taraftar tarafından ıslıklanan Volkan Demirel'in Fenerbahçe'den ayrılma kararı aldığı belirtildi. Bu ayrılışı destekliyor musunuz?</h3>
+              <h3 class="h3--large">How often do you cook at home?</h3>
             </div>
           </div>
         </div>
 
-        <div class="card__answer card__answer--yn">
+        <div class="card__answer card__answer--mctext">
 
           <button class="button button--answer">
-            <span class="button__text">Evet</span>
+            <span class="button__text">Almost every day</span>
             <span class="button__stat"">
-              <span style="width: 69%"></span>
-              <b>69%</b>
+              <span style="width: 28%"></span>
+              <b>24%</b>
             </span>
           </button>
           <button class="button button--answer">
-            <span class="button__text">Hayır</span>
+            <span class="button__text">Only when I have guests</span>
             <span class="button__stat"">
-              <span style="width: 31%"></span>
+              <span style="width: 27%"></span>
               <b>31%</b>
+            </span>
+          </button>
+          <button class="button button--answer">
+            <span class="button__text">Never</span>
+            <span class="button__stat"">
+              <span style="width: 12%"></span>
+              <b>12%</b>
+            </span>
+          </button>
+          <button class="button button--answer">
+            <span class="button__text">Other - Tell us about it below!</span>
+            <span class="button__stat"">
+              <span style="width: 33%"></span>
+              <b>28%</b>
             </span>
           </button>
 
@@ -67,7 +99,7 @@
         <div class="card__followup">
           <div class="card__followup--content">
             <div class="card__followup--content--left">
-              <strong>69% thinks the same!</strong><br>
+              <strong>24% thinks the same!</strong><br>
               <!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
               <div class="hasDropdown">
 
@@ -126,7 +158,9 @@
 
       </div><!-- end card -->
 
-      <div class="card card--embed">
+
+
+      <div class="card card--embed"><!-- start card -->
 
         <div class="card__question">
           <figure></figure>
