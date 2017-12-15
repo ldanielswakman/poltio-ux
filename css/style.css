@@ -149,7 +149,7 @@ section {
   /*#009EEB;*/
 }
 .owl-dot.active {
-  background: rgba(20, 36, 51, 0.5);;
+  background: rgba(20, 36, 51, 0.5);
 }
 
 
@@ -157,6 +157,7 @@ section {
 
 
 .card {
+  position: relative;
   display: block;
   /*flex: 0 0 30rem;*/
   max-width: 36rem;
@@ -179,6 +180,47 @@ section {
   background: rgba(255, 255, 255, 0.8);
   box-shadow: 0 0 0.5rem rgba(20, 36, 51, 0.1); /*#142433*/
 }
+
+
+
+/* sequence effect (mockup only) */
+.sequence-container-wrapper {
+  overflow: hidden;
+  margin: -1rem;
+  padding: 1rem;
+}
+.sequence-container {
+  position: relative;
+}
+@media screen and (min-width: 42rem) {
+  .sequence-container {
+    width: 36rem;
+  }
+}
+.card.card--sequence {
+  transition-delay: 5s;
+  transition-duration: 1s;
+}
+.card.card--sequence1.isAnswered {
+  transform: translateX(-20rem);
+  opacity: 0;
+}
+.card.card--sequence2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(36rem);
+  opacity: 0;
+}
+.card.isAnswered + .card.card--sequence2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* end sequence effect (mockup only) */
+
+
+
+
 .card--embed {
   box-shadow: 0 0 1rem rgba(20, 36, 51, 0.1); /* because of white bg */
 }
@@ -335,43 +377,50 @@ section {
 .card__answer {
   position: relative;
   display: flex;
-  padding: 1rem 1rem;
-  justify-content: center;
-  align-items: center;
+  padding: 1rem 0;
+  // justify-content: left;
+  align-items: flex-start;
 }
 @media screen and (min-width: 30rem) {
   .card__answer {
-    padding: 1rem 2rem;
+    padding: 1rem;
   }
 }
 .card__answer--yn > * {
-  flex: 0 0 calc(50% - 1rem);
+  flex: 0 0 calc(50% - 1.5rem);
+}
+.card__answer--yn > .button + .button {
+  margin-left: 0;
 }
 .card__answer--mctext {
   flex-direction: column;
   justify-content: flex-start;
-  flex: 0 0 100%;
+  flex: 0 0 calc(100% - 2rem);
 }
 .card__answer--mctext > * {
-  width: 100%;
+  width: calc(100% - 2rem);
   flex: 0 0 100%;
   text-align: left;
 }
 .card__answer--mcimage {
-  width: calc(100% + 2rem);
-  margin: 0 -1rem;
   flex-wrap: wrap;
 }
-.card__answer--mcimage .button {
+.card__answer--mcimage > * {
   align-self: flex-start;
   // align-self: stretch;
-  min-width: calc(33.3333% - 2rem);
-  max-width: 8.5rem;
-  width: 100%;
+  width: calc(50% - 2rem);
+}
+@media screen and (min-width: 30rem) {
+  .mcimage--3col > * {
+    width: calc(33.3333% - 2rem);
+  }
 }
 .card__answer--mcimage .button .button__text {
   text-align: left;
   padding: 0.5rem;
+  font-weight: normal;
+  letter-spacing: 0;
+  line-height: 1.125rem;
 }
 
 
@@ -438,6 +487,44 @@ section {
 .card__followup--actions button {
   margin-left: 0.5rem;
 }
+
+.card__followup-timer {
+  display: inline-block;
+  width: 10rem;
+  vertical-align: top;
+  margin-top: 0.75rem;
+  margin-left: 0.5rem;
+  background: rgba(20, 36, 51, 0.1);
+  border-radius: 0.125rem;
+  overflow: hidden;
+}
+.card__followup-timerbar {
+  height: 0.25rem;
+  width: 100%;
+  max-width: 0;
+  transition: all 3.5s linear;
+  transition-delay: 1.5s;
+}
+.isAnswered .card__followup-timerbar {
+  max-width: 100%;
+  background: rgba(0, 158, 235, 1);
+}
+
+
+.sequence__progress {
+  background: rgba(20, 36, 51, 0.05);
+}
+.sequence__progress-bar {
+  width: 12.5%; /* This width should be dynamic, based on amount of questions in sequence */
+  height: 0.125rem;
+  background: rgba(20, 36, 51, 0.5);
+  background: rgba(0, 158, 235, 1);
+  transition: all 0.6s ease;
+}
+.isAnswered .sequence__progress-bar {
+  width: 18.6667%;
+}
+
 
 
 .card__footer {
@@ -563,6 +650,9 @@ a.link--icon.isActive img[src*="toggle"] {
   position: relative;
   height: 0;
   padding-bottom: 100%;
+}
+.mcimage--2col .button.button--image figure {
+  padding-bottom: 50%;
 }
 .button.button--image figure img {
   position: absolute;
@@ -815,6 +905,14 @@ input:checked + label {
   bottom: 100%;
   border-top-color: transparent;
   border-bottom-color: rgba(30, 61, 84, 0.75);
+}
+.tooltip.tooltip--onLeft {
+  right: auto;
+  left: 0;
+}
+.tooltip.tooltip--onLeft:after {
+  right: auto;
+  left: 1rem;
 }
 
 .hasDropdown {
