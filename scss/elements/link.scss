@@ -1,0 +1,30 @@
+/* Element - Link */
+a.link--icon {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+  padding: 0.5rem;
+
+  line-height: 0.75rem;
+
+  opacity: 0.5;
+}
+a.link--icon:hover {
+  color: #009EEB;
+  opacity: 1;
+  /*text-shadow: 0 0 0.5rem #009EEB;*/
+}
+a.link--icon .value {
+}
+a.link--icon img {
+  width: 1.5rem;
+  margin-right: 0.25rem;
+}
+.owl-carousel .owl-item a.link--icon img {
+  width: 1.5rem;
+}
+
+a.link--icon.isActive img[src*="toggle"] {
+  opacity: 1;
+}

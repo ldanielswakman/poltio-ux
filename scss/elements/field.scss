@@ -1,0 +1,39 @@
+/* Element - Field */
+.field {
+  appearance: none;
+  display: inline-block;
+  min-width: 12rem;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  background: white;
+  line-height: 1.5rem;
+  font: inherit;
+  font-size: 0.875rem;
+  transition: all 0.5s ease;
+}
+.field:focus {
+  outline: none;
+  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2);
+  border-color: rgba(0, 158, 235, 1);
+}
+
+.field--checkbox {
+  display: inline-block;
+  margin-top: 0.5rem;
+}
+.field--checkbox + label {
+  display: inline-block;
+  margin-top: 0.5rem;
+  margin-left: 0.25rem;
+  color: #B8C6CC;
+  font-size: 0.75rem;
+  cursor: pointer;
+  user-select: none;
+}
+input:checked + label {
+  color: rgba(0, 158, 235, 1);
+}
+.field--checkbox + label a {
+  text-decoration: underline;
+}

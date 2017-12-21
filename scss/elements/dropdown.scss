@@ -1,0 +1,61 @@
+/* Element - Dropdown */
+.hasDropdown {
+  position: relative;
+  display: inline-block;
+}
+.dropdown {
+  position: absolute;
+  top: 100%;
+  right: 0;
+  z-index: 4;
+  display: block;
+  min-width: 10rem;
+  background-color: white;
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.1);
+  border-radius: 0.25rem;
+  max-height: 0;
+  opacity: 0;
+  transition: all 0.3s ease;
+  pointer-events: none;
+}
+.dropdown:after {
+  content: "";
+  position: absolute;
+  bottom: 100%;
+  right: 1rem;
+  z-index: 2;
+  border: 0.5rem solid transparent;
+  border-bottom-color: white;
+}
+.dropdown.dropdown--onTopLeft {
+  right: auto;
+  top: auto;
+  left: 0;
+  bottom: 100%;
+}
+.dropdown.dropdown--onTopLeft:after {
+  right: auto;
+  left: 1rem;
+  bottom: auto;
+  top: 100%;
+  border-bottom-color: transparent;
+  border-top-color: white;
+}
+.hasDropdown.isActive .dropdown {
+  max-height: 9rem;
+  opacity: 1;
+  pointer-events: all;
+}
+.dropdown ul {
+  list-style: none;
+  margin: 0;
+  padding: 0.5rem 0;
+}
+.dropdown li a {
+  display: block;
+  padding: 0.35rem 1rem;
+  white-space: nowrap;
+}
+.dropdown li a:hover {
+  opacity: 1;
+}

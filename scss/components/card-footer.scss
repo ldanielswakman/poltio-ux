@@ -1,0 +1,30 @@
+/* Component Child - Card Footer */
+.card__footer {
+  display: flex;
+  justify-content: space-between;
+  padding: 0.25rem 1rem;
+  /*background: #F0F5F7;*/
+  border-top: 1px solid #F0F5F7; /*#DDE7EB;*/
+  transition: all 0.5s ease;
+  transition-delay: 1.5s; /*Follow-up transition*/
+}
+@media screen and (min-width: 30rem) {
+  .card__footer {
+    padding: 0.25rem 2rem;
+  }
+}
+.isAnswered .card__footer {
+  background: #F0F5F7;
+}
+.card__footer > * {
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  margin: 0 -0.5rem;
+  transition: all 0.3s ease;
+  opacity: 0.5;
+}
+.isAnswered .card__footer > *,
+.card__footer:hover > * {
+  opacity: 1;
+}

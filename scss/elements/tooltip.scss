@@ -1,0 +1,51 @@
+/* Element - Tooltip */
+.hasTooltip {
+  position: relative;
+}
+.tooltip {
+  position: absolute;
+  bottom: 100%;
+  right: 0;
+  z-index: 3;
+  display: block;
+  margin-bottom: 0.5rem;
+  padding: 0.2rem 0.4rem;
+  border-radius: 0.25rem;
+  white-space: nowrap;
+  background: rgba(30, 61, 84, 0.75);
+  color: white;
+  font-size: 0.875rem;
+  font-weight: normal;
+  opacity: 0;
+  pointer-events: none;
+  transition: all 0.3s ease;
+}
+.hasTooltip:hover .tooltip {
+  opacity: 1;
+}
+.tooltip:after {
+  content: "";
+  position: absolute;
+  top: 100%;
+  right: 1rem;
+  border: 0.25rem solid transparent;
+  border-top-color: rgba(30, 61, 84, 0.75);
+}
+.tooltip.tooltip--onBottom {
+  bottom: auto;
+  top: 100%;
+}
+.tooltip.tooltip--onBottom:after {
+  top: auto;
+  bottom: 100%;
+  border-top-color: transparent;
+  border-bottom-color: rgba(30, 61, 84, 0.75);
+}
+.tooltip.tooltip--onLeft {
+  right: auto;
+  left: 0;
+}
+.tooltip.tooltip--onLeft:after {
+  right: auto;
+  left: 1rem;
+}

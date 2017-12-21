@@ -1,0 +1,44 @@
+/* Component Child - Card Header */
+.card__header {
+  display: flex;
+  flex: 0 0 100%;
+  justify-content: space-between;
+  padding: 0.75rem 1rem;
+  text-align: left;
+  font-size: 0.875rem;
+}
+.card__header > * {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  margin: -0.5rem;
+}
+.card__header--right {
+  margin-right: -1rem;
+}
+@media screen and (min-width: 30rem) {
+  .card__header {
+    padding: 0.75rem 2rem;
+  }
+  .card__header--right {
+    margin-right: -1.5rem;
+  }
+}
+.card__header a {
+  padding: 0.5rem;
+  opacity: 0.5;
+}
+.card__header .card__header--right a {
+  opacity: 0.2;
+}
+.card__header .date {
+  font-size: 0.75rem;
+  letter-spacing: 0.02rem;
+  line-height: 1rem;
+  opacity: 0.3;
+}
+
+
+.card__category {
+  height: 0.25rem;
+}

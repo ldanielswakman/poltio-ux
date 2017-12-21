@@ -1,0 +1,106 @@
+/* Component Child - Card Follow-up section */
+.card__followup {
+  height: 6rem;
+  max-height: 0;
+  transition: all 0.5s ease;
+  transition-delay: 1.5s; /*Follow-up transition*/
+  overflow: hidden;
+
+  background-color: #fff;
+}
+.card.isAnswered .card__followup {
+  max-height: 6rem;
+  overflow: visible;
+}
+.card.card--sequence.isAnswered .card__followup {
+  max-height: 3rem;
+}
+/*.card.card--sequence.isAnswered .card__followup {
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-top: -3rem;
+}*/
+.card__followup--content {
+  display: flex;
+  flex-direction: column;
+  padding: 0.25rem 1rem;
+  justify-content: space-between;
+  align-items: center;
+  opacity: 0;
+  transition: all 0.5s ease;
+  transition-delay: 1.5s; /*Follow-up transition*/
+}
+.card.card--sequence .card__followup--content {
+  padding: 0.5 1rem;
+}
+.card.card--sequence .card__followup--content--left {
+  display: flex;
+  align-items: center;
+}
+@media screen and (min-width: 30rem) {
+  .card__followup--content {
+    flex-direction: row;
+    padding: 1.75rem 2rem;
+  }
+  .card.card--embed .card__followup--content {
+    padding: 1rem 2rem;
+  }
+  .card.card--sequence .card__followup--content {
+    padding: 0.5rem 2rem;
+  }
+}
+.isAnswered .card__followup--content {
+  opacity: 1;
+}
+.card__followup--content--left {
+  text-align: left;
+}
+.card__followup--content--left > * + * {
+  margin-left: 1rem;
+}
+.card__followup--content--left strong {
+  display: inline-block;
+  font-size: 1.125rem;
+}
+.card__followup--content--left .card__colophon {
+  display: inline-block;
+  /*margin-top: 0.25rem;
+  margin-bottom: -0.75rem;*/
+  font-size: 0.875rem;
+  opacity: 0.25;
+}
+.card__followup--content--left .card__colophon img {
+  margin-left: 0.125rem;
+  height: 1.25rem;
+  vertical-align: middle;
+}
+.card__followup--actions {
+  display: flex;
+  margin-left: -0.5rem; /*Cancelling out the first button's margin left*/
+}
+.card__followup--actions button {
+  margin-left: 0.5rem;
+}
+
+.card__followup-timer {
+  display: inline-block;
+  width: 10rem;
+  vertical-align: top;
+  /*margin-top: 0.75rem;*/
+  margin-left: 0.5rem;
+  background: rgba(20, 36, 51, 0.1);
+  border-radius: 0.125rem;
+  overflow: hidden;
+}
+.card__followup-timerbar {
+  height: 0.25rem;
+  width: 100%;
+  max-width: 0;
+  transition: all 3.5s linear;
+  transition-delay: 1.5s;
+}
+.isAnswered .card__followup-timerbar {
+  max-width: 100%;
+  background: rgba(0, 158, 235, 1);
+}

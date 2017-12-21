@@ -1,0 +1,65 @@
+.card {
+  position: relative;
+  display: block;
+  /*flex: 0 0 30rem;*/
+  max-width: 36rem;
+  width: 100%;
+  flex-direction: column;
+  margin-bottom: 2rem;
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.05);
+  border-radius: 0.5rem;
+  background: white;
+  overflow: hidden;
+
+  transition: all 3s ease;
+}
+@media screen and (min-width: 30rem) {
+  .card {
+    box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); /*#142433*/
+  }
+}
+.card.isAnswered {
+  background: rgba(255, 255, 255, 0.8);
+  box-shadow: 0 0 0.5rem rgba(20, 36, 51, 0.1); /*#142433*/
+}
+
+
+
+/* sequence effect (mockup only) */
+.sequence-container-wrapper {
+  overflow: hidden;
+  margin: -1rem;
+  padding: 1rem;
+}
+.sequence-container {
+  position: relative;
+}
+@media screen and (min-width: 42rem) {
+  .sequence-container {
+    width: 36rem;
+  }
+}
+/*.card.card--sequence {
+  transition-delay: 5s;
+  transition-duration: 1s;
+}*/
+.card.card--sequence1.isShifted {
+  transform: translateX(-20rem);
+  opacity: 0;
+}
+.card.card--sequence2 {
+  position: absolute;
+  top: 0;
+  left: 0;
+  transform: translateX(36rem);
+  opacity: 0;
+}
+.card.isShifted + .card.card--sequence2 {
+  transform: translateX(0);
+  opacity: 1;
+}
+/* end sequence effect (mockup only) */
+
+.card.card--embed {
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.1); /* because of white bg */
+}
