@@ -451,6 +451,16 @@ section {
   letter-spacing: 0;
   line-height: 1.125rem;
 }
+.card__answer--score {
+  justify-content: center;
+}
+.card__answer--score .button.button--answer {
+  padding: 0.75rem;
+  padding-bottom: 0.375rem;
+  border-radius: 1.5rem;
+  line-height: 1rem;
+}
+
 
 
 .card__followup {
@@ -646,7 +656,6 @@ a.link--icon.isActive img[src*="toggle"] {
 .button {
   position: relative;
   display: inline-block;
-  /*height: 2.5rem;*/
   padding: 0.5rem 1rem;
   appearance: none;
   border: none;
@@ -677,7 +686,7 @@ a.link--icon.isActive img[src*="toggle"] {
 }
 .isAnswered .button--answer:not(.isSelected) {
   background: rgba(0, 0, 0, 0.02);
-  background: transparent;
+  // background: transparent;
   color: rgba(30, 61, 84, 0.75);
 }
 .button.isSelected {
