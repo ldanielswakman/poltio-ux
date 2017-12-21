@@ -142,9 +142,9 @@ section {
 }
 .owl-dot {
   width: 3rem;
-  height: 0.5rem;
+  height: 0.25rem;
   margin: 0.25rem;
-  border-radius: 0.25rem;
+  border-radius: 0.125rem;
   background: rgba(20, 36, 51, 0.15);
   /*#009EEB;*/
 }
@@ -201,7 +201,7 @@ section {
   transition-delay: 5s;
   transition-duration: 1s;
 }
-.card.card--sequence1.isAnswered {
+.card.card--sequence1.isShifted {
   transform: translateX(-20rem);
   opacity: 0;
 }
@@ -212,7 +212,7 @@ section {
   transform: translateX(36rem);
   opacity: 0;
 }
-.card.isAnswered + .card.card--sequence2 {
+.card.isShifted + .card.card--sequence2 {
   transform: translateX(0);
   opacity: 1;
 }
@@ -272,18 +272,42 @@ section {
 
 .card__question {
   position: relative;
+  display: flex;
 }
-.card__question figure {
-  min-height: 6rem;
+.card__q-image,
+.card__q-title {
+  position: relative;
+  min-width: 100%;
+  width: 100%;
+  flex-basis: 100%;
+  flex-grow: 1;
+}
+.card__q-image {
+  /*min-height: 6rem;*/
   max-height: 18rem;
   overflow: hidden;
+}
+.card__q-title {
+  z-index: 2;
+  margin-left: -100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+.card__question figure {
+  /*min-height: 6rem;
+  max-height: 18rem;
+  overflow: hidden;*/
   transition: all 0.5s ease;
 }
-.isAnswered .card__question figure {
+.card.isAnswered .card__question figure {
   /* 6rem = height of 'follow up container' */
   min-height: 0;
   max-height: calc(18rem - 6rem);
-  transition-delay: 1.5s; /*Follow-up transition*/
+  transition-delay: 1.5s; /* Follow-up transition */
+}
+.card.card--sequence.isAnswered .card__question figure {
+  max-height: calc(18rem - 3rem);
 }
 .card__question.isExpanded figure {
   padding-bottom: 9rem;
@@ -365,6 +389,7 @@ section {
   letter-spacing: 0.02rem;
   font-size: 1.25rem;
   font-weight: 500;
+  text-align: left;
 }
 .card__question .h3--small {
   font-size: 1.125rem;
@@ -433,10 +458,19 @@ section {
 
   background-color: #fff;
 }
-.isAnswered .card__followup {
+.card.isAnswered .card__followup {
   max-height: 6rem;
   overflow: visible;
 }
+.card.card--sequence.isAnswered .card__followup {
+  max-height: 3rem;
+}
+/*.card.card--sequence.isAnswered .card__followup {
+  position: relative;
+  z-index: 2;
+  background: white;
+  margin-top: -3rem;
+}*/
 .card__followup--content {
   display: flex;
   flex-direction: column;
@@ -447,7 +481,12 @@ section {
   transition: all 0.5s ease;
   transition-delay: 1.5s; /*Follow-up transition*/
 }
-.card.card--embed .card__followup--content {
+.card.card--sequence .card__followup--content {
+  padding: 0.5 1rem;
+}
+.card.card--sequence .card__followup--content--left {
+  display: flex;
+  align-items: center;
 }
 @media screen and (min-width: 30rem) {
   .card__followup--content {
@@ -457,6 +496,9 @@ section {
   .card.card--embed .card__followup--content {
     padding: 1rem 2rem;
   }
+  .card.card--sequence .card__followup--content {
+    padding: 0.5rem 2rem;
+  }
 }
 .isAnswered .card__followup--content {
   opacity: 1;
@@ -464,14 +506,17 @@ section {
 .card__followup--content--left {
   text-align: left;
 }
+.card__followup--content--left > * + * {
+  margin-left: 1rem;
+}
 .card__followup--content--left strong {
   display: inline-block;
   font-size: 1.125rem;
 }
 .card__followup--content--left .card__colophon {
   display: inline-block;
-  margin-top: 0.25rem;
-  margin-bottom: -0.75rem;
+  /*margin-top: 0.25rem;
+  margin-bottom: -0.75rem;*/
   font-size: 0.875rem;
   opacity: 0.25;
 }
@@ -492,7 +537,7 @@ section {
   display: inline-block;
   width: 10rem;
   vertical-align: top;
-  margin-top: 0.75rem;
+  /*margin-top: 0.75rem;*/
   margin-left: 0.5rem;
   background: rgba(20, 36, 51, 0.1);
   border-radius: 0.125rem;
@@ -699,6 +744,10 @@ a.link--icon.isActive img[src*="toggle"] {
 }
 .isAnswered .button:not(.isSelected) figure img {
   opacity: 0.25;
+}
+.button--small {
+  padding: 0.25rem 0.5rem;
+  font-size: 0.875rem;
 }
 .button--square {
   padding: 0.5rem;
