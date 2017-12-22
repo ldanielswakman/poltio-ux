@@ -680,34 +680,31 @@ a.link--icon.isActive img[src*="toggle"] {
   flex-grow: 1; }
 
 .card__q-image {
-  min-height: 5rem;
-  max-height: 18rem;
-  overflow: hidden; }
-
-.card__q-title {
-  z-index: 2;
-  margin-left: -100%;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end; }
-
-.card__question figure {
-  /*min-height: 6rem;*/
+  min-height: 6rem;
   max-height: 18rem;
   overflow: hidden;
   transition: all 0.5s ease;
   transition-delay: 1.5s;
   /* Follow-up transition */ }
 
-.card.isAnswered .card__question figure {
+.card__q-title {
+  position: relative;
+  z-index: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  margin-left: -100%;
+  pointer-events: all; }
+
+.card.isAnswered .card__question .card__q-image {
   /* 6rem = height of 'follow up container' */
   min-height: 0;
   max-height: calc(18rem - 6rem); }
 
-.card.card--sequence.isAnswered .card__question figure {
+.card.card--sequence.isAnswered .card__question .card__q-image {
   max-height: calc(18rem - 3rem); }
 
-.card__question.isExpanded figure {
+.card__question.isExpanded .card__q-image {
   padding-bottom: 9rem;
   max-height: 80vh;
   transition-delay: 0; }
@@ -730,34 +727,18 @@ a.link--icon.isActive img[src*="toggle"] {
 .card__question.isExpanded .card__question--toggle img.close {
   display: block !important; }
 
-.card__question figure img {
+.card__question img {
   width: 100%; }
 
-.card__question-cover {
-  position: absolute;
-  top: 0;
-  left: 0;
-  z-index: 2;
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-end;
-  width: 100%;
-  height: 100%;
-  pointer-events: none;
-  /*background: -moz-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);
-  background: -webkit-linear-gradient(top, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.75) 100%);*/
-  /*background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0.9) 100%);*/
-  /*filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='rgba(255, 255, 255, 0)', endColorstr='rgba(255, 255, 255, 0.75)',GradientType=0 );*/
-  text-align: left;
-  text-shadow: 0 0 4rem white;
-  transition: all 0.5s ease; }
-
-.card__question-cover__content {
+.card__q-title__content {
   position: relative;
-  padding: 1rem;
-  pointer-events: all; }
+  width: 100%;
+  padding: 1rem; }
+  @media screen and (min-width: 30rem) {
+    .card__q-title__content {
+      padding: 1rem 2rem; } }
 
-.card__question-cover__content:before {
+.card__q-title__content:before {
   content: "";
   position: absolute;
   top: -4rem;
@@ -768,10 +749,6 @@ a.link--icon.isActive img[src*="toggle"] {
   pointer-events: none;
   background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.8) 70%, rgba(255, 255, 255, 0.9) 100%); }
 
-@media screen and (min-width: 30rem) {
-  .card__question-cover__content {
-    padding: 1rem 2rem; } }
-
 .card__question h3 {
   margin: 0;
   letter-spacing: 0.02rem;
@@ -779,10 +756,10 @@ a.link--icon.isActive img[src*="toggle"] {
   font-weight: 500;
   text-align: left; }
 
-.card__question .h3--small {
+.card__question h3.h3--small {
   font-size: 1.125rem; }
 
-.card__question .h3--large {
+.card__question h3.h3--large {
   font-size: 1.5rem; }
 
 /* Component Child - Card Answer Section */
@@ -838,6 +815,10 @@ a.link--icon.isActive img[src*="toggle"] {
   padding-bottom: 0.375rem;
   border-radius: 1.5rem;
   line-height: 1rem; }
+  @media screen and (max-width: 30rem) {
+    .card__answer--score .button.button--answer {
+      margin-left: 0.5rem;
+      margin-right: 0.5rem; } }
 
 /* Component Child - Card Follow-up section */
 .card__followup {
