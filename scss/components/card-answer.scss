@@ -11,12 +11,19 @@
     padding: 1rem;
   }
 }
+
+
+
+// Answer Type 1: Yes/No
 .card__answer--yn > * {
   flex: 0 0 calc(50% - 1.5rem);
 }
 .card__answer--yn > .button + .button {
   margin-left: 0;
 }
+
+
+// Answer Type 2: Multiple Choice Text
 .card__answer--mctext {
   flex-direction: column;
   justify-content: flex-start;
@@ -27,6 +34,9 @@
   flex: 0 0 100%;
   text-align: left;
 }
+
+
+// Answer Type 3: Multiple Choice Image
 .card__answer--mcimage {
   flex-wrap: wrap;
 }
@@ -47,6 +57,9 @@
   letter-spacing: 0;
   line-height: 1.125rem;
 }
+
+
+// Answer Type 4: Score
 .card__answer--score {
   justify-content: center;
 }
