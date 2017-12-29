@@ -954,3 +954,46 @@ a.link--icon.isActive img[src*="toggle"] {
 .isAnswered .card__footer > *,
 .card__footer:hover > * {
   opacity: 1; }
+
+.card__overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  z-index: 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 1rem;
+  background: rgba(255, 255, 255, 0.95);
+  transform: translateY(2rem);
+  transition: all 0.3s ease;
+  opacity: 0;
+  pointer-events: none; }
+
+.card__overlay.isActive {
+  transform: translateY(0);
+  opacity: 1;
+  pointer-events: all; }
+
+@media screen and (min-width: 30rem) {
+  .card__overlay {
+    padding: 2rem; } }
+
+.card__overlay--close {
+  position: absolute;
+  top: 0;
+  right: 0;
+  display: inline-block;
+  padding: 0.25rem 1rem;
+  font-size: 2.5rem;
+  opacity: 0.3; }
+  .card__overlay--close:hover {
+    opacity: 0.5; }
+  .card__overlay--close:active {
+    opacity: 1; }
+
+.card__overlay img {
+  max-width: 75%;
+  max-height: 20rem; }

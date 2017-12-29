@@ -157,3 +157,20 @@ function toggleNotify($clicked) {
   $container.removeClass('isActive');
   $container.find('.link--icon').removeClass('isActive');
 }
+
+
+
+
+// Lead Response Overlay interaction
+$(document).ready(function() {
+  $('.card--hasLead .button--answer').click(function() {
+    $card = $(this).closest('.card');
+    setTimeout(function() {
+      $card.find('.card__overlay').addClass('isActive');
+    }, 1800);
+  });
+  $('.card--hasLead .card__overlay--close').click(function() {
+    $card = $(this).closest('.card');
+    $card.find('.card__overlay').removeClass('isActive');
+  });
+});
