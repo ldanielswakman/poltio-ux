@@ -270,6 +270,18 @@ section {
   border-color: #009eeb;
   color: white; }
 
+/* Answer correct/wrong states */
+.button.button-correct,
+.button.isSelected.isCorrect {
+  background: #37d7af; }
+
+.button.button-wrong,
+.button.isSelected.isWrong {
+  background: #fd674c; }
+
+.button.isCorrect:not(.isSelected) {
+  border: 2px solid #37d7af; }
+
 .button.button--image:before {
   content: "";
   position: absolute;
@@ -296,6 +308,11 @@ section {
 
 .isAnswered .button:not(.isSelected) figure img {
   opacity: 0.25; }
+
+.button--large {
+  padding: 0.75rem 1.5rem;
+  font-size: 1.125rem;
+  border-radius: 0.5rem; }
 
 .button--small {
   padding: 0.25rem 0.5rem;
@@ -997,3 +1014,6 @@ a.link--icon.isActive img[src*="toggle"] {
 .card__overlay img {
   max-width: 75%;
   max-height: 20rem; }
+
+.card__overlay h4 {
+  font-weight: 500; }
