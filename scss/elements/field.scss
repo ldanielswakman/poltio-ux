@@ -37,3 +37,7 @@ input:checked + label {
 .field--checkbox + label a {
   text-decoration: underline;
 }
+
+textarea.field {
+  resize: none;
+}

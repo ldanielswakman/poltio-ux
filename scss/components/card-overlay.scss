@@ -59,3 +59,21 @@
 .card__overlay h4 {
 	font-weight: 500;
 }
+
+.card__overlay--form {
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
+	align-items: center;
+
+	.field {
+		width: 100%;
+		margin-bottom: 0.5rem;
+	}
+}
+@media screen and (min-width: 30rem) {
+	.card__overlay--form .field {
+		width: 100%;
+		max-width: 50%;
+	}
+}
