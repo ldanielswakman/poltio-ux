@@ -80,6 +80,26 @@ $(document).ready(function() {
 
 
 
+// init Timer
+$(document).ready(function() {
+
+  $('.card__timer').addClass('isRunning');
+
+
+  // start timer counter
+  var seconds = 5;
+  var cardTimer = setInterval(function () {
+
+    $('.card__timer .card__timer--label').html('0:0' + seconds);
+    seconds--;
+    if (seconds === -1) {
+      window.clearInterval(cardTimer);
+      $('.card__timer').addClass('isFinished');
+    }
+  }, 1000);
+
+});
+
 
 
 // Prevent any click
