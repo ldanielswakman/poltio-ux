@@ -1,31 +1,34 @@
 /* Component Child - Card Answer Section */
-.card__timer {
+.sequence__timer {
   position: relative;
   display: flex;
+  justify-content: center;
   align-items: center;
   padding: 0 1rem 1rem;
 }
 @media screen and (min-width: 30rem) {
-  .card__timer {
+  .sequence__timer {
     padding: 0 2rem 1rem;
   }
 }
 
-.card__timer--label {
+.sequence__timer--label {
 	padding: 0.25rem 0.5rem;
 	flex-grow: 0;
 	border-radius: 1rem;
 	background-color: #FFC000;
 	color: #fff;
+}
+.card .sequence__timer--label {
 	font-size: 0.75rem;
 	line-height: 0.75rem;
 }
-.isFinished .card__timer--label {
+.isFinished .sequence__timer--label {
 	background-color: rgba(20, 36, 51, 0.05);
 	color: transparent;
 }
 
-.card__timer--box {
+.sequence__timer--box {
 	flex-grow: 1;
 	height: 0.25rem;
 	border-top-right-radius: 0.125rem;
@@ -33,7 +36,7 @@
 	background-color: rgba(20, 36, 51, 0.05);
 	overflow: hidden;
 }
-.card__timer--bar {
+.sequence__timer--bar {
 	display: block;
 	width: 100%;
 	height: 100%;
@@ -42,6 +45,6 @@
 	background-color: #FFC000;
 	// background-color: rgba(20, 36, 51, 0.05);
 }
-.card__timer.isRunning .card__timer--bar {
+.sequence__timer.isRunning .sequence__timer--bar {
 	width: 0;
 }

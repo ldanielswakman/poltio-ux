@@ -840,49 +840,6 @@ a.link--icon.isActive img[src*="toggle"] {
       margin-left: 0.5rem;
       margin-right: 0.5rem; } }
 
-/* Component Child - Card Answer Section */
-.card__timer {
-  position: relative;
-  display: flex;
-  align-items: center;
-  padding: 0 1rem 1rem; }
-
-@media screen and (min-width: 30rem) {
-  .card__timer {
-    padding: 0 2rem 1rem; } }
-
-.card__timer--label {
-  padding: 0.25rem 0.5rem;
-  flex-grow: 0;
-  border-radius: 1rem;
-  background-color: #FFC000;
-  color: #fff;
-  font-size: 0.75rem;
-  line-height: 0.75rem; }
-
-.isFinished .card__timer--label {
-  background-color: rgba(20, 36, 51, 0.05);
-  color: transparent; }
-
-.card__timer--box {
-  flex-grow: 1;
-  height: 0.25rem;
-  border-top-right-radius: 0.125rem;
-  border-bottom-right-radius: 0.125rem;
-  background-color: rgba(20, 36, 51, 0.05);
-  overflow: hidden; }
-
-.card__timer--bar {
-  display: block;
-  width: 100%;
-  height: 100%;
-  border-top-right-radius: 0.125rem;
-  border-bottom-right-radius: 0.125rem;
-  background-color: #FFC000; }
-
-.card__timer.isRunning .card__timer--bar {
-  width: 0; }
-
 /* Component Child - Card Follow-up section */
 .card__followup {
   height: 6rem;
