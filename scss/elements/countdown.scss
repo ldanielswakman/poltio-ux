@@ -1,0 +1,85 @@
+/* Element - Countdown */
+.countdown {
+	position: relative;
+	z-index: 2;
+	font-size: 50px; /* width and height of the timer, so everything depends on this value, as we use 'em' in children */
+	width: 1em;
+	height: 1em;
+	margin: 0 auto;
+	margin-top: -2.5rem;
+	background: #fff;
+	border-radius: 0.5em;
+}
+.countdown--cover {
+	font-size: 100px;
+	margin: 2rem auto;
+}
+.countdown__pie {
+	position: absolute;
+	width: 1em;
+	height: 1em;
+	clip: rect(0em,1em,1em,0.5em); /* only show the right half of the pie */
+	pointer-events: none;
+}
+
+.countdown__pie.isFull {
+	/* show the entire pie */
+	clip: rect(auto,auto,auto,auto);
+}
+
+.countdown__track,
+.countdown__pie .countdown__slice {
+	border: 0.08em solid #f5f6f7;
+	position: absolute;
+	width: 1em;  /* 1em - (2*border-width) */
+	height: 1em;  /* 1em - (2*border-width) */
+	-moz-border-radius: 0.5em;
+	-o-border-radius: 0.5em;
+	-webkit-border-radius: 0.5em;
+	-ms-border-radius: 0.5em;
+	border-radius: 0.5em;
+	transition: all 0.05s ease;
+}
+.countdown__pie .countdown__slice {
+	background: transparent;
+	border-color: rgba(0, 158, 235, 1);
+	clip: rect(0em,0.5em,1em,0em); /* only take a half of the pie (left part) */
+	transition: border-color 0.3s ease;
+}
+.countdown__pie.isAlert .countdown__slice {
+	border-color: #fd674c;
+}
+.countdown.isComplete .countdown__slice {
+	border-color: #DDE7EB;
+}
+.countdown__pie .countdown_filler {
+	-webkit-transform:rotate(180deg);
+	-o-transform:rotate(180deg);
+	-ms-transform:rotate(180deg);
+	-moz-transform:rotate(180deg);
+	transform:rotate(180deg);
+	display: none;
+}
+.countdown__pie.isFull .countdown_filler {
+	display: block;
+}
+.countdown__content {
+	position: absolute;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	width: 1em;
+	height: 1em;
+}
+.countdown__content .value {
+	font-size: 1.25rem;
+	font-weight: 500;
+}
+.countdown--cover .countdown__content .value {
+	font-size: 2rem;
+}
+.countdown.isComplete {
+	transform: scale(0);
+	transition: all 2s cubic-bezier(1,0,0,1);
+	opacity: 0;
+}
