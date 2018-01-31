@@ -106,7 +106,8 @@ function startCountdown(countdown) {
 
 				// card actions
 				answerCard(card);
-				nextTimeout = (card.find('.card__followup-timerbar').length > 0) ? 5000 : 0;
+				nextTimeout = (card.find('.card__followup-timerbar').length > 0) ? 5000 : 0; // value based on followup timerbar duration+delay
+
 				setTimeout(function() { nextCard(card) }, nextTimeout);
 
 			}
