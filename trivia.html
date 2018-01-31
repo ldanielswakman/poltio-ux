@@ -1,0 +1,480 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<title>Talking Dead Trivia</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="js/jquery-3.2.1.slim.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/scripts-trivia.js"></script>
+
+		<style>
+
+			body {
+				min-height: 100vh;
+				min-width: 100vw;
+				background-size: cover;
+				background-repeat: no-repeat;
+				background-position: center;
+				background-attachment: fixed;
+				background-image: url('images/content/walkingdead/talkingdead-bg.jpg');
+			}
+
+			figure {
+				max-height: 6rem;
+			}
+
+
+			/* To be made into element */
+			.countdown {
+				position: relative;
+				z-index: 2;
+				font-size: 50px; /* width and height of the timer, so everything depends on this value, as we use 'em' in children */
+				width: 1em;
+				height: 1em;
+				margin: 0 auto;
+				margin-top: -2.5rem;
+				background: #fff;
+				border-radius: 0.5em;
+			}
+			.countdown--cover {
+				font-size: 100px;
+				margin: 2rem auto;
+			}
+			.countdown__pie {
+				position: absolute;
+				width: 1em;
+				height: 1em;
+				clip: rect(0em,1em,1em,0.5em); /* only show the right half of the pie */
+				pointer-events: none;
+			}
+
+			.countdown__pie.isFull {
+				/* show the entire pie */
+				clip: rect(auto,auto,auto,auto);
+			}
+
+			.countdown__track,
+			.countdown__pie .countdown__slice {
+				border: 0.08em solid #f5f6f7;
+				position: absolute;
+				width: 1em;  /* 1em - (2*border-width) */
+				height: 1em;  /* 1em - (2*border-width) */
+				-moz-border-radius: 0.5em;
+				-o-border-radius: 0.5em;
+				-webkit-border-radius: 0.5em;
+				-ms-border-radius: 0.5em;
+				border-radius: 0.5em;
+				transition: all 0.05s ease;
+			}
+			.countdown__pie .countdown__slice {
+				background: transparent;
+				border-color: rgba(0, 158, 235, 1);
+				clip: rect(0em,0.5em,1em,0em); /* only take a half of the pie (left part) */
+				transition: border-color 0.3s ease;
+			}
+			.countdown__pie.isAlert .countdown__slice {
+				border-color: #fd674c;
+			}
+			.countdown.isComplete .countdown__slice {
+				border-color: #DDE7EB;
+			}
+			.countdown__pie .countdown_filler {
+				-webkit-transform:rotate(180deg);
+				-o-transform:rotate(180deg);
+				-ms-transform:rotate(180deg);
+				-moz-transform:rotate(180deg);
+				transform:rotate(180deg);
+				display: none;
+			}
+			.countdown__pie.isFull .countdown_filler {
+				display: block;
+			}
+			.countdown__content {
+				position: absolute;
+				display: flex;
+				justify-content: center;
+				align-items: center;
+				width: 1em;
+				height: 1em;
+			}
+			.countdown__content .value {
+				font-size: 1.25rem;
+				font-weight: 500;
+			}
+			.countdown--cover .countdown__content .value {
+				font-size: 2rem;
+			}
+			.countdown.isComplete {
+				transform: scale(0);
+				transition: all 2s cubic-bezier(1,0,0,1);
+				opacity: 0;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<section>
+
+			<div class="sequence-container-wrapper">
+				<div class="sequence-container">
+
+					<div id="q0" class="card card--countdown card--sequence card--sequence-active"><!-- start card -->
+
+						<div class="card__question">
+							<figure class="card__q-image">
+								<img src="images/content/walkingdead/1503063526.225268.gif" alt="" />
+							</figure>
+							<div class="card__q-title">
+								<div class="card__q-title__content">
+									<h3 style="text-align: center;">The Ultimate Walking Dead Quiz — 7 Seasons</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="card__answer">
+							<div style="width: 100%;">
+								<p> See if you know the gnarly details about your favorite characters! Test your knowledge on Walking Dead’s seven seasons with these 10 questions and see how much you really know!</p>
+
+								<div class="countdown countdown--cover" data-duration="2000">
+									<div class="countdown__track"></div>
+									<div class="countdown__pie">
+										<div class="countdown__spinner countdown__slice"></div>
+										<div class="countdown_filler countdown__slice"></div>
+									</div>
+									<div class="countdown__content">
+										<span class="value"></span>
+									</div>
+								</div>
+
+								<!-- <p>
+									<button class="button button--primary button--large">Start Quiz</button>
+								</p> -->
+
+							</div>
+						</div>
+
+						<div class="sequence__progress hasTooltip">
+							<div class="sequence__progress-bar sequence__progress-bar" style="width: 3%;"></div>
+							<div class="tooltip tooltip--onLeft tooltip--onBottom" style="margin-left: 0.5rem; margin-top: 1rem;">
+								Question 1/8
+							</div>
+						</div>
+
+						<div class="card__footer">
+							<div>
+								<a href="http://www.amc.com/shows/talking-dead" target="_blank" style="display: block; padding: 0.5rem 0.75rem 0rem;"><img src="images/content/walkingdead/talkingdead-logo.png" alt="" style="height: 1.5rem;" /></a>
+							</div>
+							<div>
+								<span class="hasTooltip">
+									<a href="javascript:alert('Clicking means nothing to me.')" class="link--icon">
+										<img src="images/icons/people.svg" alt="" />
+										<span class="value">424k</span>
+									</a>
+									<span class="tooltip">424.567 people logged in</span>
+								</span>
+								<span class="hasTooltip">
+									<a href="https://poltio.com" target="_blank" style="display: inline-block; float: right; opacity: 1; margin-right: -0.5rem;">
+										<img src="images/poltio-logo-monogram.svg" alt="" style="height: 2rem;" />
+									</a>
+									<span class="tooltip" style="right: -1rem;">Powered by Poltio</span>
+								</span>
+							</div>
+						</div>
+
+					</div><!-- end card -->
+
+					<div id="q1" class="card card--countdown card--sequence"><!-- start card -->
+
+						<div class="card__question">
+							<figure class="card__q-image">
+								<img src="images/content/walkingdead/1503058025.351542.jpg" alt="" />
+							</figure>
+							<div class="card__q-title">
+								<div class="card__q-title__content">
+									<h3 class="h3--large">Which character did Rick first meet after leaving the hospital?</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="card__answer" style="height: 0; padding-bottom: 0;">
+
+							<div class="countdown" data-duration="5000">
+								<div class="countdown__track"></div>
+								<div class="countdown__pie">
+									<div class="countdown__spinner countdown__slice"></div>
+									<div class="countdown_filler countdown__slice"></div>
+								</div>
+								<div class="countdown__content">
+									<span class="value"></span>
+								</div>
+							</div>
+							
+						</div>
+
+						<div class="card__answer card__answer--mctext">
+
+							<button class="button button--answer" data-correct="false">
+								<span class="button__text">Lori</span>
+								<span class="button__stat"">
+									<span style="width: 23.5%"></span>
+									<b>99.773</b>
+								</span>
+							</button>
+							<button class="button button--answer" data-correct="false">
+								<span class="button__text">Shane</span>
+								<span class="button__stat"">
+									<span style="width: 29.4%"></span>
+									<b>124.822</b>
+								</span>
+							</button>
+							<button class="button button--answer" data-correct="true">
+								<span class="button__text">Morgan's son Duane</span>
+								<span class="button__stat"">
+									<span style="width: 41.2%"></span>
+									<b>174.921</b>
+								</span>
+							</button>
+							<button class="button button--answer" data-correct="false">
+								<span class="button__text">Carl</span>
+								<span class="button__stat"">
+									<span style="width: 5.9%"></span>
+									<b>25.049</b>
+								</span>
+							</button>
+
+						</div>
+
+						<div class="card__followup">
+							<div class="card__followup--content">
+								<div class="card__followup--content--left">
+									<div class="card__colophon">
+										Next question:
+									</div>
+									<div class="card__followup-timer">
+										<div class="card__followup-timerbar"></div>
+									</div>
+									<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--outline button--small js-pausecontinue-toggle">
+										Pause
+									</a>
+									<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--primary button--small js-pausecontinue-toggle u-hide">
+										Continue
+									</a>
+								</div>
+								<div class="card__followup--actions">
+								</div>
+							</div>
+						</div>
+
+						<div class="sequence__progress hasTooltip">
+							<div class="sequence__progress-bar sequence__progress-bar"></div>
+							<div class="tooltip tooltip--onLeft tooltip--onBottom" style="margin-left: 0.5rem; margin-top: 1rem;">
+								Question 1/8
+							</div>
+						</div>
+
+						<div class="card__footer">
+							<div>
+								<a href="http://www.amc.com/shows/talking-dead" target="_blank" style="display: block; padding: 0.5rem 0.75rem 0rem;"><img src="images/content/walkingdead/talkingdead-logo.png" alt="" style="height: 1.5rem;" /></a>
+							</div>
+							<div>
+								<span class="hasTooltip">
+									<a href="javascript:alert('Clicking means nothing to me.')" class="link--icon">
+										<img src="images/icons/people.svg" alt="" />
+										<span class="value">424k</span>
+									</a>
+									<span class="tooltip">424.567 people logged in</span>
+								</span>
+								<span class="hasTooltip">
+									<a href="https://poltio.com" target="_blank" style="display: inline-block; float: right; opacity: 1; margin-right: -0.5rem;">
+										<img src="images/poltio-logo-monogram.svg" alt="" style="height: 2rem;" />
+									</a>
+									<span class="tooltip" style="right: -1rem;">Powered by Poltio</span>
+								</span>
+							</div>
+						</div>
+
+					</div><!-- end card -->
+
+					<div class="card card--embed card--sequence card--sequence2"><!-- start card -->
+
+						<div class="card__question">
+							<figure class="card__q-image">
+							</figure>
+							<div class="card__q-title">
+								<div class="card__q-title__content">
+									<h3 class="h3--large">En iyi erkek oyuncu?</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="card__answer card__answer--mcimage mcimage--2col">
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487848521.638176.png" alt="" />
+							</figure>
+							<span class="button__text">Casey Affleck - Manchester By The Sea</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487848582.02018.png" alt="" />
+							</figure>
+							<span class="button__text">Andrew Garfield - Hacksaw Ridge</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487595305.216388.png" alt="" />
+							</figure>
+							<span class="button__text">Ryan Gosling - La La Land</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487848630.4481.png" alt="" />
+							</figure>
+							<span class="button__text">Viggo Mortensen - Captain Fantastic</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487595305.346825.png" alt="" />
+							</figure>
+							<span class="button__text">Denzel Washington - Fences</span>
+						</button>
+
+						</div>
+
+						<div class="card__followup">
+							<div class="card__followup--content">
+								<div class="card__followup--content--left">
+									<div class="card__colophon" style="display: inline-block;">
+										Next question:
+									</div>
+									<div class="card__followup-timer">
+										<div class="card__followup-timerbar"></div>
+									</div>
+								</div>
+								<div class="card__followup--actions">
+								</div>
+							</div>
+						</div>
+
+						<div class="sequence__progress hasTooltip">
+							<div class="sequence__progress-bar sequence__progress-bar"></div>
+							<div class="tooltip tooltip--onLeft" style="margin-left: 0.5rem">
+								Question 1/8
+							</div>
+						</div>
+
+						<div class="card__footer">
+						<div>
+							<a href="https://poltio.com" target="_blank" style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+						</div>
+						<div>
+							<span class="hasTooltip">
+							<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								Şu ana kadar 
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+							<span class="tooltip">Vote count</span>
+							</span>
+						</div>
+						</div>
+
+					</div><!-- end card -->
+
+
+
+					<div class="card card--embed card--sequence card--sequence1"><!-- start card -->
+
+						<div class="card__question">
+							<figure class="card__q-image">
+								<img src="images/content/question-oscars.jpg" alt="" />
+							</figure>
+							<div class="card__q-title">
+								<div class="card__q-title__content">
+									<h3>Congratulations!</h3>
+								</div>
+							</div>
+						</div>
+
+						<div class="card__answer">
+							<div style="width: 100%;">
+								<p><strong>6/8</strong> answers correct.</p>
+								<p>...</p>
+								<p>
+									<button class="button button--primary button--large">Followup link!</button>
+								</p>
+							</div>
+						</div>
+
+						<div class="card__followup">
+							<div class="card__followup--content">
+								<div class="card__followup--content--left">
+									<div class="card__colophon">
+										Next question:
+									</div>
+									<div class="card__followup-timer">
+										<div class="card__followup-timerbar"></div>
+									</div>
+									<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--outline button--small js-pausecontinue-toggle">
+										Pause
+									</a>
+									<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--primary button--small js-pausecontinue-toggle u-hide">
+										Continue
+									</a>
+								</div>
+								<div class="card__followup--actions">
+								</div>
+							</div>
+						</div>
+
+					  <div class="sequence__progress hasTooltip">
+							<div class="sequence__progress-bar sequence__progress-bar sequence__progress-bar" style="width: 100%"></div>
+							<div class="tooltip tooltip--onLeft tooltip--onBottom" style="margin-left: 0.5rem; margin-top: 1rem;">
+							  Question 8/8
+							</div>
+					  </div>
+
+						<div class="card__footer">
+							<div>
+								<a href="https://poltio.com" target="_blank" style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+							</div>
+							<div>
+								<span class="hasTooltip">
+								<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+									Şu ana kadar 
+									<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+									kez oylandı.
+								</a></small>
+								<span class="tooltip">Vote count</span>
+								</span>
+							</div>
+						</div>
+
+					</div><!-- end card -->
+		
+				</div>
+			</div><!-- end sequence wrapper -->
+
+		</section>
+
+	</body>
+
+</html>

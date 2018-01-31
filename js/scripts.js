@@ -70,7 +70,10 @@ $(document).ready(function() {
       buttons.forEach(link => link.classList.remove("isSelected"));
 
       this.classList.toggle("isSelected");
-      card.classList.add("isAnswered");
+
+      if(!card.classList.contains('card--countdown')) {
+        card.classList.add("isAnswered");
+      }
     }
   }
 
