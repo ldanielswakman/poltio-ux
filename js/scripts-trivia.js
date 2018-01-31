@@ -26,6 +26,27 @@ function nextCard(card) {
 	}
 }
 
+// NB. Duplicated function nextCard for mockup; couldn't fix code bug that doesn't allow calling nextCard multiple times...
+function nextCard2(card) {
+	nextCard = card.next('.card--sequence');
+
+	if(nextCard.length > 0) {
+		card.addClass('isShiftingOut');
+		nextCard.addClass('isShiftingIn');
+
+		timeout = 600; // should be the same as css transition on card
+		setTimeout(function() {
+			card.removeClass('card--sequence-active');
+			nextCard.addClass('card--sequence-active').removeClass('isShiftingIn');
+
+			startCountdown(nextCard.find('.countdown'));
+
+		}, timeout);
+	} else {
+		alert('This was the last card in the sequence');
+	}
+}
+
 function answerCard(card) {
 
 	answerState = false;
@@ -108,7 +129,14 @@ function startCountdown(countdown) {
 				answerCard(card);
 				nextTimeout = (card.find('.card__followup-timerbar').length > 0) ? 5000 : 0; // value based on followup timerbar duration+delay
 
-				setTimeout(function() { nextCard(card) }, nextTimeout);
+				setTimeout(function() {
+					// NB. Duplicated function nextCard for mockup; couldn't fix code bug that doesn't allow calling nextCard multiple times...
+					if(card.attr('id') == 'q1') {
+						nextCard2(card);
+					} else {
+						nextCard(card);
+					}
+				}, nextTimeout);
 
 			}
 
