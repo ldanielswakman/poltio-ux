@@ -11,7 +11,7 @@
   background: white;
   overflow: hidden;
 
-  transition: all 3s ease;
+  transition: all 0.6s ease;
 }
 @media screen and (min-width: 30rem) {
   .card {
@@ -39,27 +39,38 @@
     width: 36rem;
   }
 }
-/*.card.card--sequence {
-  transition-delay: 5s;
-  transition-duration: 1s;
-}*/
-.card.card--sequence1.isShifted {
-  transform: translateX(-20rem);
-  opacity: 0;
+.card.card--sequence {
+  margin-bottom: 0;
 }
-.card.card--sequence2 {
+.card.card--sequence:not(.card--sequence-active) {
   position: absolute;
   top: 0;
   left: 0;
-  transform: translateX(36rem);
+  transform: translateX(20rem);
+  opacity: 0;
+  pointer-events: none;
+}
+.card--sequence-active {
+  pointer-events: all;
+}
+.card.isShifting,
+.card.isShiftingOut {
+  transform: translateX(-20rem);
   opacity: 0;
 }
-.card.isShifted + .card.card--sequence2 {
+.card.card--sequence.isShiftingIn {
   transform: translateX(0);
   opacity: 1;
 }
+// .card.isShifted + .card.card--sequence2 {
+//   transform: translateX(0);
+//   opacity: 1;
+// }
 /* end sequence effect (mockup only) */
 
-.card.card--embed {
-  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.1); /* because of white bg */
+.card.card--countdown {
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.25); /* because of white bg */
+}
+.card.card--countdown.isAnswered {
+  background-color: #f5f6f7;
 }

@@ -93,6 +93,34 @@
 .button.isCorrect:not(.isSelected) {
   border: 2px solid #37d7af;
 }
+.button.isSelected.isCorrect,
+.button.isSelected.isWrong {
+  padding-left: 2.5rem;
+}
+// Correct/Wrong icons
+.button:after,
+.button:after {
+  content: "";
+  position: absolute;
+  top: 0.5rem;
+  left: 0.5rem;
+  height: 1.6rem;
+  width: 1.6rem;
+  background-size: contain;
+  transition: all 0.5s ease-in-out;
+  transform: scale(0.5);
+  opacity: 0;
+}
+.button.isSelected.isCorrect:after,
+.button.isSelected.isWrong:after {
+  background: url('../images/icons/check_white.svg');
+  transform: scale(1);
+  opacity: 1;
+}
+.button.isSelected.isWrong:after {
+  background: url('../images/icons/cross_white.svg');
+}
+
 
 .button.button--image:before {
   content: "";
@@ -156,6 +184,15 @@
 .button.button--outline:hover {
   opacity: 1;
 }
+.button.isDisabled {
+  background: rgba(0, 0, 0, 0.01);
+  pointer-events: none;
+}
+.button.isDisabled .button__text {
+  color: rgba(30, 61, 84, 0.5);
+}
+
+
 
 .button__text {
   display: inline-block;
@@ -172,7 +209,7 @@
 .button .button__stat {
   display: block;
   height: 0.25rem;
-  margin: 0.125rem 1.5rem 0.25rem 0;
+  margin: 0.125rem 2.5rem 0.25rem 0;
   background-color: rgba(0, 0, 0, 0);
   border-radius: 0.125rem;
   opacity: 0.5;
