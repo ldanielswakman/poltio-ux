@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	startCountdown( $('.card--sequence-active .countdown') );
 
-	$('.card .card__followup').on('click', function() {
+	$('.card--sequence-active .card__followup').on('click', function() {
 		prepNextCard($(this).closest('.card'));
 	});
 
@@ -47,6 +47,11 @@ function goNextCard(card) {
 		setTimeout(function() {
 			card.removeClass('card--sequence-active');
 			nextCard.addClass('card--sequence-active').removeClass('isShiftingIn');
+
+			// re-assign click event
+			$('.card--sequence-active .card__followup').on('click', function() {
+				prepNextCard($(this).closest('.card'));
+			});
 
 			startCountdown(nextCard.find('.countdown'));
 
