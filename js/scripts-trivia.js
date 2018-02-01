@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	startCountdown( $('.card--sequence-active .countdown') );
 
-	$('.card--sequence-active .card__followup').on('click', function() {
+	$('.card .card__followup').on('click', function() {
 		prepNextCard($(this).closest('.card'));
 	});
 
