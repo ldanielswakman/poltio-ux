@@ -950,6 +950,9 @@ a.link--icon.isActive img[src*="toggle"] {
     .card__q-title__content {
       padding: 1rem 2rem; } }
 
+.card--sequence .card__q-title__content {
+  padding-bottom: 2rem !important; }
+
 .card__q-title__content:before {
   content: "";
   position: absolute;
