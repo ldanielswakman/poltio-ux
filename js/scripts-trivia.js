@@ -6,8 +6,8 @@ $(document).ready(function() {
 
 	startCountdown( $('.card--sequence-active .countdown') );
 
-	$('.card--sequence-active .card__followup').on('click touchstart touchend', function() {
-		prepNextCard($(this).closest('.card'));
+	$('.card--sequence-active').on('click touchstart touchend', function() {
+		prepNextCard($(this));
 	});
 
 	$('body').bind('keyup', (function(e) {
@@ -29,8 +29,8 @@ function prepNextCard(card) {
 		setTimeout(function() {
 			goNextCard(card);
 		}, nextTimeout);
-	} else {
-		console.log('Quiz not interactable at this stage...');
+	// } else {
+	// 	console.log('Quiz not interactable at this stage...');
 	}
 }
 
@@ -49,8 +49,8 @@ function goNextCard(card) {
 			nextCard.addClass('card--sequence-active').removeClass('isShiftingIn');
 
 			// re-assign click event
-			$('.card--sequence-active .card__followup').on('click touchstart touchend', function() {
-				prepNextCard($(this).closest('.card'));
+			$('.card--sequence-active').on('click touchstart touchend', function() {
+				prepNextCard($(this));
 			});
 
 			startCountdown(nextCard.find('.countdown'));
