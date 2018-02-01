@@ -23,3 +23,22 @@
 .badge.badge--overlap {
   margin-left: -1rem;
 }
+
+.badge.badge--status {
+  display: inline-block;
+  padding: 0.25rem 0.75rem;
+  width: auto;
+  border-radius: 1rem;
+  vertical-align: middle;
+}
+.badge.badge--status img {
+  float: left;
+  margin-top: 0.25rem;
+  margin-right: 0.5rem;
+  opacity: 0.25;
+}
+.badge.badge--status span {
+  display: inline-block;
+  opacity: 0.75;
+  line-height: 1.5rem;
+}

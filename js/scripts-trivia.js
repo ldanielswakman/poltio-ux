@@ -1,12 +1,42 @@
 $(document).ready(function() {
 
+	quizPresenterState = false;
+
 	$('body').addClass('isLoaded');
 
 	startCountdown( $('.card--sequence-active .countdown') );
+
+	$('.card--sequence-active .card__followup-overlay').click(function() {
+		prepNextCard($(this).closest('.card'));
+	});
+
+	$('body').bind('keyup', (function(e) {
+		if(e.keyCode == 13 || e.keyCode == 32) { // Enter or Spacebar
+			prepNextCard($('.card.card--sequence-active'));
+		}
+		e.preventDefault();
+	}));
 	
 });
 
-function nextCard(card) {
+
+
+function prepNextCard(card) {
+	if(quizPresenterState == true) {
+		card.find('.card__followup-overlay').removeClass('isVisible');
+		card.addClass('isPrepForNextQ');
+		setTimeout(function() {
+			goNextCard(card);
+			quizPresenterState = false;
+		}, nextTimeout);
+	} else {
+		console.log('Quiz not interactable at this stage...');
+	}
+}
+
+
+
+function goNextCard(card) {
 	nextCard = card.next('.card--sequence');
 
 	if(nextCard.length > 0) {
@@ -26,26 +56,7 @@ function nextCard(card) {
 	}
 }
 
-// NB. Duplicated function nextCard for mockup; couldn't fix code bug that doesn't allow calling nextCard multiple times...
-function nextCard2(card) {
-	nextCard = card.next('.card--sequence');
 
-	if(nextCard.length > 0) {
-		card.addClass('isShiftingOut');
-		nextCard.addClass('isShiftingIn');
-
-		timeout = 600; // should be the same as css transition on card
-		setTimeout(function() {
-			card.removeClass('card--sequence-active');
-			nextCard.addClass('card--sequence-active').removeClass('isShiftingIn');
-
-			startCountdown(nextCard.find('.countdown'));
-
-		}, timeout);
-	} else {
-		alert('This was the last card in the sequence');
-	}
-}
 
 function answerCard(card) {
 
@@ -63,14 +74,24 @@ function answerCard(card) {
 		card.find('.button[data-correct="true"]').addClass('isCorrect');
 	}
 
+	if (answerState == true) {
+		card.find('.card__followup-overlay .text--correct').addClass('isVisible');
+	} else {
+		card.find('.card__followup-overlay .text--wrong').addClass('isVisible');
+	}
+	card.find('.card__followup-overlay').addClass('isVisible');
+
 	return answerState;
 }
+
+
 
 function startCountdown(countdown) {
 
 	countdown.each(function() {
 
-		duration = (typeof($(this).attr('data-duration')) !== 'undefined') ? $(this).attr('data-duration') : 10000; // duration in ms
+		attrDur = $(this).attr('data-duration');
+		duration = (typeof(attrDur) !== 'undefined') ? attrDur : 10000; // duration in ms
 		alertThreshold = 7000;
 
 		var timer = $(this),
@@ -129,14 +150,12 @@ function startCountdown(countdown) {
 				answerCard(card);
 				nextTimeout = (card.find('.card__followup-timerbar').length > 0) ? 5000 : 0; // value based on followup timerbar duration+delay
 
-				setTimeout(function() {
-					// NB. Duplicated function nextCard for mockup; couldn't fix code bug that doesn't allow calling nextCard multiple times...
-					if(card.attr('id') == 'q1') {
-						nextCard2(card);
-					} else {
-						nextCard(card);
-					}
-				}, nextTimeout);
+				// if cover card
+				if(card.attr('id') == 'q0') {
+					goNextCard(card);
+				} else {
+					quizPresenterState = true;
+				}
 
 			}
 
