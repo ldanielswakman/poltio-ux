@@ -118,6 +118,8 @@
   transition: all 0.3s ease;
   transform: translateY(6rem);
   opacity: 0;
+
+  cursor: pointer;
 }
 .card__followup-overlay.isVisible {
   transform: translateY(0);

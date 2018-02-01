@@ -6,7 +6,7 @@ $(document).ready(function() {
 
 	startCountdown( $('.card--sequence-active .countdown') );
 
-	$('.card--sequence-active .card__followup').on('click', function() {
+	$('.card--sequence-active .card__followup').on('click touchstart touchend', function() {
 		prepNextCard($(this).closest('.card'));
 	});
 
@@ -23,11 +23,11 @@ $(document).ready(function() {
 
 function prepNextCard(card) {
 	if(quizPresenterState == true) {
+		quizPresenterState = false;
 		card.find('.card__followup-overlay').removeClass('isVisible');
 		card.addClass('isPrepForNextQ');
 		setTimeout(function() {
 			goNextCard(card);
-			quizPresenterState = false;
 		}, nextTimeout);
 	} else {
 		console.log('Quiz not interactable at this stage...');
@@ -49,7 +49,7 @@ function goNextCard(card) {
 			nextCard.addClass('card--sequence-active').removeClass('isShiftingIn');
 
 			// re-assign click event
-			$('.card--sequence-active .card__followup').on('click', function() {
+			$('.card--sequence-active .card__followup').on('click touchstart touchend', function() {
 				prepNextCard($(this).closest('.card'));
 			});
 
