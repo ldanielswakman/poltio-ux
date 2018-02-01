@@ -1046,18 +1046,11 @@ a.link--icon.isActive img[src*="toggle"] {
   background-color: #fff; }
 
 .card.isAnswered .card__followup {
-  max-height: 6rem;
-  overflow: visible; }
+  max-height: 6rem; }
 
 .card.card--sequence.isAnswered .card__followup {
   max-height: 3rem; }
 
-/*.card.card--sequence.isAnswered .card__followup {
-  position: relative;
-  z-index: 2;
-  background: white;
-  margin-top: -3rem;
-}*/
 .card__followup--content {
   display: flex;
   flex-grow: 1;
