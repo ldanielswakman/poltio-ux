@@ -36,14 +36,14 @@ figure img {
 .u-hide {
   display: none !important; }
 
-nav ul {
+nav > ul {
   display: flex;
   margin: 0;
   padding: 0;
   justify-content: center;
   list-style: none; }
 
-nav a {
+nav > ul > li > a {
   display: inline-block;
   margin: 1rem 0.5rem;
   padding: 0.5rem 1rem;
