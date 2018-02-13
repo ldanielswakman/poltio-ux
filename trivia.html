@@ -40,6 +40,11 @@
 
 		<script>
 			$(document).ready(function() {
+
+				setTimeout(function() {
+					$('[name="q"]').focus();
+				}, 300);
+
 				// $('#thesinput').keyup(function(e) {
 				$('[name="q"]').on('change keyup',function(e) {
 					if(e.keyCode !== 13) {
