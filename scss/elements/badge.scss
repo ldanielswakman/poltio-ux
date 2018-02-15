@@ -42,3 +42,13 @@
   opacity: 0.75;
   line-height: 1.5rem;
 }
+.badge--circle {
+  text-align: center;
+  line-height: 2.5rem;
+}
+.badge--circle.badge--small {
+  line-height: 2rem;
+}
+.badge--circle img {
+  opacity: 0.25;
+}

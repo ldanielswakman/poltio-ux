@@ -1,0 +1,61 @@
+.card__leaderboard {
+	width: 100%;
+	text-align: left;
+	margin: 0;
+	padding: 1rem 0;
+}
+
+.card__leaderboard li {
+	display: flex;
+	height: 2.75rem;
+	padding: 0.5rem 0;
+	line-height: 1.75rem;
+}
+.card__leaderboard li:nth-child(2n) {
+	background-color: rgba(240, 245, 247, 0.25);
+}
+.card__leaderboard li:hover {
+	background-color: rgba(240, 245, 247, 0.75);
+}
+.card__leaderboard li + li {
+	border-top: 1px solid #F0F5F7;
+}
+.card__leaderboard li > * {
+	flex: 1;
+}
+.card__leaderboard li > div:first-child {
+	padding-left: 1.5rem;
+	padding-right: 0.75rem;
+}
+.card__leaderboard li > div:last-child {
+	padding-right: 1rem;
+}
+
+// .card__leaderboard div.col--square {
+// 	flex: 0 1 2rem;
+// }
+.card__leaderboard .col--alignright {
+	text-align: right;
+}
+.card__leaderboard [data-type="rank"] {
+	color: rgba(0, 158, 235, 1);
+	flex: 0 1 10%;
+	text-align: right;
+}
+.card__leaderboard [data-type="name"] {
+	flex-basis: 40%;
+}
+.card__leaderboard [data-type="time"] {
+	opacity: 0.3;
+	text-align: center;
+	flex-basis: 20%;
+}
+.card__leaderboard [data-type="score"] {
+	flex: 0 1 15%;
+}
+@media screen and (max-width: 480px) {
+	.card__leaderboard [data-type="time"] {
+		padding-right: 1rem;
+		flex: 0 0 5rem;
+	}
+}
