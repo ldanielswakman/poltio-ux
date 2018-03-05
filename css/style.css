@@ -281,9 +281,6 @@ section {
   height: 0;
   padding-bottom: 100%; }
 
-.mcimage--2col .button.button--image figure {
-  padding-bottom: 50%; }
-
 .button.button--image figure img {
   position: absolute;
   width: 100%;
