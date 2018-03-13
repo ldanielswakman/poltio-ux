@@ -14,7 +14,7 @@
 }
 .card.isAnswered .card__followup {
   max-height: 6rem;
-  pointer-events: none;
+  pointer-events: all;
 }
 .card.card--sequence.isAnswered .card__followup {
   max-height: 3rem;
