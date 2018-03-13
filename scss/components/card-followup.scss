@@ -6,7 +6,7 @@
   max-height: 0;
   transition: all 0.5s ease;
   transition-delay: 1.5s; /*Follow-up transition*/
-  overflow: hidden;
+  // overflow: hidden;
   align-items: center;
   pointer-events: none;
 
@@ -30,11 +30,8 @@
   transition: all 0.5s ease;
   transition-delay: 1.5s; /*Follow-up transition*/
 
-  @include phoneAndUp() {
-    flex-direction: row;
-    padding: 1.75rem 1rem;
-  }
-  @include tabletAndUp() { padding: 1.75rem 2rem; }
+  @include phoneAndUp() { padding: 1.75rem 1rem; }
+  @include tabletAndUp() { flex-direction: row; padding: 1.75rem 2rem; }
 }
 .card.card--sequence .card__followup--content {
   padding: 0.5rem 0.75rem;

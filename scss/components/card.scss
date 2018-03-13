@@ -22,6 +22,12 @@
   background: #FBFCFC;
   box-shadow: 0 0 0.5rem rgba(20, 36, 51, 0.1); /*#142433*/
 }
+// Hides content on small mobile
+@media screen and (max-width: 24rem) {
+  .card .card__hidexs {
+    display: none;
+  }
+}
 
 
 

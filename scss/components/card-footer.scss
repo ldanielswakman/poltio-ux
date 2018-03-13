@@ -26,8 +26,3 @@
 .card__footer:hover > * {
   opacity: 1;
 }
-@media screen and (max-width: 24rem) {
-  .card__footer .card__footer--hidexs {
-    display: none;
-  }
-}

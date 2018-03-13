@@ -874,6 +874,10 @@ a.link--icon.isActive img[src*="toggle"] {
   box-shadow: 0 0 0.5rem rgba(20, 36, 51, 0.1);
   /*#142433*/ }
 
+@media screen and (max-width: 24rem) {
+  .card .card__hidexs {
+    display: none; } }
+
 /* sequence effect (mockup only) */
 .sequence-container-wrapper {
   overflow: hidden;
@@ -1178,7 +1182,6 @@ a.link--icon.isActive img[src*="toggle"] {
   transition: all 0.5s ease;
   transition-delay: 1.5s;
   /*Follow-up transition*/
-  overflow: hidden;
   align-items: center;
   pointer-events: none;
   background-color: #fff; }
@@ -1203,10 +1206,10 @@ a.link--icon.isActive img[src*="toggle"] {
   /*Follow-up transition*/ }
   @media screen and (min-width: 22.5rem) {
     .card__followup--content {
-      flex-direction: row;
       padding: 1.75rem 1rem; } }
   @media screen and (min-width: 30rem) {
     .card__followup--content {
+      flex-direction: row;
       padding: 1.75rem 2rem; } }
 
 .card.card--sequence .card__followup--content {
@@ -1349,10 +1352,6 @@ a.link--icon.isActive img[src*="toggle"] {
 .isAnswered .card__footer > *,
 .card__footer:hover > * {
   opacity: 1; }
-
-@media screen and (max-width: 24rem) {
-  .card__footer .card__footer--hidexs {
-    display: none; } }
 
 .card__overlay {
   position: absolute;
