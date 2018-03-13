@@ -491,7 +491,7 @@
 					</div>
 				</div>
 
-				<div class="card__answer card__answer--mcimage mcimage--2col">
+				<div class="card__answer card__answer--mcimage mcimage--3col">
 
 				<button class="button button--answer button--image">
 					<figure>
@@ -533,12 +533,18 @@
 				<div class="card__followup">
 					<div class="card__followup--content">
 						<div class="card__followup--content--left">
-							<div class="card__colophon" style="display: inline-block;">
+							<div class="card__colophon">
 								Next question:
 							</div>
 							<div class="card__followup-timer">
 								<div class="card__followup-timerbar"></div>
 							</div>
+							<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--outline button--small js-pausecontinue-toggle">
+								Pause
+							</a>
+							<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--primary button--small js-pausecontinue-toggle u-hide">
+								Continue
+							</a>
 						</div>
 						<div class="card__followup--actions">
 						</div>

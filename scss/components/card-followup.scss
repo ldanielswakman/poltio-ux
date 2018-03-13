@@ -37,7 +37,10 @@
   @include tabletAndUp() { padding: 1.75rem 2rem; }
 }
 .card.card--sequence .card__followup--content {
-  padding: 0.5 1rem;
+  padding: 0.5rem 0.75rem;
+
+  @include phoneAndUp() { padding: 0.5rem 1rem; }
+  @include tabletAndUp() { padding: 0.5rem 2rem; }
 }
 .card.card--sequence .card__followup--content--left {
   display: flex;
@@ -46,9 +49,6 @@
 @include tabletAndUp() {
   .card.card--embed .card__followup--content {
     padding: 1rem 2rem;
-  }
-  .card.card--sequence .card__followup--content {
-    padding: 0.5rem 2rem;
   }
 }
 .isAnswered .card__followup--content {
@@ -83,13 +83,19 @@
 
 .card__followup-timer {
   display: inline-block;
-  width: 10rem;
+  width: 8.5rem;
   vertical-align: top;
-  /*margin-top: 0.75rem;*/
   margin-left: 0.5rem;
+  margin-right: 0.5rem;
   background: rgba(20, 36, 51, 0.1);
   border-radius: 0.125rem;
   overflow: hidden;
+
+  @include phoneAndUp() {
+    width: 9rem;
+    margin-right: 1rem;
+  }
+  @include tabletAndUp() { width: 12rem; }
 }
 .card__followup-timerbar {
   height: 0.25rem;
