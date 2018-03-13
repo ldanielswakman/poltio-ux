@@ -229,6 +229,24 @@ section {
 .badge--circle img {
   opacity: 0.25; }
 
+.badge.badge--end-date {
+  width: auto;
+  height: auto;
+  margin-right: 0;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border-color: transparent;
+  background-color: #fff6d9;
+  color: #ffc000;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: initial; }
+
+.badge.badge--end-date img {
+  display: inline-block;
+  width: 1rem;
+  vertical-align: middle; }
+
 /* Element - Button */
 .button {
   position: relative;
@@ -411,10 +429,15 @@ section {
 .button__text {
   display: inline-block;
   padding-top: 0.25rem;
-  font-size: 1rem;
-  line-height: 1rem;
+  font-size: 0.875rem;
+  line-height: 0.875rem;
   transform-origin: top left;
   transition: transform 0.5s ease, padding 0.5s ease; }
+
+@media screen and (min-width: 21rem) {
+  .button.button--answer {
+    font-size: 1rem;
+    line-height: 1rem; } }
 
 .isAnswered .button__text {
   transform: scale(0.875);
@@ -837,7 +860,8 @@ a.link--icon.isActive img[src*="toggle"] {
 .sequence-container-wrapper {
   overflow: hidden;
   margin: -1rem;
-  padding: 1rem; }
+  padding: 1rem;
+  max-width: 100vw; }
 
 .sequence-container {
   position: relative; }
@@ -927,11 +951,25 @@ a.link--icon.isActive img[src*="toggle"] {
 .card__header .card__header--right a {
   opacity: 0.2; }
 
+.card__header .author .author__name {
+  display: block;
+  white-space: nowrap;
+  max-width: 25vw;
+  text-overflow: ellipsis;
+  overflow: hidden; }
+
 .card__header .date {
+  display: none;
   font-size: 0.75rem;
   letter-spacing: 0.02rem;
   line-height: 1rem;
   opacity: 0.3; }
+
+@media screen and (min-width: 21rem) {
+  .card__header .date {
+    display: inherit; }
+  .card__header .date--onmobile {
+    display: none; } }
 
 .card__header--horizontal {
   padding: 0 2rem;
@@ -1108,10 +1146,12 @@ a.link--icon.isActive img[src*="toggle"] {
   /*Follow-up transition*/
   overflow: hidden;
   align-items: center;
+  pointer-events: none;
   background-color: #fff; }
 
 .card.isAnswered .card__followup {
-  max-height: 6rem; }
+  max-height: 6rem;
+  pointer-events: none; }
 
 .card.card--sequence.isAnswered .card__followup {
   max-height: 3rem; }
@@ -1237,6 +1277,7 @@ a.link--icon.isActive img[src*="toggle"] {
   display: flex;
   justify-content: space-between;
   padding: 0.25rem 1rem;
+  align-items: center;
   /*background: #F0F5F7;*/
   border-top: 1px solid #F0F5F7;
   /*#DDE7EB;*/
@@ -1262,6 +1303,10 @@ a.link--icon.isActive img[src*="toggle"] {
 .isAnswered .card__footer > *,
 .card__footer:hover > * {
   opacity: 1; }
+
+@media screen and (max-width: 24rem) {
+  .card__footer .card__footer--hidexs {
+    display: none; } }
 
 .card__overlay {
   position: absolute;
