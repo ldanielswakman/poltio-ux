@@ -232,12 +232,12 @@ section {
 .badge.badge--end-date {
   width: auto;
   height: auto;
-  margin-right: 0;
   padding: 0.25rem;
   border-radius: 0.25rem;
   border-color: transparent;
   background-color: #fff6d9;
   color: #ffc000;
+  font-size: 0.875rem;
   font-weight: 500;
   white-space: nowrap;
   overflow: initial; }
@@ -246,6 +246,10 @@ section {
   display: inline-block;
   width: 1rem;
   vertical-align: middle; }
+
+@media screen and (max-width: 30rem) {
+  .badge.badge--end-date {
+    margin-right: 0; } }
 
 /* Element - Button */
 .button {
@@ -435,7 +439,7 @@ section {
   transition: transform 0.5s ease, padding 0.5s ease; }
 
 @media screen and (min-width: 21rem) {
-  .button.button--answer {
+  .button__text {
     font-size: 1rem;
     line-height: 1rem; } }
 
@@ -1277,10 +1281,7 @@ a.link--icon.isActive img[src*="toggle"] {
   display: flex;
   justify-content: space-between;
   padding: 0.25rem 1rem;
-  align-items: center;
-  /*background: #F0F5F7;*/
   border-top: 1px solid #F0F5F7;
-  /*#DDE7EB;*/
   transition: all 0.5s ease;
   transition-delay: 1.5s;
   /*Follow-up transition*/ }
@@ -1296,6 +1297,7 @@ a.link--icon.isActive img[src*="toggle"] {
   display: flex;
   flex-direction: row;
   justify-content: flex-start;
+  align-items: center;
   margin: 0 -0.5rem;
   transition: all 0.3s ease;
   opacity: 0.5; }

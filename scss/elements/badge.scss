@@ -55,12 +55,12 @@
 .badge.badge--end-date {
   width: auto;
   height: auto;
-  margin-right: 0;
   padding: 0.25rem;
   border-radius: 0.25rem;
   border-color: transparent;
   background-color: #fff6d9;
   color: #ffc000;
+  font-size: 0.875rem;
   font-weight: 500;
   white-space: nowrap;
   overflow: initial;
@@ -69,4 +69,9 @@
   display: inline-block;
   width: 1rem;
   vertical-align: middle;
+}
+@media screen and (max-width: 30rem) {
+  .badge.badge--end-date {
+    margin-right: 0;
+  }
 }
