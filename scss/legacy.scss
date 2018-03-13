@@ -54,7 +54,7 @@ nav > ul {
 nav > ul > li > a {
   display: inline-block;
   margin: 1rem 0.5rem;
-  padding: 0.5rem 1rem;
+  padding: 0.5rem 0.25rem;
   border-radius: 0.5rem;
   text-transform: uppercase;
   // background-color: rgba(30, 61, 84, 0.05);
@@ -62,6 +62,10 @@ nav > ul > li > a {
   letter-spacing: 0.1rem;
   color: rgba(30, 61, 84, 0.4);
   opacity: 0.6;
+
+  @include phoneAndUp() {
+    padding: 0.5rem 1rem;
+  }
 }
 nav a:hover {
   opacity: 0.8;
@@ -84,13 +88,12 @@ section {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  padding: 1rem;
+  padding: 0.5rem;
   text-align: center;
-}
-@media screen and (min-width: 30rem) {
-  section {
-    padding: 10vh;
-  }
+
+  @include phoneAndUp() { padding: 0.75rem; }
+  @include tabletAndUp() { padding: 1rem; }
+  @include tabletWideAndUp() { padding: 10vh; }
 }
 
 

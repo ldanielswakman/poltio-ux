@@ -2,36 +2,29 @@
 .card__answer {
   position: relative;
   display: flex;
-  padding: 1rem 0;
-  // justify-content: left;
+  flex: 0 0 100%;
   align-items: flex-start;
-}
-@media screen and (min-width: 30rem) {
-  .card__answer {
-    padding: 1rem;
-  }
+  padding: 0.5rem 0.25rem;
+
+  @include phoneAndUp() { padding: 0.75rem 0.375rem; }
+  @include tabletAndUp() { padding: 1rem; }
 }
 
 
 
 // Answer Type 1: Yes/No
 .card__answer--yn > * {
-  flex: 0 0 calc(50% - 1.5rem);
+  flex-basis: 50%;
 }
-.card__answer--yn > .button + .button {
-  margin-left: 0;
-}
+
 
 
 // Answer Type 2: Multiple Choice Text
 .card__answer--mctext {
   flex-direction: column;
-  justify-content: flex-start;
-  flex: 0 0 calc(100% - 2rem);
+  align-items: stretch;
 }
 .card__answer--mctext > * {
-  width: calc(100% - 2rem);
-  flex: 0 0 100%;
   text-align: left;
 }
 
@@ -39,16 +32,26 @@
 // Answer Type 3: Multiple Choice Image
 .card__answer--mcimage {
   flex-wrap: wrap;
+  padding: 0.75rem 0.375rem;
+
+  @include phoneAndUp() { padding: 1rem 0.5rem; }
+  @include tabletAndUp() { padding: 1rem 1.5rem; }
 }
 .card__answer--mcimage > * {
   align-self: flex-start;
-  // align-self: stretch;
-  width: calc(50% - 2rem);
+  flex-basis: calc(50% - 0.75rem);
+
+  @include phoneAndUp() { flex-basis: calc(50% - 1rem); }
 }
-@media screen and (min-width: 30rem) {
+@include tabletAndUp() {
   .mcimage--3col > * {
-    width: calc(33.3333% - 2rem);
+    flex-basis: calc(33.3333% - 1rem);
   }
+}
+.card__answer--mcimage > .button.button--answer {
+  margin: 0.375rem;
+
+  @include phoneAndUp() { margin: 0.5rem; }
 }
 .card__answer--mcimage .button .button__text {
   text-align: left;

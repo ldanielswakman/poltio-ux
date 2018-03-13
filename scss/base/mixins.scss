@@ -1,0 +1,31 @@
+@mixin prefix($property, $arguments) {
+  -webkit-#{$property}: $arguments;
+  -moz-#{$property}: $arguments;
+  #{$property}: $arguments;
+}
+
+@mixin smallPhone() {
+  @media screen and (max-width: calc(22.5rem - 1px)) {
+    @content;
+  }
+}
+@mixin phoneAndUp() {
+  @media screen and (min-width: 22.5rem) {
+    @content;
+  }
+}
+@mixin tabletAndUp() {
+  @media screen and (min-width: 30rem) {
+    @content;
+  }
+}
+@mixin tabletWideAndUp() {
+  @media screen and (min-width: 48rem) {
+    @content;
+  }
+}
+@mixin dekstopAndUp() {
+  @media screen and (min-width: 60rem) {
+    @content;
+  }
+}

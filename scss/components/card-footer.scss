@@ -2,15 +2,13 @@
 .card__footer {
   display: flex;
   justify-content: space-between;
-  padding: 0.25rem 1rem;
+  padding: 0.25rem 0.5rem;
   border-top: 1px solid #F0F5F7;
   transition: all 0.5s ease;
   transition-delay: 1.5s; /*Follow-up transition*/
-}
-@media screen and (min-width: 30rem) {
-  .card__footer {
-    padding: 0.25rem 2rem;
-  }
+
+  @include phoneAndUp() { padding: 0.25rem 1rem; }
+  @include tabletAndUp() { padding: 0.25rem 2rem; }
 }
 .isAnswered .card__footer {
   background: #F0F5F7;

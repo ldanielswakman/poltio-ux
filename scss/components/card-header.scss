@@ -3,9 +3,12 @@
   display: flex;
   flex: 0 0 100%;
   justify-content: space-between;
-  padding: 0.75rem 1rem;
+  padding: 0.5rem 0.75rem;
   text-align: left;
   font-size: 0.875rem;
+
+  @include phoneAndUp() { padding: 0.5rem 1rem; }
+  @include tabletAndUp() { padding: 0.75rem 2rem; }
 }
 .card__header > * {
   display: flex;
@@ -15,12 +18,8 @@
 }
 .card__header--right {
   margin-right: -1rem;
-}
-@media screen and (min-width: 30rem) {
-  .card__header {
-    padding: 0.75rem 2rem;
-  }
-  .card__header--right {
+
+  @include tabletAndUp() { 
     margin-right: -1.5rem;
   }
 }
