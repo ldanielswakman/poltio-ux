@@ -52,3 +52,21 @@
 .badge--circle img {
   opacity: 0.25;
 }
+.badge.badge--end-date {
+  width: auto;
+  height: auto;
+  margin-right: 0;
+  padding: 0.25rem;
+  border-radius: 0.25rem;
+  border-color: transparent;
+  background-color: #fff6d9;
+  color: #ffc000;
+  font-weight: 500;
+  white-space: nowrap;
+  overflow: initial;
+}
+.badge.badge--end-date img {
+  display: inline-block;
+  width: 1rem;
+  vertical-align: middle;
+}

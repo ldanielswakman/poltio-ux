@@ -31,11 +31,27 @@
 .card__header .card__header--right a {
   opacity: 0.2;
 }
+.card__header .author .author__name {
+  display: block;
+  white-space: nowrap;
+  max-width: 25vw;
+  text-overflow: ellipsis;
+  overflow: hidden;
+}
 .card__header .date {
+  display: none;
   font-size: 0.75rem;
   letter-spacing: 0.02rem;
   line-height: 1rem;
   opacity: 0.3;
+}
+@media screen and (min-width: 21rem) {
+  .card__header .date {
+    display: inherit;
+  }
+  .card__header .date--onmobile {
+    display: none;
+  }
 }
 
 

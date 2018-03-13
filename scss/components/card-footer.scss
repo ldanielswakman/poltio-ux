@@ -3,6 +3,7 @@
   display: flex;
   justify-content: space-between;
   padding: 0.25rem 1rem;
+  align-items: center;
   /*background: #F0F5F7;*/
   border-top: 1px solid #F0F5F7; /*#DDE7EB;*/
   transition: all 0.5s ease;
@@ -27,4 +28,9 @@
 .isAnswered .card__footer > *,
 .card__footer:hover > * {
   opacity: 1;
+}
+@media screen and (max-width: 24rem) {
+  .card__footer .card__footer--hidexs {
+    display: none;
+  }
 }

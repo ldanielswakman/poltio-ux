@@ -8,11 +8,13 @@
   transition-delay: 1.5s; /*Follow-up transition*/
   overflow: hidden;
   align-items: center;
+  pointer-events: none;
 
   background-color: #fff;
 }
 .card.isAnswered .card__followup {
   max-height: 6rem;
+  pointer-events: none;
 }
 .card.card--sequence.isAnswered .card__followup {
   max-height: 3rem;
