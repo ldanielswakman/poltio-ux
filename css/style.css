@@ -923,25 +923,6 @@ a.link--icon.isActive img[src*="toggle"] {
 .card.card--countdown.isAnswered {
   background-color: #f5f6f7; }
 
-.card.card--wide {
-  max-width: 60rem; }
-
-.card.card--wide.isInProgress {
-  box-shadow: 0 0 3rem #009eeb; }
-
-@media screen and (min-width: 42rem) {
-  .card.card--wide {
-    display: flex;
-    flex-direction: row; }
-  .card.card--wide > * {
-    flex-grow: 1; }
-  .card--wide .card__leftcol {
-    max-width: 24rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1); }
-  .card--wide .card__leftcol .card__leftcol-main {
-    flex-basis: 100%;
-    flex-grow: 1; } }
-
 /* Component Child - Card Header */
 .card__header {
   display: flex;
@@ -1412,6 +1393,70 @@ a.link--icon.isActive img[src*="toggle"] {
   .card__overlay--form .field {
     width: 100%;
     max-width: 50%; } }
+
+.leaderboard {
+  width: 100%;
+  max-width: 70rem;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  background-color: #F8F9FA;
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); }
+
+.leaderboard .leaderboard__header h1 {
+  padding: 1rem 0;
+  font-weight: normal;
+  color: #009EEB; }
+
+@media screen and (min-width: 42rem) {
+  .leaderboard__main {
+    display: flex;
+    flex-direction: row; }
+  .leaderboard__main > * {
+    flex: 1; }
+  .leaderboard .card {
+    margin-bottom: 0; }
+  .leaderboard .leaderboard__leftcol {
+    display: flex;
+    max-width: 24rem;
+    margin-right: 2rem;
+    align-items: center; }
+  .leaderboard .leaderboard__rightcol .card {
+    max-width: inherit; }
+  .leaderboard .leaderboard__leftcol .leaderboard__leftcol-main {
+    flex-basis: 100%;
+    flex-grow: 1; } }
+
+.leaderboard__footer {
+  display: flex;
+  padding: 2rem 0; }
+
+.leaderboard__footer > * {
+  flex: 1; }
+
+.leaderboard__footer .leaderboard__footer__left {
+  text-align: left; }
+
+.leaderboard__footer .leaderboard__footer__centre {
+  flex: 2;
+  text-align: center;
+  align-items: center; }
+
+.leaderboard__footer .leaderboard__footer__right {
+  text-align: right; }
+
+.leaderboard__footer h4 {
+  margin: 0;
+  margin-bottom: 0.25rem;
+  color: #009EEB; }
+
+.leaderboard__footer .sequence__progress {
+  max-width: 20rem;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+  overflow: hidden; }
+
+.leaderboard__footer .sequence__progress-bar {
+  height: 0.5rem; }
 
 .card__leaderboard {
   width: 100%;

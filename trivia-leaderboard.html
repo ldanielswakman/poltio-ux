@@ -45,10 +45,6 @@
 		<script>
 			$(document).ready(function() {
 
-				setTimeout(function() {
-					$('.card').addClass('isInProgress');
-					startCountdown( $('.card--wide .countdown') );
-				}, 2000);
 				// $('#thesinput').keyup(function(e) {
 				$('[name="q"]').on('change keyup',function(e) {
 					if(e.keyCode !== 13) {
@@ -81,198 +77,212 @@
 
 		<section id="main">
 
-			<div id="q0" class="card card--wide"><!-- start card -->
+			<div class="leaderboard">
 
-				<div class="card__leftcol">
+				<div class="leaderboard__header">
+					<h1 style="text-align: center;">It's Trivia Time!</h1>
+				</div>
 
-					<div class="card__header--horizontal">
-							<h1 style="text-align: center;">It's Trivia Time!</h1>
-							<p class="text--medium">Join the quiz at <b>trivia.poltio.com</b> and use the code <i>wework</i></p>
-					</div>
+				<div class="leaderboard__main">
 
-					<div class="card__leftcol-main">
+					<div class="leaderboard__leftcol">
 
-						<div class="sequence__progress hasTooltip">
-							<div class="sequence__progress-bar sequence__progress-bar"></div>
-							<div class="tooltip tooltip--onLeft" style="margin-left: 0.5rem">
-								Question 1/8
+						<div id="q0" class="card"><!-- start card -->
+
+							<div class="card__header--horizontal">
+									<p class="text--medium">Join the quiz at <b>trivia.poltio.com</b> and use the code <i>wework</i></p>
 							</div>
-						</div>
 
-						<br>
+							<div class="card__leftcol-main">
 
-						<div class="badge badge--status">
-							<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-							<span><b class="value">424.567</b> people participating</span>
-						</div>
+								<br>
 
-						<br>
+								<br>
 
-						<div class="countdown countdown--cover">
-							<div class="countdown__track"></div>
-							<div class="countdown__pie">
-								<div class="countdown__spinner countdown__slice"></div>
-								<div class="countdown_filler countdown__slice"></div>
+								<div style="line-height: 2rem; opacity: 0.25;" id="round_status">
+									Waiting for trivia round to start... 
+								</div>
+
+								<br>
+								<br>
+								<br>
+
 							</div>
-							<div class="countdown__content">
-								<span class="value"></span>
-							</div>
-						</div>
 
-						<div style="line-height: 2rem; opacity: 0.25;" id="round_status">
-							Waiting for trivia round to start... 
 						</div>
-
-						<br>
-						<br>
-						<br>
 
 					</div>
 
-					<div class="card__footer">
+					<div class="leaderboard__rightcol">
+
+						<div id="q0" class="card card--score"><!-- start card -->
+
+							<div class="card__leaderboard--header">
+								<!-- <h2>Top 10</h2> -->
+							</div>
+
+							<ol class="card__leaderboard">
+
+								<li class="line">
+									<div data-type="rank" class="col--square">1</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Cathy Johnston</b>
+									</div>
+									<div data-type="time">37 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>12</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">2</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">John Appleseed</b>
+									</div>
+									<div data-type="time">38 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>10</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">3</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Jill Kennedy</b>
+									</div>
+									<div data-type="time">41 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>9</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">4</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Claudia Franklin</b>
+									</div>
+									<div data-type="time">42 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">5</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Adrian Hoffman</b>
+									</div>
+									<div data-type="time">43 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">6</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Judy Jenkins</b>
+									</div>
+									<div data-type="time">47 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">7</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Emily Carter</b>
+									</div>
+									<div data-type="time">48 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">8</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Loretta Ellis</b>
+									</div>
+									<div data-type="time">49 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>6</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">9</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Emily Carter</b>
+									</div>
+									<div data-type="time">48 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+								</li>
+
+								<li class="line">
+									<div data-type="rank" class="col--square">10</div>
+									<div data-type="name">
+										<div class="badge badge--small badge--circle">
+											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+										</div>
+										<b style="vertical-align: top;">Steve Cougan</b>
+									</div>
+									<div data-type="time">49 sec</div>
+									<div data-type="score" class="col--square col--alignright"><b>6</b>/12</div>
+								</li>
+
+							</ol>
+
+						</div>
+
+					</div>
+
+				</div>
+
+				<div class="leaderboard__footer">
+					<div class="leaderboard__footer__left">
+
 						<div>
 							<a href="http://www.amc.com/shows/talking-dead" target="_blank" style="display: block; padding: 0.5rem 0.75rem 0rem;" class="hasTooltip">
 								<img src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" />
 								<span class="tooltip tooltip--onLeft">Powered by Poltio</span>
 							</a>
 						</div>
+						
 					</div>
+					<div class="leaderboard__footer__centre">
 
+						<h4>Question 3/8</h4>
+						
+						<div class="sequence__progress">
+							<div class="sequence__progress-bar sequence__progress-bar"></div>
+						</div>
+
+					</div>
+					<div class="leaderboard__footer__right">
+
+						<div class="badge badge--status">
+							<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
+							<span><b class="value">424.567</b> people participating</span>
+						</div>
+
+					</div>
 				</div>
 
-				<div class="card__rightcol">
 
-					<div class="card__leaderboard--header">
-						<!-- <h2>Top 10</h2> -->
-					</div>
-
-					<ol class="card__leaderboard">
-
-						<li class="line">
-							<div data-type="rank" class="col--square">1</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Cathy Johnston</b>
-							</div>
-							<div data-type="time">37 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>12</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">2</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">John Appleseed</b>
-							</div>
-							<div data-type="time">38 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>10</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">3</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Jill Kennedy</b>
-							</div>
-							<div data-type="time">41 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>9</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">4</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Claudia Franklin</b>
-							</div>
-							<div data-type="time">42 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">5</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Adrian Hoffman</b>
-							</div>
-							<div data-type="time">43 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">6</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Judy Jenkins</b>
-							</div>
-							<div data-type="time">47 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">7</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Emily Carter</b>
-							</div>
-							<div data-type="time">48 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">8</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Loretta Ellis</b>
-							</div>
-							<div data-type="time">49 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>6</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">9</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Emily Carter</b>
-							</div>
-							<div data-type="time">48 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
-						</li>
-
-						<li class="line">
-							<div data-type="rank" class="col--square">10</div>
-							<div data-type="name">
-								<div class="badge badge--small badge--circle">
-									<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
-								</div>
-								<b style="vertical-align: top;">Steve Cougan</b>
-							</div>
-							<div data-type="time">49 sec</div>
-							<div data-type="score" class="col--square col--alignright"><b>6</b>/12</div>
-						</li>
-
-					</ol>
-
-				</div>
-
-			</div><!-- end card -->
+			</div>
 
 		</section>
 

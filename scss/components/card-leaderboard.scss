@@ -1,61 +1,136 @@
+// Wide card (for leaderboard)
+.leaderboard {
+  width: 100%;
+  max-width: 70rem;
+  padding: 0 2rem;
+  border-radius: 0.5rem;
+  background-color: #F8F9FA;
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15);
+}
+.leaderboard .leaderboard__header h1 {
+  padding: 1rem 0;
+  font-weight: normal;
+  color: #009EEB;
+}
+@media screen and (min-width: 42rem) {
+  .leaderboard__main {
+    display: flex;
+    flex-direction: row;
+  }
+  .leaderboard__main > * {
+    flex: 1;
+  }
+  .leaderboard .card {
+    margin-bottom: 0;
+  }
+  .leaderboard .leaderboard__leftcol,
+  .leaderboard .leaderboard__rightcol {
+
+  }
+  .leaderboard .leaderboard__leftcol {
+    display: flex;
+    max-width: 24rem;
+    margin-right: 2rem;
+    align-items: center;
+  }
+  .leaderboard .leaderboard__rightcol .card {
+    max-width: inherit;
+  }
+  .leaderboard .leaderboard__leftcol .leaderboard__leftcol-main {
+    flex-basis: 100%;
+    flex-grow: 1;
+  }
+}
+
+
+.leaderboard__footer {
+  display: flex;
+  padding: 2rem 0;
+}
+.leaderboard__footer > * {
+  flex: 1;
+}
+.leaderboard__footer .leaderboard__footer__left {
+  text-align: left;
+}
+.leaderboard__footer .leaderboard__footer__centre {
+  flex: 2;
+  text-align: center;
+  align-items: center;
+}
+.leaderboard__footer .leaderboard__footer__right {
+  text-align: right;
+}
+.leaderboard__footer h4 {
+  margin: 0;
+  margin-bottom: 0.25rem;
+  color: #009EEB;
+}
+.leaderboard__footer .sequence__progress {
+  max-width: 20rem;
+  margin: 0 auto;
+  border-radius: 0.25rem;
+  overflow: hidden;
+}
+.leaderboard__footer .sequence__progress-bar {
+  height: 0.5rem;
+}
+
+
 .card__leaderboard {
-	width: 100%;
-	text-align: left;
-	margin: 0;
-	padding: 1rem 0;
+    width: 100%;
+    text-align: left;
+    margin: 0;
+    padding: 1rem 0;
 }
 
 .card__leaderboard li {
-	display: flex;
-	height: 2.75rem;
-	padding: 0.5rem 0;
-	line-height: 1.75rem;
+    display: flex;
+    height: 2.75rem;
+    padding: 0.5rem 0;
+    line-height: 1.75rem;
 }
 .card__leaderboard li:nth-child(2n) {
-	background-color: rgba(240, 245, 247, 0.25);
+    background-color: rgba(240, 245, 247, 0.25);
 }
 .card__leaderboard li:hover {
-	background-color: rgba(240, 245, 247, 0.75);
+    background-color: rgba(240, 245, 247, 0.75);
 }
 .card__leaderboard li + li {
-	border-top: 1px solid #F0F5F7;
+    border-top: 1px solid #F0F5F7;
 }
 .card__leaderboard li > * {
-	flex: 1;
+    flex: 1;
 }
 .card__leaderboard li > div:first-child {
-	padding-left: 1.5rem;
-	padding-right: 0.75rem;
+    padding-left: 1.5rem;
+    padding-right: 0.75rem;
 }
 .card__leaderboard li > div:last-child {
-	padding-right: 1rem;
+    padding-right: 1rem;
 }
-
-// .card__leaderboard div.col--square {
-// 	flex: 0 1 2rem;
-// }
 .card__leaderboard .col--alignright {
-	text-align: right;
+    text-align: right;
 }
 .card__leaderboard [data-type="rank"] {
-	color: rgba(0, 158, 235, 1);
-	flex: 0 1 10%;
-	text-align: right;
+    color: rgba(0, 158, 235, 1);
+    flex: 0 1 10%;
+    text-align: right;
 }
 .card__leaderboard [data-type="name"] {
-	flex-basis: 40%;
+    flex-basis: 40%;
 }
 .card__leaderboard [data-type="time"] {
-	opacity: 0.3;
-	text-align: center;
-	flex-basis: 20%;
+    opacity: 0.3;
+    text-align: center;
+    flex-basis: 20%;
 }
 .card__leaderboard [data-type="score"] {
-	flex: 0 1 15%;
+    flex: 0 1 15%;
 }
 @media screen and (max-width: 480px) {
-	.card__leaderboard [data-type="time"] {
-		padding-right: 1rem;
-		flex: 0 0 5rem;
-	}
+    .card__leaderboard [data-type="time"] {
+        padding-right: 1rem;
+        flex: 0 0 5rem;
+    }
 }

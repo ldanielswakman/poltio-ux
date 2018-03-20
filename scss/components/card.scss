@@ -81,32 +81,3 @@
 .card.card--countdown.isAnswered {
   background-color: #f5f6f7;
 }
-
-
-// Wide card (for leaderboard)
-.card.card--wide {
-  max-width: 60rem;
-}
-.card.card--wide.isInProgress {
-  box-shadow: 0 0 3rem rgba(0, 158, 235, 1);
-}
-@media screen and (min-width: 42rem) {
-  .card.card--wide {
-    display: flex;
-    flex-direction: row;
-  }
-  .card.card--wide > * {
-    flex-grow: 1;
-  }
-  // .card.card--wide > * + * {
-  //   border-left: 2px solid #f0f5f7;
-  // }
-  .card--wide .card__leftcol {
-    max-width: 24rem;
-    box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.1);
-  }
-  .card--wide .card__leftcol .card__leftcol-main {
-    flex-basis: 100%;
-    flex-grow: 1;
-  }
-}
