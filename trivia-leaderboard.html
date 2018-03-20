@@ -46,6 +46,7 @@
 			$(document).ready(function() {
 
 				setTimeout(function() {
+					$('.card--question').removeClass('isActive');
 					$('.card--score').addClass('isActive');
 				}, 2000);
 
@@ -91,7 +92,7 @@
 
 					<div class="leaderboard__leftcol">
 
-						<div id="q0" class="card card--question"><!-- start card -->
+						<div id="q0" class="card card--question isActive"><!-- start card -->
 
 							<div class="card__header--horizontal">
 								
