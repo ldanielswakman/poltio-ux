@@ -1458,11 +1458,23 @@ a.link--icon.isActive img[src*="toggle"] {
 .leaderboard__footer .sequence__progress-bar {
   height: 0.5rem; }
 
+.leaderboard .card--question.isActive {
+  background: #009EEB;
+  color: #fff; }
+
+.leaderboard .card--score {
+  background: transparent;
+  box-shadow: none; }
+  .leaderboard .card--score.isActive {
+    background: #fff;
+    box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); }
+
 .card__leaderboard {
   width: 100%;
   text-align: left;
   margin: 0;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  font-size: 1.25rem; }
 
 .card__leaderboard li {
   display: flex;
@@ -1487,7 +1499,7 @@ a.link--icon.isActive img[src*="toggle"] {
   padding-right: 0.75rem; }
 
 .card__leaderboard li > div:last-child {
-  padding-right: 1rem; }
+  padding-right: 2rem; }
 
 .card__leaderboard .col--alignright {
   text-align: right; }
@@ -1506,9 +1518,5 @@ a.link--icon.isActive img[src*="toggle"] {
   flex-basis: 20%; }
 
 .card__leaderboard [data-type="score"] {
-  flex: 0 1 15%; }
-
-@media screen and (max-width: 480px) {
-  .card__leaderboard [data-type="time"] {
-    padding-right: 1rem;
-    flex: 0 0 5rem; } }
+  flex: 0 1 15%;
+  font-weight: bold; }

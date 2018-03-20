@@ -45,6 +45,10 @@
 		<script>
 			$(document).ready(function() {
 
+				setTimeout(function() {
+					$('.card--score').addClass('isActive');
+				}, 2000);
+
 				// $('#thesinput').keyup(function(e) {
 				$('[name="q"]').on('change keyup',function(e) {
 					if(e.keyCode !== 13) {
@@ -87,10 +91,10 @@
 
 					<div class="leaderboard__leftcol">
 
-						<div id="q0" class="card"><!-- start card -->
+						<div id="q0" class="card card--question"><!-- start card -->
 
 							<div class="card__header--horizontal">
-									<p class="text--medium">Join the quiz at <b>trivia.poltio.com</b> and use the code <i>wework</i></p>
+								
 							</div>
 
 							<div class="card__leftcol-main">
@@ -100,7 +104,7 @@
 								<br>
 
 								<div style="line-height: 2rem; opacity: 0.25;" id="round_status">
-									Waiting for trivia round to start... 
+									Question card
 								</div>
 
 								<br>
@@ -131,8 +135,7 @@
 										</div>
 										<b style="vertical-align: top;">Cathy Johnston</b>
 									</div>
-									<div data-type="time">37 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>12</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">12</div>
 								</li>
 
 								<li class="line">
@@ -143,8 +146,7 @@
 										</div>
 										<b style="vertical-align: top;">John Appleseed</b>
 									</div>
-									<div data-type="time">38 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>10</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">10</div>
 								</li>
 
 								<li class="line">
@@ -155,8 +157,7 @@
 										</div>
 										<b style="vertical-align: top;">Jill Kennedy</b>
 									</div>
-									<div data-type="time">41 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>9</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">9</div>
 								</li>
 
 								<li class="line">
@@ -167,8 +168,7 @@
 										</div>
 										<b style="vertical-align: top;">Claudia Franklin</b>
 									</div>
-									<div data-type="time">42 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
 								<li class="line">
@@ -179,8 +179,7 @@
 										</div>
 										<b style="vertical-align: top;">Adrian Hoffman</b>
 									</div>
-									<div data-type="time">43 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
 								<li class="line">
@@ -191,8 +190,7 @@
 										</div>
 										<b style="vertical-align: top;">Judy Jenkins</b>
 									</div>
-									<div data-type="time">47 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
 								<li class="line">
@@ -203,8 +201,7 @@
 										</div>
 										<b style="vertical-align: top;">Emily Carter</b>
 									</div>
-									<div data-type="time">48 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
 								<li class="line">
@@ -215,8 +212,7 @@
 										</div>
 										<b style="vertical-align: top;">Loretta Ellis</b>
 									</div>
-									<div data-type="time">49 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>6</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">6</div>
 								</li>
 
 								<li class="line">
@@ -227,8 +223,7 @@
 										</div>
 										<b style="vertical-align: top;">Emily Carter</b>
 									</div>
-									<div data-type="time">48 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>7</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
 								<li class="line">
@@ -239,8 +234,7 @@
 										</div>
 										<b style="vertical-align: top;">Steve Cougan</b>
 									</div>
-									<div data-type="time">49 sec</div>
-									<div data-type="score" class="col--square col--alignright"><b>6</b>/12</div>
+									<div data-type="score" class="col--square col--alignright">6</div>
 								</li>
 
 							</ol>
