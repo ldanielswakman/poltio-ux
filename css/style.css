@@ -176,11 +176,27 @@ section {
   100% {
     -webkit-transform: scale(1); } }
 
+@keyframes activeBumpLarge {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(1.2); }
+  100% {
+    -webkit-transform: scale(1); } }
+
 @keyframes inActiveBump {
   0% {
     -webkit-transform: scale(1); }
   50% {
     -webkit-transform: scale(0.85); }
+  100% {
+    -webkit-transform: scale(1); } }
+
+@keyframes inActiveBumpLarge {
+  0% {
+    -webkit-transform: scale(1); }
+  50% {
+    -webkit-transform: scale(0.8); }
   100% {
     -webkit-transform: scale(1); } }
 
@@ -357,7 +373,6 @@ section {
 .button.isSelected.isWrong {
   padding-left: 2.5rem; }
 
-.button:after,
 .button:after {
   content: "";
   position: absolute;
@@ -1421,10 +1436,7 @@ a.link--icon.isActive img[src*="toggle"] {
     margin-right: 2rem;
     align-items: center; }
   .leaderboard .leaderboard__rightcol .card {
-    max-width: inherit; }
-  .leaderboard .leaderboard__leftcol .leaderboard__leftcol-main {
-    flex-basis: 100%;
-    flex-grow: 1; } }
+    max-width: inherit; } }
 
 .leaderboard__footer {
   display: flex;
@@ -1458,16 +1470,65 @@ a.link--icon.isActive img[src*="toggle"] {
 .leaderboard__footer .sequence__progress-bar {
   height: 0.5rem; }
 
-.leaderboard .card--question.isActive {
-  background: #009EEB;
-  color: #fff; }
+.leaderboard .card {
+  border-radius: 1rem; }
+
+.leaderboard .card--question {
+  padding: 0.5rem;
+  transition: all 0.5s ease; }
+  .leaderboard .card--question:not(.isActive) {
+    background: transparent;
+    box-shadow: none; }
+    .leaderboard .card--question:not(.isActive) .card__q-title__content:before {
+      background: linear-gradient(to bottom, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 0.8) 30%, #f8f9fa 100%); }
+  .leaderboard .card--question.isActive {
+    background: #009EEB;
+    color: #fff;
+    animation: activeBumpLarge 0.6s ease-in-out; }
+    .leaderboard .card--question.isActive .card__q-title__content:before {
+      background: linear-gradient(to bottom, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 0.8) 30%, #009eeb 100%); }
+  .leaderboard .card--question .card__question {
+    border-top-left-radius: 0.5rem;
+    border-top-right-radius: 0.5rem;
+    overflow: hidden; }
+  .leaderboard .card--question .card__q-title h3 {
+    margin-bottom: -1rem; }
+  .leaderboard .card--question .card__q-title__content {
+    padding-left: 1rem;
+    padding-right: 1rem; }
+  .leaderboard .card--question .card__answer {
+    padding-left: 0;
+    padding-right: 0; }
+  .leaderboard .card--question .card__answer .button {
+    pointer-events: none;
+    box-shadow: none;
+    border: none; }
+  .leaderboard .card--question:not(.isAnswered) .card__answer .button,
+  .leaderboard .card--question.isAnswered .card__answer .button--answer:not(.isCorrect) {
+    background: transparent; }
+  .leaderboard .card--question:not(.isAnswered) .card__answer .button {
+    padding-left: 0; }
+  .leaderboard .card--question.isAnswered .card__question .card__q-image {
+    max-height: 18rem; }
+  .leaderboard .card--question .card__answer .button:after {
+    transform: scale(1);
+    opacity: 1; }
+  .leaderboard .card--question .card__answer .button__text {
+    font-size: 1.125rem; }
+  .leaderboard .card--question .card.isAnswered .button--answer {
+    color: #fff; }
+  .leaderboard .card--question .button .button__stat b {
+    bottom: 0.5rem;
+    font-size: 1.25rem;
+    font-weight: normal; }
 
 .leaderboard .card--score {
   background: transparent;
   box-shadow: none; }
   .leaderboard .card--score.isActive {
     background: #fff;
-    box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); }
+    box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15);
+    animation: activeBumpLarge 0.6s ease-in-out; }
 
 .card__leaderboard {
   width: 100%;

@@ -202,8 +202,18 @@ section {
    50% { -webkit-transform: scale(1.05); }
   100% { -webkit-transform: scale(1); }
 }
+@keyframes activeBumpLarge {
+    0% { -webkit-transform: scale(1); }
+   50% { -webkit-transform: scale(1.2); }
+  100% { -webkit-transform: scale(1); }
+}
 @keyframes inActiveBump {
     0% { -webkit-transform: scale(1); }
    50% { -webkit-transform: scale(0.85); }
+  100% { -webkit-transform: scale(1); }
+}
+@keyframes inActiveBumpLarge {
+    0% { -webkit-transform: scale(1); }
+   50% { -webkit-transform: scale(0.8); }
   100% { -webkit-transform: scale(1); }
 }

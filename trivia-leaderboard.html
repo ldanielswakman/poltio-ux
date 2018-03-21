@@ -46,9 +46,20 @@
 			$(document).ready(function() {
 
 				setTimeout(function() {
+					$('.card--question').addClass('isActive');
+				}, 1000);
+
+				setTimeout(function() {
+					$('.card--question').addClass('isAnswered');
+					rand = Math.floor(Math.random() * 4) + 1;
+					console.log(rand);
+					$('.card--question').find('.button--answer:nth-child(' + rand + ')').addClass('isSelected isCorrect');
+				}, 4000);
+
+				setTimeout(function() {
 					$('.card--question').removeClass('isActive');
 					$('.card--score').addClass('isActive');
-				}, 2000);
+				}, 6000);
 
 				// $('#thesinput').keyup(function(e) {
 				$('[name="q"]').on('change keyup',function(e) {
@@ -92,25 +103,49 @@
 
 					<div class="leaderboard__leftcol">
 
-						<div id="q0" class="card card--question isActive"><!-- start card -->
+						<div id="q0" class="card card--question"><!-- start card -->
 
-							<div class="card__header--horizontal">
-								
+							<div class="card__question">
+								<figure class="card__q-image">
+									<img src="images/content/question-food-image-2.png" alt="" />
+								</figure>
+								<div class="card__q-title">
+									<div class="card__q-title__content">
+										<h3 class="h3--large">How often do you cook at home?</h3>
+									</div>
+								</div>
 							</div>
 
-							<div class="card__leftcol-main">
+							<div class="card__answer card__answer--mctext">
 
-								<br>
-
-								<br>
-
-								<div style="line-height: 2rem; opacity: 0.25;" id="round_status">
-									Question card
-								</div>
-
-								<br>
-								<br>
-								<br>
+								<button class="button button--answer">
+									<span class="button__text">Almost every day</span>
+									<span class="button__stat"">
+										<span style="width: 28%"></span>
+										<b>24%</b>
+									</span>
+								</button>
+								<button class="button button--answer">
+									<span class="button__text">Only when I have guests</span>
+									<span class="button__stat"">
+										<span style="width: 27%"></span>
+										<b>31%</b>
+									</span>
+								</button>
+								<button class="button button--answer">
+									<span class="button__text">Never</span>
+									<span class="button__stat"">
+										<span style="width: 12%"></span>
+										<b>12%</b>
+									</span>
+								</button>
+								<button class="button button--answer">
+									<span class="button__text">Other - Tell us about it below!</span>
+									<span class="button__stat"">
+										<span style="width: 33%"></span>
+										<b>28%</b>
+									</span>
+								</button>
 
 							</div>
 
