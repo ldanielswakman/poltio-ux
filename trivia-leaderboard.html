@@ -45,6 +45,7 @@
 		<script>
 			$(document).ready(function() {
 
+				//auto perform trivia interactions
 				setTimeout(function() {
 					$('.card--question').addClass('isActive');
 				}, 1000);
@@ -60,6 +61,14 @@
 					$('.card--question').removeClass('isActive');
 					$('.card--score').addClass('isActive');
 				}, 6000);
+
+				setTimeout(function() {
+					$('.card--score li:nth-child(4)').addClass('demote');
+					$('.card--score li:nth-child(5)').addClass('promote');
+				}, 8000);
+
+
+
 
 				// $('#thesinput').keyup(function(e) {
 				$('[name="q"]').on('change keyup',function(e) {
@@ -157,13 +166,9 @@
 
 						<div id="q0" class="card card--score"><!-- start card -->
 
-							<div class="card__leaderboard--header">
-								<!-- <h2>Top 10</h2> -->
-							</div>
-
 							<ol class="card__leaderboard">
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">1</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -174,7 +179,7 @@
 									<div data-type="score" class="col--square col--alignright">12</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">2</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -185,7 +190,7 @@
 									<div data-type="score" class="col--square col--alignright">10</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">3</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -196,7 +201,7 @@
 									<div data-type="score" class="col--square col--alignright">9</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">4</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -207,7 +212,7 @@
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">5</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -218,7 +223,7 @@
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">6</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -229,7 +234,7 @@
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">7</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -240,7 +245,7 @@
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">8</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -251,7 +256,7 @@
 									<div data-type="score" class="col--square col--alignright">6</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">9</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">
@@ -262,7 +267,7 @@
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
 
-								<li class="line">
+								<li>
 									<div data-type="rank" class="col--square">10</div>
 									<div data-type="name">
 										<div class="badge badge--small badge--circle">

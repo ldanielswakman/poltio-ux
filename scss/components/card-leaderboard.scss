@@ -157,6 +157,7 @@
 .leaderboard .card--score {
   background: transparent;
   box-shadow: none;
+  overflow: visible;
 
   &.isActive {
     background: #fff;
@@ -179,6 +180,7 @@
     height: 2.75rem;
     padding: 0.5rem 0;
     line-height: 1.75rem;
+    transition: all 1s ease-in-out;
 }
 .card__leaderboard li:nth-child(2n) {
     background-color: rgba(240, 245, 247, 0.25);
@@ -199,6 +201,16 @@
 .card__leaderboard li > div:last-child {
     padding-right: 2rem;
 }
+.card__leaderboard li.demote {
+  animation: demoteBump 1s ease-in-out forwards;
+}
+.card__leaderboard li.promote {
+  background-color: #fff;
+  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15);
+  animation: promoteBump 1s ease-in-out forwards;
+  transform-origin: bottom center;
+  color: #009EEB;
+}
 .card__leaderboard .col--alignright {
     text-align: right;
 }
@@ -218,4 +230,15 @@
 .card__leaderboard [data-type="score"] {
     flex: 0 1 15%;
     font-weight: bold;
+}
+
+@keyframes demoteBump {
+    0% { -webkit-transform: scale(1) translateY(0); opacity: 0.7; }
+   50% { -webkit-transform: scale(0.8); opacity: 0.7; }
+  100% { -webkit-transform: scale(1) translateY(100%); opacity: 1; }
+}
+@keyframes promoteBump {
+    0% { -webkit-transform: scale(1) translateY(0); z-index: 10; }
+   50% { -webkit-transform: scale(1.2) translateY(50%); }
+  100% { -webkit-transform: scale(1) translateY(-100%); z-index: inherit; }
 }
