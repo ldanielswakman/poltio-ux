@@ -1432,11 +1432,13 @@ a.link--icon.isActive img[src*="toggle"] {
     flex: 1; }
   .leaderboard .card {
     margin-bottom: 0; }
-  .leaderboard .leaderboard__leftcol {
+  .leaderboard .leaderboard__leftcol,
+  .leaderboard .leaderboard__rightcol {
     display: flex;
-    max-width: 24rem;
-    margin-right: 2rem;
     align-items: center; }
+  .leaderboard .leaderboard__leftcol {
+    max-width: 24rem;
+    margin-right: 2rem; }
   .leaderboard .leaderboard__rightcol .card {
     max-width: inherit; } }
 

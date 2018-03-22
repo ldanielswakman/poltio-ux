@@ -28,13 +28,12 @@
   }
   .leaderboard .leaderboard__leftcol,
   .leaderboard .leaderboard__rightcol {
-
+    display: flex;
+    align-items: center;
   }
   .leaderboard .leaderboard__leftcol {
-    display: flex;
     max-width: 24rem;
     margin-right: 2rem;
-    align-items: center;
   }
   .leaderboard .leaderboard__rightcol .card {
     max-width: inherit;
