@@ -52,8 +52,8 @@
 
 				setTimeout(function() {
 					$('.card--question').addClass('isAnswered');
-					rand = Math.floor(Math.random() * 4) + 1;
-					console.log(rand);
+					n_answers = $('.card--question').find('.button--answer').length;
+					rand = Math.floor(Math.random() * n_answers) + 1;
 					$('.card--question').find('.button--answer:nth-child(' + rand + ')').addClass('isSelected isCorrect');
 				}, 4000);
 
@@ -149,7 +149,21 @@
 									</span>
 								</button>
 								<button class="button button--answer">
-									<span class="button__text">Other - Tell us about it below!</span>
+									<span class="button__text">An answer that is way too long, but somehow made it through the content screening test</span>
+									<span class="button__stat"">
+										<span style="width: 33%"></span>
+										<b>28%</b>
+									</span>
+								</button>
+								<button class="button button--answer">
+									<span class="button__text">Another answer, number 5...</span>
+									<span class="button__stat"">
+										<span style="width: 33%"></span>
+										<b>28%</b>
+									</span>
+								</button>
+								<button class="button button--answer">
+									<span class="button__text">Bring it on</span>
 									<span class="button__stat"">
 										<span style="width: 33%"></span>
 										<b>28%</b>

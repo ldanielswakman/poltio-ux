@@ -1412,7 +1412,7 @@ a.link--icon.isActive img[src*="toggle"] {
 .leaderboard {
   width: 100%;
   max-width: 70rem;
-  padding: 0 2rem;
+  padding: 0 0.5rem;
   border-radius: 0.5rem;
   background-color: #F8F9FA;
   box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); }
@@ -1423,6 +1423,8 @@ a.link--icon.isActive img[src*="toggle"] {
   color: #009EEB; }
 
 @media screen and (min-width: 42rem) {
+  .leaderboard {
+    padding: 0 2rem; }
   .leaderboard__main {
     display: flex;
     flex-direction: row; }
@@ -1500,6 +1502,8 @@ a.link--icon.isActive img[src*="toggle"] {
     padding-left: 0;
     padding-right: 0; }
   .leaderboard .card--question .card__answer .button {
+    margin-top: 0.125rem;
+    margin-bottom: 0.125rem;
     pointer-events: none;
     box-shadow: none;
     border: none; }
