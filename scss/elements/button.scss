@@ -235,7 +235,7 @@
   transition: max-width 1.5s cubic-bezier(1, 0, 0, 1), margin-top 0.5s ease;
 }
 .isAnswered .button .button__stat span {
-  max-width: 60%;
+  max-width: 100%;
   transition-delay: 0.5s;
 }
 .button .button__stat b {
