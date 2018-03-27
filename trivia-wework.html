@@ -56,7 +56,7 @@
 
 					if (q.length > 3 ) {
 
-						$('#participant h3').html(q);
+						$('#participant .participant__name').html(q);
 						$('#form').hide();
 						$('#participant').show();
 
@@ -103,7 +103,7 @@
 								</form>
 								<div id="participant" style="display: none;" onclick="$('#participant, #connect').toggle()">
 									<p>Participating as:</p>
-									<h3></h3>
+									<h3><span class="participant__name"></span> <small class="participant__id" style="font-weight: normal; opacity: 0.25;">#189</small></h3>
 								</div>
 
 								<div id="connect" style="display: none; margin-bottom: 2rem;" onclick="$('#connect').toggle(); $('#countdown').addClass('countdown countdown--cover'); startCountdown( $('#countdown') ); $('#round_status').html('Get ready! The round is starting.')">
