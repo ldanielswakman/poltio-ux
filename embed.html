@@ -909,7 +909,7 @@
 
 					<h4>Excellent! Now fill in this form for some reason.</h4>
 
-					<form class="card__overlay--form">
+					<div class="card__overlay--form">
 
 						<input class="field" required placeholder="Name" name="name" type="text" value="" />
 						<input class="field" required placeholder="E-mail" name="email" type="email" value="" />
@@ -925,7 +925,7 @@
 
 						<button class="button button--primary">Submit</button>
 
-					<form>
+					</div>
 
 				</div>
 
@@ -1077,6 +1077,127 @@
 			<div class="card-context">
 				<small>
 					Card indicating answer button states
+				</small>
+			</div>
+
+
+
+
+
+			<div class="card isAnswered isEnded"><!-- start card -->
+
+				<div class="card__question">
+					<figure class="card__q-image">
+						<img src="images/content/question-norway.jpg" alt="" />
+					</figure>
+					<div class="card__q-title">
+						<div class="card__q-title__content">
+							<h3 class="h3--large">What is your favourite town in Norway?</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="card__answer card__answer--mctext">
+
+					<button class="button button--answer isSelected isCorrect isDisabled" style="margin-left: 0; background: none;">
+						<span class="button__text" style="font-size: 2rem;">Ålesund</span>
+						<span class="button__stat" style="opacity: 0.7;">
+							<span style="width: 34%"></span>
+							<b style="font-size: 1.5rem;">34%</b>
+						</span>
+					</button>
+
+					<div class="js-toggle-result-options" style="display: flex; justify-content: center; margin-top: 0.5rem;">
+						<button class="button button--outline" onclick="$('.js-toggle-result-options').toggleClass('u-hide')">Show all options</button>
+					</div>
+					
+				</div>
+
+				<div class="card__answer card__answer--mctext js-toggle-result-options u-hide" style="padding-top: 0;">
+					<button class="button button--answer isDisabled">
+						<span class="button__text">Trondheim</span>
+						<span class="button__stat"">
+							<span style="width: 29%"></span>
+							<b>29%</b>
+						</span>
+					</button>
+					<button class="button button--answer isDisabled">
+						<span class="button__text">Stavanger</span>
+						<span class="button__stat"">
+							<span style="width: 21%"></span>
+							<b>281</b>
+						</span>
+					</button>
+					<button class="button button--answer isDisabled">
+						<span class="button__text">Bergen</span>
+						<span class="button__stat"">
+							<span style="width: 12%"></span>
+							<b>12%</b>
+						</span>
+					</button>
+					<button class="button button--answer isSelected isDisabled">
+						<span class="button__text">Tromsø</span>
+						<span class="button__stat"">
+							<span style="width: 10%"></span>
+							<b>10%</b>
+						</span>
+					</button>
+					<button class="button button--answer isDisabled">
+						<span class="button__text">None of the above</span>
+						<span class="button__stat"">
+							<span style="width: 8%"></span>
+							<b>8%</b>
+						</span>
+					</button>
+
+					<div style="display: flex; justify-content: center; margin-top: 0.5rem;">
+						<button class="button button--outline" onclick="$('.js-toggle-result-options').toggleClass('u-hide')">Hide other options</button>
+					</div>
+
+				</div>
+
+				<div class="card__followup">
+					<div class="card__followup--content">
+						<div class="card__followup--actions">
+							<button class="button button--square button--facebook">
+								<img src="images/icons/facebook_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+								Share
+							</button>
+							<button class="button button--square button--twitter">
+								<img src="images/icons/twitter_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+								Share
+							</button>
+							<span class="hasTooltip">
+								<button class="button button--outline button--square">
+									<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+								</button>
+								<span class="tooltip">View Geo Split</span>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card__footer">
+					<div>
+						<a href="https://poltio.com" target="_blank" style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+					</div>
+					<div>
+						<span class="hasTooltip">
+							<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Şu ana kadar</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+							<span class="tooltip">Vote count</span>
+						</span>
+					</div>
+				</div>
+
+			</div><!-- end card -->
+
+			<div class="card-context">
+				<small>
+					Card for ended poll
 				</small>
 			</div>
 

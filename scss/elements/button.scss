@@ -42,6 +42,10 @@
 .button.isSelected {
   background: rgba(0, 158, 235, 1);
   color: white;
+
+  &.isDisabled .button__text {
+    color: white;
+  }
 }
 .button.button--answer {
   margin: 0.25rem;
