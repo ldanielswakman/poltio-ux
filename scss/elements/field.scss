@@ -67,3 +67,21 @@ input:checked + label {
 textarea.field {
   resize: none;
 }
+
+.field.field--underline {
+  border: none;
+  border-radius: 0;
+  border-bottom: 3px solid #B8C6CC;
+  background: none;
+  padding: 1rem 0;
+}
+.field.field--underline:focus {
+  border-bottom-color: rgba(0, 158, 235, 1);
+  box-shadow: none;
+  color: rgba(0, 158, 235, 1);
+}
+.field.field--underline.field--large {
+  font-weight: 500;
+  font-size: 2rem;
+}
+

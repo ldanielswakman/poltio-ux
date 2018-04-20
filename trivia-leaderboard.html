@@ -46,26 +46,30 @@
 			$(document).ready(function() {
 
 				//auto perform trivia interactions
-				setTimeout(function() {
-					$('.card--question').addClass('isActive');
-				}, 1000);
+				// setTimeout(function() {
+				//   $('.card--question').addClass('isActive');
+				// }, 1000);
 
-				setTimeout(function() {
-					$('.card--question').addClass('isAnswered');
-					n_answers = $('.card--question').find('.button--answer').length;
-					rand = Math.floor(Math.random() * n_answers) + 1;
-					$('.card--question').find('.button--answer:nth-child(' + rand + ')').addClass('isSelected isCorrect');
-				}, 4000);
+				// setTimeout(function() {
+				// 	$('.card--question').addClass('isAnswered');
+				// 	n_answers = $('.card--question').find('.button--answer').length;
+				// 	rand = Math.floor(Math.random() * n_answers) + 1;
+				// 	$('.card--question').find('.button--answer:nth-child(' + rand + ')').addClass('isSelected isCorrect');
+				// }, 4000);
 
-				setTimeout(function() {
-					$('.card--question').removeClass('isActive');
-					$('.card--score').addClass('isActive');
-				}, 6000);
+				repaintScoreboard($('.card__leaderboard'));
 
-				setTimeout(function() {
-					$('.card--score li:nth-child(4)').addClass('demote');
-					$('.card--score li:nth-child(5)').addClass('promote');
-				}, 8000);
+
+
+				// setTimeout(function() {
+				// 	$('.card--question').toggleClass('isActive isAnswered');
+				// 	$('.card--score').addClass('isActive');
+				// }, 3000);
+
+				// setTimeout(function() {
+				// 	$('.card--score li:nth-child(4)').addClass('demote');
+				// 	$('.card--score li:nth-child(5)').addClass('promote');
+				// }, 4000);
 
 
 
@@ -87,13 +91,89 @@
 						$('#participant').show();
 
 					} else if (q.length > 0 ) {
-						$('.response').html('... The name\'s gotta be more than 3 characters. That\'s the rules.');
+						$('.response').html('...The name\'s gotta be more than 3 characters. That\'s the rules.');
 					} else {
 						$('.response').html('...You gotta enter a name to participate in the Trivia though.');
 					}
 					
 				});
 			});
+
+			function repaintScoreboard($board) {
+
+				setTimeout(function() {
+					$board.addClass('card__leaderboard--fadeOut');
+					$('.card--score').addClass('isActive');
+				}, 1000);
+
+				// Duplicate DOM
+				setTimeout(function() {
+					$parentHeight = $board.parent().outerHeight();
+					$board.parent().css('height', $board.parent().outerHeight());
+
+					$board.clone().appendTo('#score').attr('id', 'newboard');
+					$board.remove();
+					$newboard = $('#newboard');
+					$newboard.removeClass('card__leaderboard--fadeOut').addClass('card__leaderboard--fadeIn');
+					$newboard.find('li').shuffle();
+				}, 2000);
+
+				// Set result classes
+				setTimeout(function() {
+
+					// Set random correct/incorrect classes
+					for(i=0; i < (Math.round(Math.random() * 10) + 3); i++) {
+						$rand_1_10 = Math.round(Math.random() * 10);
+						$newboard.find('li:nth-child(' + $rand_1_10 + ')').addClass('isCorrect');
+					}
+					$newboard.find('li:not(.isCorrect)').addClass('isWrong');
+
+					// Set random promote/demote classes
+					for(i=0; i < (Math.round(Math.random() * 10) + 4); i++) {
+						$rand_1_10 = Math.round(Math.random() * 10);
+						$newboard.find('li:nth-child(' + $rand_1_10 + '):not(.isWrong)').addClass('promote');
+						$newboard.find('li:nth-child(' + ($rand_1_10+1) + '):not(.isCorrect)').addClass('demote');
+					}
+
+				}, 2000);
+
+				// Score additions
+				setTimeout(function() {
+					$newboard.find('li.isCorrect').each(function() {
+
+						$score_el = $(this).find('[data-type="score"]');
+						$oldscore = parseInt($score_el.html());
+						$score_el.html($oldscore + 1);
+					});
+				}, 4000);
+
+				// Clean up classes & DOM
+				setTimeout(function() {
+					$newboard = $('#newboard');
+					$newboard.removeClass('card__leaderboard--fadeOut card__leaderboard--fadeIn');
+					$newboard.removeAttr('id');
+				}, 4000);
+
+			}
+
+			(function($){ 
+		    $.fn.shuffle = function() {
+		        var allElems = this.get(),
+		            getRandom = function(max) {
+		                return Math.floor(Math.random() * max);
+		            },
+		            shuffled = $.map(allElems, function(){
+		                var random = getRandom(allElems.length),
+		                    randEl = $(allElems[random]).clone(true)[0];
+		                allElems.splice(random, 1);
+		                return randEl;
+		           });
+		        this.each(function(i){
+		            $(this).replaceWith($(shuffled[i]));
+		        });
+		        return $(shuffled);
+		    };
+			})(jQuery);
 		</script>
 
 	</head>
@@ -127,7 +207,7 @@
 
 							<div class="card__answer card__answer--mctext">
 
-								<button class="button button--answer">
+								<button class="button button--answer isCorrect isSelected">
 									<span class="button__text">Almost every day</span>
 									<span class="button__stat">
 										<span style="width: 28%"></span>
@@ -178,17 +258,17 @@
 
 					<div class="leaderboard__rightcol">
 
-						<div id="q0" class="card card--score"><!-- start card -->
+						<div id="score" class="card card--score"><!-- start card -->
 
 							<ol class="card__leaderboard">
 
 								<li>
 									<div data-type="rank" class="col--square">1</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Cathy Johnston</b>
+										<span>Cathy Johnston</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">12</div>
 								</li>
@@ -196,10 +276,10 @@
 								<li>
 									<div data-type="rank" class="col--square">2</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">John Appleseed</b>
+										<span>John Appleseed</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">10</div>
 								</li>
@@ -207,10 +287,10 @@
 								<li>
 									<div data-type="rank" class="col--square">3</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Jill Kennedy</b>
+										<span>Jill Kennedy</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">9</div>
 								</li>
@@ -218,10 +298,10 @@
 								<li>
 									<div data-type="rank" class="col--square">4</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Claudia Franklin</b>
+										<span>Claudia Franklin</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
@@ -229,10 +309,10 @@
 								<li>
 									<div data-type="rank" class="col--square">5</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Adrian Hoffman</b>
+										<span>Adrian Hoffman</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
@@ -240,10 +320,10 @@
 								<li>
 									<div data-type="rank" class="col--square">6</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Judy Jenkins</b>
+										<span>Judy Jenkins</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
@@ -251,10 +331,10 @@
 								<li>
 									<div data-type="rank" class="col--square">7</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Emily Carter</b>
+										<span>Emily Carter</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
@@ -262,10 +342,10 @@
 								<li>
 									<div data-type="rank" class="col--square">8</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Loretta Ellis</b>
+										<span>Loretta Ellis</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">6</div>
 								</li>
@@ -273,10 +353,10 @@
 								<li>
 									<div data-type="rank" class="col--square">9</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Emily Carter</b>
+										<span>Emily Carter</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">7</div>
 								</li>
@@ -284,10 +364,10 @@
 								<li>
 									<div data-type="rank" class="col--square">10</div>
 									<div data-type="name">
-										<div class="badge badge--small badge--circle">
+										<div class="badge badge--small badge--circle" style="line-height: 1.8rem;">
 											<img src="images/icons/people.svg" alt="" style="width: 1rem;" />
 										</div>
-										<b style="vertical-align: top;">Steve Cougan</b>
+										<span>Steve Cougan</span>
 									</div>
 									<div data-type="score" class="col--square col--alignright">6</div>
 								</li>

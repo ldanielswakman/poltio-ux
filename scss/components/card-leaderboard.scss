@@ -32,7 +32,7 @@
     align-items: center;
   }
   .leaderboard .leaderboard__leftcol {
-    max-width: 24rem;
+    max-width: 28rem;
     margin-right: 2rem;
   }
   .leaderboard .leaderboard__rightcol .card {
@@ -159,6 +159,7 @@
 }
 
 .leaderboard .card--score {
+  position: relative;
   background: transparent;
   box-shadow: none;
   overflow: visible;
@@ -177,6 +178,32 @@
     margin: 0;
     padding: 1rem 0;
     font-size: 1.25rem;
+    transition: all 0.5s ease-in-out;
+
+    &.card__leaderboard--fadeOut {
+      opacity: 0;
+    }
+    &.card__leaderboard--fadeIn {
+      position: absolute;
+      top: 0;
+      opacity: 1;
+
+      li {
+        opacity: 0;
+        animation: fadeIn 0.5s ease-in-out forwards;
+
+        &:nth-child(1) { animation-delay: 0; }
+        &:nth-child(2) { animation-delay: 0.1s; }
+        &:nth-child(3) { animation-delay: 0.2s; }
+        &:nth-child(4) { animation-delay: 0.3s; }
+        &:nth-child(5) { animation-delay: 0.4s; }
+        &:nth-child(6) { animation-delay: 0.5s; }
+        &:nth-child(7) { animation-delay: 0.6s; }
+        &:nth-child(8) { animation-delay: 0.7s; }
+        &:nth-child(9) { animation-delay: 0.8s; }
+        &:nth-child(10) { animation-delay: 0.9s; }
+      }
+    }
 }
 
 .card__leaderboard li {
@@ -203,46 +230,128 @@
     padding-right: 0.75rem;
 }
 .card__leaderboard li > div:last-child {
-    padding-right: 2rem;
+    padding-right: 2.5rem;
+}
+.card__leaderboard li.isCorrect {
+  [data-type="score"] {
+    color: #37d7af;
+
+    &:before {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+}
+.card__leaderboard li.isWrong {
+  [data-type="score"] {
+    color: #fd674c;
+
+    &:before {
+      $wrong_svg: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill:#fd674c;}</style><path class="st0" d="M17.3,16l7.3-7.3c0.4-0.4,0.4-1,0-1.4s-1-0.4-1.4,0l-7.3,7.3L8.6,7.3c-0.4-0.4-1-0.4-1.4,0s-0.4,1,0,1.4l7.3,7.3l-7.3,7.3c-0.4,0.4-0.4,1,0,1.4C7.4,24.9,7.6,25,7.9,25s0.5-0.1,0.7-0.3l7.3-7.3l7.3,7.3c0.2,0.2,0.5,0.3,0.7,0.3s0.5-0.1,0.7-0.3c0.4-0.4,0.4-1,0-1.4L17.3,16z"/></svg>';
+      background-image: url("data:image/svg+xml;utf8,#{$wrong_svg}");
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
 }
 .card__leaderboard li.demote {
-  animation: demoteBump 1s ease-in-out forwards;
+  // animation: demoteBump 1s ease-in-out forwards;
+
+  [data-type="rank"] {
+    &:before {
+      opacity: 0.3;
+      transform: translateY(0) rotate(180deg);
+    }
+  }
 }
 .card__leaderboard li.promote {
-  background-color: #fff;
-  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15);
-  animation: promoteBump 1s ease-in-out forwards;
-  transform-origin: bottom center;
-  color: #009EEB;
+  // animation: promoteBump 1s ease-in-out forwards;
+
+  [data-type="rank"] {
+    color: rgba(0, 158, 235, 1);
+
+    &:before {
+      opacity: 0.3;
+      transform: translateY(0);
+    }
+  }
 }
 .card__leaderboard .col--alignright {
     text-align: right;
 }
 .card__leaderboard [data-type="rank"] {
-    color: rgba(0, 158, 235, 1);
-    flex: 0 1 10%;
-    text-align: right;
+  position: relative;
+  flex: 0 1 12%;
+  text-align: right;
+
+  &:before {
+    $arrow_up_svg: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 12 13" style="enable-background:new 0 0 12 13;" xml:space="preserve"><style type="text/css">.st0{fill:#1E3D54;}</style><path id="Combined-Shape" class="st0" d="M7.1,4.1v7.7c0,0.6-0.4,1.1-1.1,1.1s-1.1-0.4-1.1-1.1V4.1L1.8,7.2c-0.4,0.4-1.1,0.4-1.5,0c-0.4-0.4-0.4-1.1,0-1.5L6,0l5.7,5.7c0.4,0.4,0.4,1.1,0,1.5c-0.4,0.4-1.1,0.4-1.5,0L7.1,4.1z"/></svg>';
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 0.75rem;
+    width: 0.75rem;
+    height: 1rem;
+    margin-top: -0.5rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml;utf8,#{$arrow_up_svg}");
+    opacity: 0;
+    transform: translateY(0.5rem);
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+  }
 }
 .card__leaderboard [data-type="name"] {
-    flex-basis: 40%;
+  flex-basis: 38%;
+  font-weight: 500;
+
+  span {
+    vertical-align: top;
+  }
 }
 .card__leaderboard [data-type="time"] {
-    opacity: 0.3;
-    text-align: center;
-    flex-basis: 20%;
+  opacity: 0.3;
+  text-align: center;
+  flex-basis: 20%;
 }
 .card__leaderboard [data-type="score"] {
-    flex: 0 1 15%;
-    font-weight: bold;
+  position: relative;
+  flex: 0 1 15%;
+  font-weight: bold;
+
+  &:before {
+    $correct_svg: '<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 32 32" style="enable-background:new 0 0 32 32;" xml:space="preserve"><style type="text/css">.st0{fill:#37d7af;}</style><path class="st0" d="M12.4,25.7L2.3,15.5c-0.4-0.4-0.4-1,0-1.4s1-0.4,1.4,0l8.7,8.7L28.3,7c0.4-0.4,1-0.4,1.4,0s0.4,1,0,1.4L12.4,25.7z"/></svg>';
+    content: "";
+    position: absolute;
+    top: 50%;
+    right: 0.5rem;
+    width: 1.5rem;
+    height: 1.5rem;
+    margin-top: -0.75rem;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+    background-image: url("data:image/svg+xml;utf8,#{$correct_svg}");
+    transform: scale(0);
+    transition: all 0.5s ease;
+    transition-delay: 0.5s;
+    opacity: 0;
+  }
+}
+
+@keyframes fadeIn {
+    0% { -webkit-transform: translateY(0.5rem) scale(1); opacity: 0; }
+   50% { -webkit-transform: translateY(0.25rem) scale(1.05); opacity: 0.5; }
+  100% { -webkit-transform: translateY(0) scale(1); opacity: 1; }
 }
 
 @keyframes demoteBump {
-    0% { -webkit-transform: scale(1) translateY(0); opacity: 0.7; }
-   50% { -webkit-transform: scale(0.8); opacity: 0.7; }
-  100% { -webkit-transform: scale(1) translateY(100%); opacity: 1; }
+  //   0% { -webkit-transform: translateY(-1rem); opacity: 0; }
+  // 100% { -webkit-transform: translateY(0); opacity: 1; }
 }
 @keyframes promoteBump {
-    0% { -webkit-transform: scale(1) translateY(0); z-index: 10; }
-   50% { -webkit-transform: scale(1.2) translateY(50%); }
-  100% { -webkit-transform: scale(1) translateY(-100%); z-index: inherit; }
+  //   0% { -webkit-transform: translateY(1rem); opacity: 0; }
+  // 100% { -webkit-transform: translateY(0); opacity: 1; }
 }

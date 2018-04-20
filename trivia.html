@@ -30,9 +30,43 @@
 
 				background-attachment: fixed;
 				background-size: 100px;
-				background-image: url('images/poltio-logo-texture.svg');
+				/*background-image: url('images/poltio-logo-texture.svg');*/
+			}
+			.trivia-start {
+				display: block;
+				padding: 1rem 1rem 0;
+			}
+			.trivia-start img {
+				height: 3rem;
+			}
+			.trivia-start h2 {
+				margin-top: 0;
+				letter-spacing: 0.1rem;
+				opacity: 0.25;
+			}
+			.trivia-start form {
+				display: flex;
+				justify-content: center;
+				flex-wrap: wrap;
+			}
+			.trivia-start .button[type="submit"] {
+				margin-left: 0.5rem;
+				margin-bottom: 0.5rem;
+				border-radius: 50%;
+				opacity: 0.5;
+				background: rgba(0, 0, 0, 0.1);
+				transform: translateX(-0.25rem);
+				transform-origin: left bottom;
+				transition: all 0.3s ease-in-out;
+				font-size: 1.5rem;
+			}
+			.trivia-start form.hasContent .button[type="submit"] {
+				transform: scale(1);
+				opacity: 1;
+				background: rgba(0, 158, 235, 1);
 			}
 			.response {
+				margin-top: 2rem;
 				font-weight: 500;
 				color: rgba(0, 158, 235, 1);
 			}
@@ -45,10 +79,14 @@
 					$('[name="q"]').focus();
 				}, 300);
 
-				// $('#thesinput').keyup(function(e) {
 				$('[name="q"]').on('change keyup',function(e) {
 					if(e.keyCode !== 13) {
 						$('.response').html('');
+					}
+					if($(this).val().length > 1) {
+						$(this).closest('form').addClass('hasContent');
+					} else {
+						$(this).closest('form').removeClass('hasContent');
 					}
 				});
 				$('#form').submit(function(e) {
@@ -75,41 +113,20 @@
 
 	<body>
 
-		<section id="opening">
+		<section class="trivia-start">
 
-			<div class="card"><!-- start card -->
+			<a href="http://www.poltio.com" class="logo" target="_blank">
+				<img src="images/poltio-logo.svg" alt="Poltio" title="Poltio" />
+			</a>
 
-				<div class="card__answer">
-					<div style="width: 100%; display: flex; justify-content: space-between;">
+			<h2>Trivia</h2>			
 
-						<a href="index.html" style="width: 3rem; padding: 0.5rem 1rem; align-self: center;"><img src="images/icons/cross.svg" alt="" style="width: 1.5rem; opacity: 0.25;" /></a>
+			<form id="form">
+				<input name="q" class="field field--large field--underline" type="text" placeholder="Enter Trivia Code..." style="margin-bottom: 0.5rem;">
+				<button type="submit" class="button button--primary button--large button--rounded">Go</button>
+			</form>
 
-						<div>
-							<a href="http://www.poltio.com" target="_blank" style="display: block; padding: 1rem 1rem 0;"><img src="images/poltio-logo.svg" alt="" style="height: 3rem;" /></a>
-						</div>
-
-						<div style="width: 3rem;"></div>
-
-					</div>
-				</div>
-				<div class="card__answer">
-					<div style="width: 100%;">
-
-						<h2 style="opacity: 0.25; letter-spacing: 0.1rem;">Trivia</h2>
-
-						<form id="form" style="display: flex; justify-content: center; flex-wrap: wrap;">
-							<input name="q" class="field field--large" type="text" placeholder="Enter Trivia Code..." style="margin-bottom: 0.5rem;">
-							<button type="submit" class="button button--primary button--large" style="margin-left: 0.5rem; margin-bottom: 0.5rem;">Enter</button>
-						</form>
-
-						<div class="response" style="margin-top: 0.5rem; height: 1.25rem;"></div>
-
-					</div>
-				</div>
-
-				<br><br>
-
-			</div><!-- end card -->
+			<div class="response" style="margin-top: 0.5rem; height: 1.25rem;"></div>
 
 		</section>
 
