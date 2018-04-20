@@ -45,32 +45,23 @@
 		<script>
 			$(document).ready(function() {
 
-				//auto perform trivia interactions
-				// setTimeout(function() {
-				//   $('.card--question').addClass('isActive');
-				// }, 1000);
+				// auto perform trivia interactions
+				setTimeout(function() {
+				  $('.card--question').addClass('isActive');
+				}, 1000);
 
-				// setTimeout(function() {
-				// 	$('.card--question').addClass('isAnswered');
-				// 	n_answers = $('.card--question').find('.button--answer').length;
-				// 	rand = Math.floor(Math.random() * n_answers) + 1;
-				// 	$('.card--question').find('.button--answer:nth-child(' + rand + ')').addClass('isSelected isCorrect');
-				// }, 4000);
+				setTimeout(function() {
+					$('.card--question').addClass('isAnswered');
+					n_answers = $('.card--question').find('.button--answer').length;
+					rand = Math.floor(Math.random() * n_answers) + 1;
+					console.log(rand);
+					$('.card--question').find('.button--answer:nth-child(' + rand + ')').addClass('isSelected isCorrect');
+				}, 2000);
 
-				repaintScoreboard($('.card__leaderboard'));
-
-
-
-				// setTimeout(function() {
-				// 	$('.card--question').toggleClass('isActive isAnswered');
-				// 	$('.card--score').addClass('isActive');
-				// }, 3000);
-
-				// setTimeout(function() {
-				// 	$('.card--score li:nth-child(4)').addClass('demote');
-				// 	$('.card--score li:nth-child(5)').addClass('promote');
-				// }, 4000);
-
+				setTimeout(function() {
+					$('.card--question').removeClass('isActive');
+					repaintScoreboard($('.card__leaderboard'));
+				}, 5000);
 
 
 
@@ -101,10 +92,8 @@
 
 			function repaintScoreboard($board) {
 
-				setTimeout(function() {
-					$board.addClass('card__leaderboard--fadeOut');
-					$('.card--score').addClass('isActive');
-				}, 1000);
+				$board.addClass('card__leaderboard--fadeOut');
+				$('.card--score').addClass('isActive');
 
 				// Duplicate DOM
 				setTimeout(function() {
@@ -116,7 +105,7 @@
 					$newboard = $('#newboard');
 					$newboard.removeClass('card__leaderboard--fadeOut').addClass('card__leaderboard--fadeIn');
 					$newboard.find('li').shuffle();
-				}, 2000);
+				}, 1000);
 
 				// Set result classes
 				setTimeout(function() {
@@ -135,7 +124,7 @@
 						$newboard.find('li:nth-child(' + ($rand_1_10+1) + '):not(.isCorrect)').addClass('demote');
 					}
 
-				}, 2000);
+				}, 1000);
 
 				// Score additions
 				setTimeout(function() {
@@ -145,7 +134,7 @@
 						$oldscore = parseInt($score_el.html());
 						$score_el.html($oldscore + 1);
 					});
-				}, 4000);
+				}, 3000);
 
 				// Clean up classes & DOM
 				setTimeout(function() {
@@ -207,7 +196,7 @@
 
 							<div class="card__answer card__answer--mctext">
 
-								<button class="button button--answer isCorrect isSelected">
+								<button class="button button--answer">
 									<span class="button__text">Almost every day</span>
 									<span class="button__stat">
 										<span style="width: 28%"></span>
