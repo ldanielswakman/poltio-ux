@@ -751,18 +751,33 @@ textarea.field {
 .field.field--underline {
   border: none;
   border-radius: 0;
-  border-bottom: 3px solid #B8C6CC;
+  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
   background: none;
-  padding: 1rem 0; }
+  padding: 1rem 0;
+  color: rgba(255, 255, 255, 0.7); }
 
 .field.field--underline:focus {
-  border-bottom-color: #009eeb;
+  border-bottom-color: #fff;
   box-shadow: none;
-  color: #009eeb; }
+  color: #fff; }
 
 .field.field--underline.field--large {
+  padding: 3rem 0;
   font-weight: 500;
-  font-size: 2rem; }
+  font-size: 2rem;
+  border-bottom-width: 3px; }
+
+.field.field--underline.field--large::-webkit-input-placeholder {
+  color: rgba(255, 255, 255, 0.3); }
+
+.field.field--underline.field--large:-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3); }
+
+.field.field--underline.field--large::-moz-placeholder {
+  color: rgba(255, 255, 255, 0.3); }
+
+.field.field--underline.field--large:-ms-input-placeholder {
+  color: rgba(255, 255, 255, 0.3); }
 
 /* Element - Link */
 a.link--icon {
