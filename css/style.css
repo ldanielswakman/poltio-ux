@@ -81,9 +81,9 @@ section {
   @media screen and (min-width: 30rem) {
     section {
       padding: 1rem; } }
-  @media screen and (min-width: 48rem) {
+  @media screen and (min-width: 60rem) {
     section {
-      padding: 10vh; } }
+      padding: 1rem 10vh; } }
 
 /* Owl Carousel: Spacing */
 .owl-carousel {
@@ -230,7 +230,8 @@ section {
   padding: 0.25rem 0.75rem;
   width: auto;
   border-radius: 1rem;
-  vertical-align: middle; }
+  vertical-align: middle;
+  white-space: nowrap; }
 
 .badge.badge--status img {
   float: left;
@@ -241,7 +242,10 @@ section {
 .badge.badge--status span {
   display: inline-block;
   opacity: 0.75;
-  line-height: 1.5rem; }
+  line-height: 1.5rem;
+  overflow: hidden;
+  max-width: 90%;
+  text-overflow: ellipsis; }
 
 .badge--circle {
   text-align: center;
@@ -1471,7 +1475,8 @@ a.link--icon.isActive img[src*="toggle"] {
   box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); }
 
 .leaderboard .leaderboard__header h1 {
-  padding: 1rem 0;
+  margin: 0;
+  padding: 1.5rem 0 1rem;
   font-weight: normal;
   color: #009EEB; }
 
@@ -1488,7 +1493,7 @@ a.link--icon.isActive img[src*="toggle"] {
   .leaderboard .leaderboard__leftcol,
   .leaderboard .leaderboard__rightcol {
     display: flex;
-    align-items: center; }
+    align-items: stretch; }
   .leaderboard .leaderboard__leftcol {
     max-width: 28rem;
     margin-right: 2rem; }
@@ -1497,7 +1502,7 @@ a.link--icon.isActive img[src*="toggle"] {
 
 .leaderboard__footer {
   display: flex;
-  padding: 2rem 0; }
+  padding: 1rem 0 1.5rem; }
 
 .leaderboard__footer > * {
   flex: 1; }
@@ -1538,12 +1543,44 @@ a.link--icon.isActive img[src*="toggle"] {
     box-shadow: none; }
     .leaderboard .card--question:not(.isActive) .card__q-title__content:before {
       background: linear-gradient(to bottom, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 0.8) 30%, #f8f9fa 100%); }
-  .leaderboard .card--question.isActive {
+  .leaderboard .card--question.isActive.isAnswering {
     background: #009EEB;
     color: #fff;
     animation: activeBumpLarge 0.6s ease-in-out; }
-    .leaderboard .card--question.isActive .card__q-title__content:before {
+    .leaderboard .card--question.isActive.isAnswering .card__q-title__content:before {
       background: linear-gradient(to bottom, rgba(248, 249, 250, 0) 0%, rgba(248, 249, 250, 0.8) 30%, #009eeb 100%); }
+  .leaderboard .card--question .card__q--calculatingresult {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.8);
+    color: #1E3D54;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    pointer-events: none; }
+    .leaderboard .card--question .card__q--calculatingresult .progress {
+      display: inline-block;
+      width: 15rem;
+      height: 0.5rem;
+      margin-bottom: 0.5rem;
+      background: rgba(30, 61, 84, 0.1);
+      border-radius: 0.25rem;
+      overflow: hidden; }
+      .leaderboard .card--question .card__q--calculatingresult .progress .progress-bar {
+        display: block;
+        height: 100%;
+        max-width: 0;
+        background: #009EEB;
+        transition: all 5s ease-in-out; }
+  .leaderboard .card--question.isActive.isCalculating .card__q--calculatingresult {
+    opacity: 1; }
+    .leaderboard .card--question.isActive.isCalculating .card__q--calculatingresult .progress-bar {
+      max-width: 15rem; }
   .leaderboard .card--question .card__question {
     border-top-left-radius: 0.5rem;
     border-top-right-radius: 0.5rem;
@@ -1677,6 +1714,27 @@ a.link--icon.isActive img[src*="toggle"] {
     opacity: 0.3;
     transform: translateY(0); }
 
+.card__leaderboard li.isVictorious {
+  font-size: 1.75rem;
+  height: auto;
+  padding: 1rem 0;
+  color: #009EEB; }
+  .card__leaderboard li.isVictorious [data-type="name"] {
+    position: relative; }
+    .card__leaderboard li.isVictorious [data-type="name"]:after {
+      content: "WINNER";
+      position: absolute;
+      top: 0;
+      right: 0.5rem;
+      display: inline-block;
+      border-radius: 0.25rem;
+      padding: 0.25rem 0.5rem;
+      background-color: #E9EFF2;
+      font-size: 1rem;
+      color: rgba(30, 61, 84, 0.5);
+      letter-spacing: 0.05rem;
+      line-height: 1rem; }
+
 .card__leaderboard .col--alignright {
   text-align: right; }
 
@@ -1743,5 +1801,3 @@ a.link--icon.isActive img[src*="toggle"] {
   100% {
     -webkit-transform: translateY(0) scale(1);
     opacity: 1; } }
-
-@keyframes demoteBump {}@keyframes promoteBump {}

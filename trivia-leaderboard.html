@@ -47,21 +47,25 @@
 
 				// auto perform trivia interactions
 				setTimeout(function() {
-				  $('.card--question').addClass('isActive');
+				  $('.card--question').addClass('isAnswering isActive');
 				}, 1000);
 
+				// auto perform trivia interactions
 				setTimeout(function() {
-					$('.card--question').addClass('isAnswered');
+				  $('.card--question').removeClass('isAnswering').addClass('isCalculating');
+				}, 3000);
+
+				setTimeout(function() {
+					$('.card--question').addClass('isAnswered').removeClass('isCalculating');
 					n_answers = $('.card--question').find('.button--answer').length;
 					rand = Math.floor(Math.random() * n_answers) + 1;
-					console.log(rand);
 					$('.card--question').find('.button--answer:nth-child(' + rand + ')').addClass('isSelected isCorrect');
-				}, 2000);
+				}, 8000);
 
 				setTimeout(function() {
 					$('.card--question').removeClass('isActive');
 					repaintScoreboard($('.card__leaderboard'));
-				}, 5000);
+				}, 10000);
 
 
 
@@ -98,13 +102,16 @@
 				// Duplicate DOM
 				setTimeout(function() {
 					$parentHeight = $board.parent().outerHeight();
-					$board.parent().css('height', $board.parent().outerHeight());
+					// $board.parent().css('height', $board.parent().outerHeight());
 
 					$board.clone().appendTo('#score').attr('id', 'newboard');
 					$board.remove();
 					$newboard = $('#newboard');
 					$newboard.removeClass('card__leaderboard--fadeOut').addClass('card__leaderboard--fadeIn');
 					$newboard.find('li').shuffle();
+					$newboard.find('li').each(function(i) {
+						$(this).find('[data-type="rank"]').html(i+1);
+					});
 				}, 1000);
 
 				// Set result classes
@@ -136,12 +143,17 @@
 					});
 				}, 3000);
 
+				// Add winning player class
+				setTimeout(function() {
+					$('#newboard').find('li').removeClass('isCorrect isWrong');
+					$('#newboard').find('li:first-child').addClass('isVictorious');
+				}, 4000);
+
 				// Clean up classes & DOM
 				setTimeout(function() {
 					$newboard = $('#newboard');
 					$newboard.removeClass('card__leaderboard--fadeOut card__leaderboard--fadeIn');
-					$newboard.removeAttr('id');
-				}, 4000);
+				}, 5000);
 
 			}
 
@@ -192,6 +204,10 @@
 										<h3 class="h3--large">How often do you cook at home?</h3>
 									</div>
 								</div>
+								<div class="card__q--calculatingresult">
+									<span class="progress"><span class="progress-bar"></span></span>
+									<strong class="text">Calculating result...</strong>
+								</div>
 							</div>
 
 							<div class="card__answer card__answer--mctext">
@@ -226,13 +242,6 @@
 								</button>
 								<button class="button button--answer">
 									<span class="button__text">Another answer, number 5...</span>
-									<span class="button__stat">
-										<span style="width: 33%"></span>
-										<b>28%</b>
-									</span>
-								</button>
-								<button class="button button--answer">
-									<span class="button__text">Bring it on</span>
 									<span class="button__stat">
 										<span style="width: 33%"></span>
 										<b>28%</b>

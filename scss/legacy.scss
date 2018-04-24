@@ -93,7 +93,7 @@ section {
 
   @include phoneAndUp() { padding: 0.75rem; }
   @include tabletAndUp() { padding: 1rem; }
-  @include tabletWideAndUp() { padding: 10vh; }
+  @include dekstopAndUp() { padding: 1rem 10vh; }
 }
 
 

@@ -31,6 +31,7 @@
   width: auto;
   border-radius: 1rem;
   vertical-align: middle;
+  white-space: nowrap;
 }
 .badge.badge--status img {
   float: left;
@@ -42,6 +43,9 @@
   display: inline-block;
   opacity: 0.75;
   line-height: 1.5rem;
+  overflow: hidden;
+  max-width: 90%;
+  text-overflow: ellipsis;
 }
 .badge--circle {
   text-align: center;
