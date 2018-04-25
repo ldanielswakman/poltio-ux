@@ -1,0 +1,146 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<title>Poltio Trivia</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="js/jquery-3.2.1.slim.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/scripts-trivia.js"></script>
+
+		<style type="text/css">
+			body {
+				min-height: 100vh;
+				min-width: 100vw;
+
+				display: flex;
+				justify-content: center;
+				align-items: stretch;
+
+				background-color: #ededed;
+				background-image: url('images/content/live-polling/background-texture.svg');
+				background-repeat: no-repeat;
+				background-size: calc(100vw + 6rem);
+				background-position: -3rem;
+				text-align: center;
+			}
+			.wsj-all-logo {
+				width: 16rem;
+				max-width: 70vw;
+				margin: 0 auto;
+				transform: translateY(-2rem);
+				transition: all 1s ease-out;
+				transition-delay: 0.3s;
+				opacity: 0;
+			}
+			.isLoaded .wsj-all-logo {
+				transform: translateY(0);
+				opacity: 1;
+			}
+			.wsj-sponsor-logos {
+				width: 30rem;
+				max-width: 80vw;
+				margin: 0 auto;
+				transform: translateY(2rem);
+				transition: all 1s ease-out;
+				transition-delay: 0.6s;
+				opacity: 0;
+			}
+			.isLoaded .wsj-sponsor-logos {
+				transform: translateY(0);
+				opacity: 1;
+			}
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: stretch;
+				flex-direction: column;
+			}
+		</style>
+
+		<script>
+			$(document).ready(function() {
+				$('body').addClass('isLoaded');
+			});
+		</script>
+
+	</head>
+
+	<body>
+
+		<section>
+			<img src="images/content/live-polling/wsj-all-logo.svg" class="wsj-all-logo" alt="" />
+			<br><br>
+			<div class="card">
+
+				<div class="card__question">
+					<figure class="card__q-image" style="min-height: 5rem;">
+					</figure>
+					<div class="card__q-title">
+						<div class="card__q-title__content">
+							<h3 class="h3--large" style="text-align: center;">Whose idea do you like best?</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="card__answer card__answer--mcimage mcimage--3col">
+
+					<button class="button button--answer button--image">
+						<figure>
+							<img src="images/content/live-polling/host1.jpg" alt="" />
+							<span class="button__stat" style="color: #1E3D54;">
+								<span style="width: 18%"></span>
+								<b style="font-size: 1.25rem; line-height: 1.5rem;">18%</b>
+							</span>
+						</figure>
+						<span class="button__text">Host 1</span>
+					</button>
+
+					<button class="button button--answer button--image">
+						<figure>
+							<img src="images/content/live-polling/host2.jpg" alt="" />
+							<span class="button__stat" style="color: #1E3D54;">
+								<span style="width: 18%"></span>
+								<b style="font-size: 1.25rem; line-height: 1.5rem;">18%</b>
+							</span>
+						</figure>
+						<span class="button__text">Host 2</span>
+					</button>
+
+					<button class="button button--answer button--image">
+						<figure>
+							<img src="images/content/live-polling/host3.jpg" alt="" />
+							<span class="button__stat" style="color: #1E3D54;">
+								<span style="width: 18%"></span>
+								<b style="font-size: 1.25rem; line-height: 1.5rem;">18%</b>
+							</span>
+						</figure>
+						<span class="button__text">Host 3</span>
+					</button>
+
+				</div>
+
+				<div class="card__footer" style="justify-content: center; padding: 0.5rem 0;">
+					<div>
+						<img src="images/poltio-logo.svg" alt="" style="height: 1.25rem;" />
+					</div>
+				</div>
+
+			</div>
+			<br><br>
+			<img src="images/content/live-polling/wsj-sponsor-logos.svg" class="wsj-sponsor-logos" alt="" />
+		</section>
+
+	</body>
+
+</html>

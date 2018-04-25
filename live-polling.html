@@ -1,0 +1,83 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<title>Poltio Trivia</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="js/jquery-3.2.1.slim.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/scripts.js"></script>
+		<script src="js/scripts-trivia.js"></script>
+
+		<style type="text/css">
+			body {
+				min-height: 100vh;
+				min-width: 100vw;
+
+				display: flex;
+				justify-content: center;
+				align-items: stretch;
+
+				background-color: #ededed;
+				background-image: url('images/content/live-polling/background-texture.svg');
+				background-repeat: no-repeat;
+				background-size: calc(100vw + 6rem);
+				background-position: -3rem;
+				text-align: center;
+			}
+			.wsj-all-logo {
+				width: 30rem;
+				max-width: 70vw;
+				margin: 0 auto;
+				transform: translateY(-2rem);
+				transition: all 1s ease-out;
+				transition-delay: 0.3s;
+				opacity: 0;
+			}
+			.isLoaded .wsj-all-logo {
+				transform: translateY(0);
+				opacity: 1;
+			}
+			.wsj-sponsor-logos {
+				width: 40rem;
+				max-width: 80vw;
+				margin: 0 auto;
+				transform: translateY(2rem);
+				transition: all 1s ease-out;
+				transition-delay: 0.6s;
+				opacity: 0;
+			}
+			.isLoaded .wsj-sponsor-logos {
+				transform: translateY(0);
+				opacity: 1;
+			}
+			a {
+				display: flex;
+				justify-content: center;
+				align-items: stretch;
+				flex-direction: column;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<a href="live-polling-next.html">
+			<img src="images/content/live-polling/wsj-all-logo.svg" class="wsj-all-logo" alt="" />
+			<br><br>
+			<img src="images/content/live-polling/wsj-sponsor-logos.svg" class="wsj-sponsor-logos" alt="" />
+		</a>
+
+	</body>
+
+</html>
