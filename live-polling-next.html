@@ -70,7 +70,21 @@
 
 		<script>
 			$(document).ready(function() {
+
 				$('body').addClass('isLoaded');
+
+				setTimeout(function() {
+
+					rand = Math.floor(Math.random() * 3) + 1;
+					console.log(rand);
+					$trigger = $(".button--answer:nth-child(" + rand + ")");
+					// X_centre = $trigger.offset().left + $trigger.outerWidth() / 2;
+					// Y_centre = $trigger.offset().top + $trigger.outerHeight() / 2;
+					// document.elementFromPoint(X_centre, Y_centre).click();
+					$trigger.trigger('click');
+
+				}, 5000);
+
 			});
 		</script>
 
@@ -93,7 +107,7 @@
 					</div>
 				</div>
 
-				<div class="card__answer card__answer--mcimage mcimage--3col">
+				<div class="card__answer card__answer--mcimage mcimage--3col" style="pointer-events: none;">
 
 					<button class="button button--answer button--image">
 						<figure>
@@ -130,11 +144,20 @@
 
 				</div>
 
-				<div class="card__footer" style="justify-content: center; padding: 0.5rem 0;">
+				<br>
+
+				<div class="sequence__progress hasTooltip">
+					<div class="sequence__progress-bar sequence__progress-bar"></div>
+					<div class="tooltip tooltip--onLeft" style="margin-left: 0.5rem; margin-top: 1rem;">
+						Question 2/8
+					</div>
+				</div>
+
+				<!-- <div class="card__footer" style="justify-content: center; padding: 0.5rem 0;">
 					<div>
 						<img src="images/poltio-logo.svg" alt="" style="height: 1.25rem;" />
 					</div>
-				</div>
+				</div> -->
 
 			</div>
 			<br><br>
