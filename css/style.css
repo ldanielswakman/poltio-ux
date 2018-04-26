@@ -296,8 +296,7 @@ section {
   line-height: 1rem;
   letter-spacing: 0.02rem;
   color: inherit;
-  transition: all 0.5s ease;
-  animation: inActiveBump 0.3s ease-in-out; }
+  transition: all 0.5s ease; }
   .button::-moz-focus-inner {
     border: 0; }
 
