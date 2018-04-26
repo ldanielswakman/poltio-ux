@@ -82,6 +82,7 @@
 					// Y_centre = $trigger.offset().top + $trigger.outerHeight() / 2;
 					// document.elementFromPoint(X_centre, Y_centre).click();
 					$trigger.trigger('click');
+					$('.card__footer').css('opacity', '0.5').find('small').html('Voting has ended')
 
 				}, 5000);
 
@@ -95,19 +96,22 @@
 		<section>
 			<img src="images/content/live-polling/wsj-all-logo.svg" class="wsj-all-logo" alt="" />
 			<br><br>
-			<div class="card">
+			<div class="card" style="pointer-events: none;">
 
 				<div class="card__question">
-					<figure class="card__q-image" style="min-height: 5rem;">
+					<figure class="card__q-image">
 					</figure>
 					<div class="card__q-title">
 						<div class="card__q-title__content">
-							<h3 class="h3--large" style="text-align: center;">Whose idea do you like best?</h3>
+							<h3 class="h3--large" style="text-align: center;">
+								Whose idea do you like best?<br>
+								<span style="color: #009EEB;">Cast your votes now!</span>
+							</h3>
 						</div>
 					</div>
 				</div>
 
-				<div class="card__answer card__answer--mcimage mcimage--3col" style="pointer-events: none;">
+				<div class="card__answer card__answer--mcimage mcimage--3col">
 
 					<button class="button button--answer button--image">
 						<figure>
@@ -153,11 +157,11 @@
 					</div>
 				</div>
 
-				<!-- <div class="card__footer" style="justify-content: center; padding: 0.5rem 0;">
+				<div class="card__footer" style="justify-content: center; padding: 0.5rem 0;">
 					<div>
-						<img src="images/poltio-logo.svg" alt="" style="height: 1.25rem;" />
+						<small>Votes are being cast...</small>
 					</div>
-				</div> -->
+				</div>
 
 			</div>
 			<br><br>
