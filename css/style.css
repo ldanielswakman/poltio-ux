@@ -279,6 +279,22 @@ section {
   .badge.badge--end-date {
     margin-right: 0; } }
 
+.badge.badge--poll-ended {
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: auto;
+  height: auto;
+  margin-left: 2rem;
+  padding: 0.25rem 0.5rem;
+  background: linear-gradient(-70deg, rgba(104, 181, 239, 0.7) 0%, rgba(29, 201, 181, 0.7) 100%);
+  border: none;
+  border-radius: 0.25rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  color: #fff; }
+
 /* Element - Button */
 .button {
   position: relative;
@@ -932,22 +948,67 @@ a.link--icon.isActive img[src*="toggle"] {
     display: none; } }
 
 /* Poll ended state */
-.card.isEnded {
-  background: linear-gradient(-90deg, #68B5EF 0%, #1DC9B5 100%); }
-  .card.isEnded .card__q-image {
-    opacity: 0.7; }
-  .card.isEnded .card__q-title__content:before {
-    background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 70%, rgba(255, 255, 255, 0.8) 100%); }
-  .card.isEnded .card__answer--mctext:first-child {
+.card.isEnded .card__q-image {
+  opacity: 0.7; }
+
+.card.isEnded .card__q-title__content:before {
+  background: linear-gradient(to bottom, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0.6) 70%, rgba(255, 255, 255, 0.8) 100%); }
+
+.card.isEnded .card__answer--mctext:first-child {
+  padding-bottom: 0; }
+
+.card.isEnded .card__followup {
+  background: none; }
+  .card.isEnded .card__followup .card__followup--content {
+    padding-top: 0.5rem;
+    justify-content: center; }
+
+.card.isEnded .card__footer {
+  background: rgba(255, 255, 255, 0.25);
+  border-top: 0; }
+
+.card.isEnded .card__answer--mctext .button--answer.isDisabled {
+  margin-left: -0.5rem;
+  background: none; }
+
+.card.isEnded .card__answer--mcimage .button--answer.isDisabled img {
+  opacity: 0.7; }
+
+.card.isEnded .button--answer.isWinner {
+  color: #009EEB; }
+  .card.isEnded .button--answer.isWinner .button__text {
+    color: inherit;
+    font-size: 2rem; }
+  .card.isEnded .button--answer.isWinner .button__stat {
+    opacity: 0.7;
+    margin-right: 3rem; }
+  .card.isEnded .button--answer.isWinner .button__winnerbadge {
+    font-size: 0.875rem;
+    font-weight: 500;
+    letter-spacing: 0.05rem;
+    color: rgba(20, 36, 51, 0.15); }
+
+.card.isEnded .card__answer--mcimage .button--answer.isWinner {
+  flex-basis: 100%; }
+  .card.isEnded .card__answer--mcimage .button--answer.isWinner figure {
+    width: 8rem;
+    height: 8rem;
     padding-bottom: 0; }
-  .card.isEnded .card__followup {
-    background: none; }
-    .card.isEnded .card__followup .card__followup--content {
-      padding-top: 0.5rem;
-      justify-content: center; }
-  .card.isEnded .card__footer {
-    background: rgba(255, 255, 255, 0.25);
-    border-top: 0; }
+    .card.isEnded .card__answer--mcimage .button--answer.isWinner figure img {
+      width: 8rem;
+      height: 8rem;
+      display: flex;
+      align-self: flex-start;
+      justify-self: flex-start; }
+  .card.isEnded .card__answer--mcimage .button--answer.isWinner .button__stat {
+    position: absolute;
+    bottom: 1rem;
+    left: 9rem;
+    width: 120%; }
+  .card.isEnded .card__answer--mcimage .button--answer.isWinner .button__text {
+    position: absolute;
+    top: 1rem;
+    left: 9rem; }
 
 /* sequence effect (mockup only) */
 .sequence-container-wrapper {

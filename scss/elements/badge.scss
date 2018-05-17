@@ -80,3 +80,21 @@
     margin-right: 0;
   }
 }
+.badge.badge--poll-ended {
+  display: flex;
+  justify-self: flex-start;
+  align-self: flex-start;
+  width: auto;
+  height: auto;
+  margin-left: 2rem;
+  padding: 0.25rem 0.5rem;
+
+  background: linear-gradient(-70deg, rgba(104, 181, 239, 0.7) 0%, rgba(29, 201, 181, 0.7) 100%);
+  border: none;
+  border-radius: 0.25rem; 
+  
+  font-size: 0.875rem;
+  font-weight: 500;
+  letter-spacing: 0.05rem;
+  color: #fff;
+}
