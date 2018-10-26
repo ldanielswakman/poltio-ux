@@ -95,11 +95,46 @@
 							<div style="width: 100%;">
 
 								<form id="form" style="display: flex; justify-content: center; flex-wrap: wrap; margin-bottom: 1rem;">
-									<p>Enter your name to participate in the round:</p>
+
+									<div style="width: 100%;"><p>To join the Trivia:</p><div><input name="username" class="field field--large" type="text" placeholder="Enter your name..." maxlength="15" value="" style="margin-bottom: 0.5rem;"><p style="
+ margin-bottom: 0.5rem;
+opacity: 0.5;
+font-size: 0.875rem;
+">Choose your donation amount:</p><div style=" display: inline-block;
+position: relative;
+"><input name="amount" class="field field--large" min="1" type="number" placeholder="0" value="" style="margin-bottom: 0.5rem;
+padding-left: 2rem;
+">
+ <span style="
+ position: absolute;
+top: 0;
+display: flex;
+justify-content: center;
+padding: 0.675rem 1rem;
+">$</span></div>
+ <p style="
+ margin-bottom: 0.5rem;
+opacity: 0.5;
+font-size: 0.875rem;
+">Enter your payment info for the donation:</p><div class="field field--large StripeElement StripeElement--empty" style=""><div class="__PrivateStripeElement" style="margin: 0px !important;
+padding: 0px !important;
+border: none !important;
+display: block !important;
+background: transparent !important;
+position: relative !important;
+opacity: 1 !important;
+"><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame4" allowpaymentrequest="true" src="https: //js.stripe.com/v3/elements-inner-card-78dbf9045641a61f4f4194542dc446eb.html#componentName=cardNumber&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;origin=https%3A%2F%2Ftrivia-stage.poltio.com&amp;referrer=https%3A%2F%2Ftrivia-stage.poltio.com%2Fplayer%2F983&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; height: 16.8px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" autocomplete="false" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div><div class="field field--large StripeElement StripeElement--empty" style=""><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame5" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-78dbf9045641a61f4f4194542dc446eb.html#componentName=cardExpiry&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;origin=https%3A%2F%2Ftrivia-stage.poltio.com&amp;referrer=https%3A%2F%2Ftrivia-stage.poltio.com%2Fplayer%2F983&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; height: 16.8px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" autocomplete="false" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div><div class="field field--large StripeElement StripeElement--empty" style=""><div class="__PrivateStripeElement" style="margin: 0px !important; padding: 0px !important; border: none !important; display: block !important; background: transparent !important; position: relative !important; opacity: 1 !important;"><iframe frameborder="0" allowtransparency="true" scrolling="no" name="__privateStripeFrame6" allowpaymentrequest="true" src="https://js.stripe.com/v3/elements-inner-card-78dbf9045641a61f4f4194542dc446eb.html#componentName=cardCvc&amp;wait=false&amp;rtl=false&amp;keyMode=live&amp;origin=https%3A%2F%2Ftrivia-stage.poltio.com&amp;referrer=https%3A%2F%2Ftrivia-stage.poltio.com%2Fplayer%2F983&amp;controllerId=__privateStripeController1" title="Secure payment input frame" style="border: none !important; margin: 0px !important; padding: 0px !important; width: 1px !important; min-width: 100% !important; overflow: hidden !important; display: block !important; height: 16.8px;"></iframe><input class="__PrivateStripeElement-input" aria-hidden="true" autocomplete="false" style="border: none !important; display: block !important; position: absolute !important; height: 1px !important; top: 0px !important; left: 0px !important; padding: 0px !important; margin: 0px !important; width: 100% !important; opacity: 0 !important; background: transparent !important; pointer-events: none !important; font-size: 16px !important;"></div></div><p style="
+opacity: 0.5;
+margin-bottom: 0.25rem;
+"><small>For your order receipt, please enter your email:</small></p>
+ <input name="email" class="field field--large" type="email" placeholder="Enter your email..." value="" style="margin-bottom: 0.5rem;"><br><br><button type="submit" class="button button--primary button--large" style="margin-left: 0.5rem; margin-bottom: 0.5rem;">Join</button></div><div class="response" style="width: 100%; margin-top: 0.5rem; height: 1.25rem;"></div><div class="badge badge--status"><img src="/static/media/people.eeb81cd6.svg" alt="" style="width: 1rem;"><span><b class="value">0</b> people participating</span></div></div>
+
+ 
+									<!-- <p>Enter your name to participate in the round:</p>
 									<input name="q" class="field field--large" type="text" placeholder="Enter your name..." style="margin-bottom: 0.5rem;">
 									<button type="submit" class="button button--primary button--large" style="margin-left: 0.5rem; margin-bottom: 0.5rem;">Join</button>
 
-									<div class="response" style="width: 100%; margin-top: 0.5rem; height: 1.25rem;"></div>
+									<div class="response" style="width: 100%; margin-top: 0.5rem; height: 1.25rem;"></div> -->
 								</form>
 								<div id="participant" style="display: none;" onclick="$('#participant, #connect').toggle()">
 									<p>Participating as:</p>
