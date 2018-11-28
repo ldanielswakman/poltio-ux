@@ -1,6 +1,7 @@
 // Base
 @import 'base/mixins';
-@import 'legacy';
+@import 'base/variables';
+@import 'base/generic';
 
 // Elements
 @import 'elements/badge';

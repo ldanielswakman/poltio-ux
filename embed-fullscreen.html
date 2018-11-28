@@ -1,0 +1,172 @@
+<!doctype html>
+
+<html lang="en">
+
+	<head>
+
+		<title>Poltio interaction test</title>
+
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+		<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+		<link rel="stylesheet" href="css/owl.carousel.min.css" />
+		<link rel="stylesheet" href="css/style.css" />
+
+		<script src="js/jquery-3.2.1.slim.min.js"></script>
+		<script src="js/owl.carousel.min.js"></script>
+		<script src="js/scripts.js"></script>
+
+		<style>
+			.card-context {
+				width: 100%;
+				max-width: 36rem;
+				margin-top: -1rem;
+				margin-bottom: 4rem;
+				opacity: 0.25;
+				text-align: left;
+			}
+			.u-mb3 {
+				margin-bottom: 3rem !important;
+			}
+		</style>
+
+	</head>
+
+	<body>
+
+		<section class="embed-fs-bg" style="background-image: url('images/content/embed-fullscreen-background.jpg');">
+
+	    <nav>
+	      <ul>
+	        <li><a href="index.html">Feed</a></li>
+	        <li><a href="embed.html">Embeds</a></li>
+	        <li class="hasDropdown">
+	          <a href="javascript:void(0)">Other...</a>
+	          <div class="dropdown" style="margin-top: -1rem; margin-right: 0.75rem;">
+	            <ul>
+	              <li><a href="embed-fullscreen.html" class="isActive">Fullscreen Embed</a></li>
+	              <li><a href="trivia.html">Trivia Landing</a></li>
+	              <li><a href="trivia-talkingdead.html">Talking Dead</a></li>
+	              <li><a href="trivia-nbc.html">NBC</a></li>
+	              <li><a href="trivia-wework.html">WeWork</a></li>
+	              <li><a href="trivia-leaderboard.html">Leaderboard</a></li>
+	              <li><a href="live-polling.html">Live Polling</a></li>
+	            </ul>
+	          </div>
+	        </li>
+	      </ul>
+	    </nav>
+
+
+			<div class="card card--wide card--embed"><!-- start card -->
+
+				<div class="card__question">
+					<figure class="card__q-image">
+						<img src="images/content/embed-question-1.jpg" alt="" />
+					</figure>
+					<div class="card__q-title">
+						<div class="card__q-title__content">
+							<h3 class="h3--large">Araç kaymaya başlarsa yapılacak en doğru şey nedir?</h3>
+						</div>
+					</div>
+				</div>
+
+				<div class="card__answer" style="display: none;">
+					<div style="width: 100%; color: #8392A6;">
+						<p>Şimdi sürücülük bilgilerinizi test etme zamanı. Teste katılın, öğrenin!</p>
+						<p><button class="button button--primary button--large" style="background: rgb(0, 158, 235); color: white;">Let's Go</button></p>
+					</div>
+				</div>
+
+				<div class="card__answer card__answer--mctext">
+
+            <button class="button button--answer">
+              <span class="button__text">En hızlı şekilde frene sonuna kadar basmak</span>
+              <span class="button__stat">
+                <span style="width: 41%"></span>
+                <b>41%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Direksiyonu hızla kayma yönünün tam tersine kırmak</span>
+              <span class="button__stat">
+                <span style="width: 25%"></span>
+                <b>25%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Ayağı gazdan çekip tekerlekleri gitmek istenen yöne çevirmek</span>
+              <span class="button__stat">
+                <span style="width: 37%"></span>
+                <b>37%</b>
+              </span>
+            </button>
+
+				</div>
+
+				<div class="card__followup">
+					<div class="card__followup--content">
+						<div class="card__followup--content--left">
+							<div class="hasDropdown">
+
+								<a href="#" style="padding: 0;" class="link--icon">
+									<img src="images/icons/toggle_outline.svg" alt="" style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+									<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours left)</span></small>
+								</a>
+
+								<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+									<div style="display: flex;">
+										<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+										<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									</div>
+									<input class="field--checkbox" type="checkbox" id="notify_email_tnc" name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the <a href="https://en.wikipedia.org/wiki/Contractual_term" target="_blank">T&amp;C</a></label>
+								</div>
+
+							</div>
+
+						</div>
+						<div class="card__followup--actions">
+							<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+							<button class="button button--square button--facebook">
+								<img src="images/icons/facebook_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+							</button>
+							<button class="button button--square button--twitter">
+								<img src="images/icons/twitter_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+							</button>
+							<span class="hasTooltip">
+								<button class="button button--outline button--square">
+									<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+								</button>
+								<span class="tooltip">View Geo Split</span>
+							</span>
+						</div>
+					</div>
+				</div>
+
+				<div class="card__footer">
+					<div>
+					</div>
+					<div>
+						<span class="hasTooltip">
+							<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Voted</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								times
+							</a></small>
+							<span class="tooltip">Vote count</span>
+						</span>
+					</div>
+				</div>
+
+			</div><!-- end card -->
+
+			<img src="images/content/embed-brand-logo.png" alt="" />
+
+		</section>
+
+	</body>
+
+</html>
