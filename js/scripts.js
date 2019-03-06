@@ -31,7 +31,7 @@ $(document).ready(function() {
   function animate (e) {
 
     const parent = this;
-    const card = this.parentElement.parentElement;
+    const card = this.closest('.card');
 
     if (this.querySelectorAll(".ink").length === 0) {
       const span = document.createElement("span");
@@ -189,11 +189,11 @@ $(document).ready(function() {
   $('.card--hasLead .button--answer').click(function() {
     $card = $(this).closest('.card');
     setTimeout(function() {
-      $card.find('.card__overlay').addClass('isActive');
+      $card.addClass('card--leadActive');
     }, 1800);
   });
   $('.card--hasLead .card__overlay--close').click(function() {
     $card = $(this).closest('.card');
-    $card.find('.card__overlay').removeClass('isActive');
+    $card.removeClass('card--leadActive');
   });
 });

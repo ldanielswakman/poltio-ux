@@ -9,6 +9,13 @@
 
   @include phoneAndUp() { padding: 0.25rem 1rem; }
   @include tabletAndUp() { padding: 0.25rem 2rem; }
+
+  .card__footer-brandlogo {
+    display: block;
+    height: 3rem;
+    margin: 0.25rem 0;
+    margin-left: 0.75rem;
+  }
 }
 .isAnswered .card__footer {
   background: #F0F5F7;

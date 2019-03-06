@@ -957,7 +957,25 @@ a.link--icon.isActive img[src*="toggle"] {
     .card {
       box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15); } }
   .card--wide {
-    max-width: 52rem; }
+    max-width: 56rem; }
+    @media screen and (min-width: 30rem) {
+      .card--wide.card--hasLead .card__content {
+        max-width: 100%;
+        transition: all 0.6s ease;
+        border-radius: 0.5rem;
+        overflow: hidden; }
+      .card--wide.card--hasLead .card__overlay {
+        max-width: 50%;
+        transition-delay: 0.6s; }
+        .card--wide.card--hasLead .card__overlay .card__overlay--close {
+          display: none; }
+      .card--wide.card--hasLead.isAnswered {
+        background: #fff; }
+        .card--wide.card--hasLead.isAnswered .card__content {
+          box-shadow: 0 0 1rem rgba(20, 36, 51, 0.2); }
+      .card--wide.card--hasLead.card--leadActive.isAnswered .card__content {
+        max-width: 50%;
+        transform: scale(0.9); } }
 
 .card.isAnswered {
   background: #FBFCFC;
@@ -1470,6 +1488,11 @@ a.link--icon.isActive img[src*="toggle"] {
   @media screen and (min-width: 30rem) {
     .card__footer {
       padding: 0.25rem 2rem; } }
+  .card__footer .card__footer-brandlogo {
+    display: block;
+    height: 3rem;
+    margin: 0.25rem 0;
+    margin-left: 0.75rem; }
 
 .isAnswered .card__footer {
   background: #F0F5F7; }
@@ -1490,7 +1513,7 @@ a.link--icon.isActive img[src*="toggle"] {
 .card__overlay {
   position: absolute;
   top: 0;
-  left: 0;
+  right: 0;
   width: 100%;
   height: 100%;
   z-index: 3;
@@ -1503,15 +1526,13 @@ a.link--icon.isActive img[src*="toggle"] {
   transition: all 0.3s ease;
   opacity: 0;
   pointer-events: none; }
-
-.card__overlay.isActive {
-  transform: translateY(0);
-  opacity: 1;
-  pointer-events: all; }
-
-@media screen and (min-width: 30rem) {
-  .card__overlay {
-    padding: 2rem; } }
+  @media screen and (min-width: 30rem) {
+    .card__overlay {
+      padding: 2rem; } }
+  .card.card--leadActive .card__overlay {
+    transform: translateY(0);
+    opacity: 1;
+    pointer-events: all; }
 
 .card__overlay--close {
   position: absolute;

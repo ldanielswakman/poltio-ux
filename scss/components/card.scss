@@ -17,7 +17,38 @@
     box-shadow: 0 0 1rem rgba(20, 36, 51, 0.15);
   }
   &--wide {
-    max-width: 52rem;
+    max-width: 56rem;
+
+    @include tabletAndUp() {
+      &.card--hasLead {
+        .card__content {
+          max-width: 100%;
+          transition: all 0.6s ease;
+          border-radius: 0.5rem;
+          overflow: hidden;
+        }
+        .card__overlay {
+          max-width: 50%;
+          transition-delay: 0.6s;
+
+          .card__overlay--close { display: none; }
+        }
+        &.isAnswered {
+          background: #fff;
+
+          .card__content {
+            box-shadow: 0 0 1rem rgba(20, 36, 51, 0.2);
+          }
+        }
+        &.card--leadActive.isAnswered {
+
+          .card__content {
+            max-width: 50%;
+            transform: scale(0.9);
+          }
+        }
+      }
+    }
   }
 }
 .card.isAnswered {
