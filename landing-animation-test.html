@@ -1,0 +1,109 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <title>Poltio interaction test</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body>
+
+    <section>
+      <div class="video-card-scene">
+        <div class="video-card">
+          <!-- <figure><img src="images/animation-static.png" alt="" /></figure> -->
+          <video muted playsInline autoPlay loop>
+            <source src="images/animation-optimised.mp4" type="video/mp4" />
+          </video>
+        </div>
+      </div>
+      <div class="section__text">
+        <h1>Ask, Challenge and Engage</h1>
+        <h2>Poltio is a platform that helps brands access, engage with and learn from their users.</h2>
+      </div>
+      <style>
+        @font-face {
+          font-family: 'Averta';
+          src: url('https://uploads-ssl.webflow.com/5b59ba6c19d47803e282008d/5b59cec34bd7c555a240d1f9_Intelligent%20Design%20-%20AvertaStd-Regular.otf') format('opentype');
+          font-weight: normal;
+          font-style: normal;
+        }
+        @font-face {
+          font-family: 'Averta';
+          src: url('https://uploads-ssl.webflow.com/5b59ba6c19d47803e282008d/5b59cec3bbb7320de31762af_Intelligent%20Design%20-%20AvertaStd-Semibold.otf') format('opentype');
+          font-weight: bold;
+          font-style: normal;
+        }
+        body {
+          font-family: 'Averta', Arial, sans-serif;
+        }
+        section {
+          display: flex;
+        }
+        .section__text {
+          text-align: left;
+          max-width: 40rem;
+          padding: 2rem 0;
+        }
+        @media screen and (min-width: 768px) {
+          section {
+            flex-direction: row;
+          }
+          .section__text {
+            padding-left: 2rem;
+          }
+        }
+        h2 {
+          font-weight: normal;
+          opacity: 0.8;
+        }
+        .video-card-scene {
+          margin-top: 3rem;
+          perspective: 600px;
+          /*border: 1px solid red;*/
+        }
+        .video-card {
+          display: block;
+          max-width: 30rem;
+          padding: 1rem;
+          background: white;
+          border-radius: 2rem;
+          transform-style: preserve-3d;
+          transform: rotateX(10deg) rotateY(20deg) rotateZ(-10deg) scale3d(0.95, 0.9, 1) translateX(1.5rem) translateY(-1rem);
+          box-shadow: 0 0.5rem 2rem rgba(20, 31, 31, 0.25), 0 2rem 2rem -0.5rem rgba(20, 31, 31, 0.25);
+          border-left: 0.5rem solid #f1f3f5;
+          transition: all 0.3s ease;
+        }
+        .video-card:hover {
+          transform: rotateX(0) rotateY(5deg) rotateZ(0) scale3d(0.95, 0.9, 1) translateX(1.5rem) translateY(-1rem);
+          border-left-width: 0.1rem;
+        }
+        .video-card figure {
+          background: red;
+          border-radius: 1.5rem;
+        }
+        .video-card video {
+          max-width: 100%;
+          border-radius: 1.5rem;
+          overflow: hidden;
+          border: 1px solid rgba(20, 31, 31, 0.1);
+        }
+      </style>
+    </section>
+
+  </body>
+
+</html>
