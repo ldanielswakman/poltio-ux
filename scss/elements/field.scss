@@ -4,98 +4,104 @@
   display: inline-block;
   min-width: 12rem;
   padding: 0.5rem;
-  border: 1px solid #ccc;
+  border: 1px solid rgba($darkblue, 0.2);
   border-radius: 0.5rem;
-  background: white;
+  background: $white;
   line-height: 1.5rem;
   font: inherit;
   font-size: 0.875rem;
   transition: all 0.5s ease;
-}
-.field:focus {
-  outline: none;
-  box-shadow: 0 0 0.75rem rgba(0, 0, 0, 0.2);
-  border-color: rgba(0, 158, 235, 1);
-}
+  resize: none; // For textarea
+  
+  &:focus {
+    outline: none;
+    box-shadow: 0 0.125rem 1rem rgba($darkblue, 0.2);
+    border-color: $blue;
+  }
+  &::-webkit-input-placeholder {
+    color: rgba($darkblue, 0.3);
+  }
+  &:-moz-placeholder {
+    color: rgba($darkblue, 0.3);
+  }
+  &::-moz-placeholder {
+    color: rgba($darkblue, 0.3);
+  }
+  &:-ms-input-placeholder {
+    color: rgba($darkblue, 0.3);
+  }
 
+  // Answer input field
+  &--answer {
+    padding: calc(0.75rem - 1px) 1rem;
+    font-size: 1.125rem;
+    line-height: 2rem;
+  }
 
-.field::-webkit-input-placeholder {
-  color: #ccc;
-}
-.field:-moz-placeholder {
-  color: #ccc;
-}
-.field::-moz-placeholder {
-  color: #ccc;
-}
-.field:-ms-input-placeholder {
-  color: #ccc;
-}
+  // Large field
+  &--large {
+    min-width: 18rem;
+    padding: calc(0.5rem + 2px) 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 0.5rem;
+    background: $white;
+    line-height: 2rem;
+    font: inherit;
+    font-size: 1rem;
+    transition: all 0.5s ease;
+  }
 
-.field.field--large {
-  min-width: 18rem;
-  padding: calc(0.5rem + 2px) 0.75rem;
-  border: 1px solid #ccc;
-  border-radius: 0.5rem;
-  background: white;
-  line-height: 2rem;
-  font: inherit;
-  font-size: 1rem;
-  transition: all 0.5s ease;
-}
+  // Checkbox
+  &--checkbox {
+    display: inline-block;
+    margin-top: 0.5rem;
+  }
+  &--checkbox + label {
+    display: inline-block;
+    margin-top: 0.5rem;
+    margin-left: 0.25rem;
+    color: #B8C6CC;
+    font-size: 0.75rem;
+    cursor: pointer;
+    user-select: none;
+  }
+  &--checkbox:checked + label {
+    color: rgba($blue, 1);
+  }
+  &--checkbox + label a {
+    text-decoration: underline;
+  }
 
-.field--checkbox {
-  display: inline-block;
-  margin-top: 0.5rem;
-}
-.field--checkbox + label {
-  display: inline-block;
-  margin-top: 0.5rem;
-  margin-left: 0.25rem;
-  color: #B8C6CC;
-  font-size: 0.75rem;
-  cursor: pointer;
-  user-select: none;
-}
-input:checked + label {
-  color: rgba(0, 158, 235, 1);
-}
-.field--checkbox + label a {
-  text-decoration: underline;
-}
+  &--underline {
+    border: none;
+    border-radius: 0;
+    border-bottom: 2px solid rgba($white, 0.2);
+    background: none;
+    padding: 1rem 0;
+    color: rgba($white, 0.7);
 
-textarea.field {
-  resize: none;
-}
-
-.field.field--underline {
-  border: none;
-  border-radius: 0;
-  border-bottom: 2px solid rgba(255, 255, 255, 0.2);
-  background: none;
-  padding: 1rem 0;
-  color: rgba(255, 255, 255, 0.7);
-}
-.field.field--underline:focus {
-  border-bottom-color: #fff;
-  box-shadow: none;
-  color: #fff;
-}
-.field.field--underline.field--large {
-  padding: 3rem 0;
-  font-weight: 500;
-  font-size: 2rem;
-  border-bottom-width: 3px;
-}
-.field.field--underline.field--large::-webkit-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-.field.field--underline.field--large:-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-.field.field--underline.field--large::-moz-placeholder {
-  color: rgba(255, 255, 255, 0.3);
-}
-.field.field--underline.field--large:-ms-input-placeholder {
-  color: rgba(255, 255, 255, 0.3);
+    &:focus {
+      border-bottom-color: $white;
+      box-shadow: none;
+      color: $white;
+    }
+    &.field--large {
+      padding: 3rem 0;
+      font-weight: 500;
+      font-size: 2rem;
+      border-bottom-width: 3px;
+    }
+    &.field--large::-webkit-input-placeholder {
+      color: rgba($white, 0.3);
+    }
+    &.field--large:-moz-placeholder {
+      color: rgba($white, 0.3);
+    }
+    &.field--large::-moz-placeholder {
+      color: rgba($white, 0.3);
+    }
+    &.field--large:-ms-input-placeholder {
+      color: rgba($white, 0.3);
+    }
+  }
 }

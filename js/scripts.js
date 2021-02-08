@@ -197,3 +197,17 @@ $(document).ready(function() {
     $card.removeClass('card--leadActive');
   });
 });
+
+
+
+
+// Open answer: Enable submit button
+$(document).ready(function() {
+  $('.card__answer--open input').keyup(function() {
+    if($(this).val().length > 0) {
+      $(this).parent().find('.button').removeClass('isDisabled');
+    } else {
+      $(this).parent().find('.button').addClass('isDisabled');
+    }
+  })
+});

@@ -77,3 +77,32 @@
     margin-right: 0.5rem;
   }
 }
+
+
+
+// Answer Type 5: Open
+.card__answer--open {
+  justify-content: center;
+}
+
+.card__answer .answer-group {
+  display: flex;
+  align-items: flex-end;
+  margin: 1rem;
+
+  &__button {
+    width: 2.5rem;
+    height: 2.5rem;
+    margin-left: -3rem;
+    margin-bottom: 0.5rem;
+    padding: 0.5rem;
+
+    svg { stroke: $white; }
+
+    &.isDisabled {
+      background: $greylightest;
+
+      svg { stroke: rgba($darkblue, 0.2); }
+    }
+  }
+}
