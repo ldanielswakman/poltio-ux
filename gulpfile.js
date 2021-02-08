@@ -1,22 +1,26 @@
 // Gulpfile.js
 
 // Check required packages
-var gulp = require('gulp');
-var sass = require('gulp-sass');
+const gulp = require('gulp');
+const rename = require("gulp-rename");
+// CSS compiling
+const sass = require('gulp-sass');
+const cleanCSS = require('gulp-clean-css');
 
-
-
-// Concatenate Sass task
-gulp.task('sass', function() {
-  gulp.src('scss/style.scss')
+function style() {
+  return gulp.src('scss/style.scss')
     .pipe(sass().on('error', sass.logError))
-    .pipe(gulp.dest('./css/'));
-});
-
+    .pipe(gulp.dest('css/'))
+    .pipe(cleanCSS({compatibility: 'ie9', debug: true}))
+    .pipe(rename({ suffix: '.min' }))
+    .pipe(gulp.dest('css'));
+}
 
 
 // Watch task
-gulp.task('default',function() {
-    gulp.watch('scss/**/*.scss',['sass']);
-});
+function watch() {
+  gulp.watch('scss/**/*.scss', style);
+}
 
+exports.style = style;
+exports.default = watch;
