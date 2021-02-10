@@ -750,8 +750,23 @@ section {
     color: rgba(30, 61, 84, 0.3); }
   .field--answer {
     padding: calc(0.75rem - 1px) 1rem;
+    padding-right: 3.5rem;
     font-size: 1.125rem;
     line-height: 2rem; }
+    .field--answer.field--multiline {
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.375rem; }
+    .card.isAnswered .field--answer {
+      border-color: transparent;
+      background: #009EEB;
+      color: #fff;
+      pointer-events: none; }
+      .card.isAnswered .field--answer + .button {
+        margin-left: 0;
+        margin-right: -2rem;
+        opacity: 0;
+        pointer-events: none; }
   .field--large {
     min-width: 18rem;
     padding: calc(0.5rem + 2px) 0.75rem;
@@ -1314,23 +1329,32 @@ a.link--icon.isActive img[src*="toggle"] {
 
 .card__answer--open {
   justify-content: center; }
-
-.card__answer .answer-group {
-  display: flex;
-  align-items: flex-end;
-  margin: 1rem; }
-  .card__answer .answer-group__button {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: -3rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem; }
-    .card__answer .answer-group__button svg {
-      stroke: #fff; }
-    .card__answer .answer-group__button.isDisabled {
-      background: #E9EFF2; }
-      .card__answer .answer-group__button.isDisabled svg {
-        stroke: rgba(30, 61, 84, 0.2); }
+  .card__answer--open .answer-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    margin: 1rem; }
+    .card__answer--open .answer-group .button--answer {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: -3rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem; }
+      .card__answer--open .answer-group .button--answer svg {
+        stroke: #fff; }
+      .card__answer--open .answer-group .button--answer.isDisabled {
+        background: #E9EFF2; }
+        .card__answer--open .answer-group .button--answer.isDisabled svg {
+          stroke: rgba(30, 61, 84, 0.2); }
+    .card__answer--open .answer-group .indicator {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      font-size: 0.875rem;
+      opacity: 0.3;
+      letter-spacing: 0.5px; }
 
 /* Component Child - Card Follow-up section */
 .card__followup {

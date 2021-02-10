@@ -812,7 +812,7 @@
 			<div class="card__answer card__answer--open">
 				<div class="answer-group">
 					<input type="number" class="field field--answer" placeholder="A number, please" value="" />
-					<button type="submit" class="button button--primary answer-group__button isDisabled">
+					<button type="submit" class="button button--primary button--answer isDisabled">
 						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5 12H19" stroke="inherit" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
 							<path d="M12 5L19 12L12 19" stroke="inherit" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
@@ -866,6 +866,93 @@
 			</div>
 
 		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: Open, number<br>
+			</small>
+		</div>
+
+		<div class="card card--embed card--sequence card--sequence-active u-mb3"><!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--large">What is the answer to the Life, the Universe, and Everything?</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--open">
+				<div class="answer-group">
+					<textarea type="text" rows="3" class="field field--answer field--multiline" placeholder="Type away, m'boy" value=""></textarea>
+					<button type="submit" class="button button--primary button--answer isDisabled">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 12H19" stroke="inherit" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+							<path d="M12 5L19 12L12 19" stroke="inherit" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+						</svg>						
+					</button>
+					<div class="indicator"><span class="counter">0</span>/255</div>
+				</div>
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<div class="card__colophon">
+							Next question:
+						</div>
+						<div class="card__followup-timer">
+							<div class="card__followup-timerbar"></div>
+						</div>
+						<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--outline button--small js-pausecontinue-toggle">
+							Pause
+						</a>
+						<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');" class="button button--primary button--small js-pausecontinue-toggle u-hide">
+							Continue
+						</a>
+					</div>
+					<div class="card__followup--actions">
+					</div>
+				</div>
+			</div>
+
+			<div class="sequence__progress hasTooltip">
+				<div class="sequence__progress-bar sequence__progress-bar"></div>
+				<div class="tooltip tooltip--onLeft" style="margin-left: 0.5rem">
+					Question 1/8
+				</div>
+			</div>
+
+			<div class="card__footer">
+			<div>
+				<a href="https://poltio.com" target="_blank" style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+			</div>
+			<div>
+				<span class="hasTooltip">
+				<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+					<span class="card__hidexs">Şu ana kada</span>
+					<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+					kez oylandı.
+				</a></small>
+				<span class="tooltip">Vote count</span>
+				</span>
+			</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: Open, text<br>
+			</small>
+		</div>
 
 
 

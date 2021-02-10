@@ -83,26 +83,37 @@
 // Answer Type 5: Open
 .card__answer--open {
   justify-content: center;
-}
 
-.card__answer .answer-group {
-  display: flex;
-  align-items: flex-end;
-  margin: 1rem;
+  .answer-group {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    flex: 1;
+    margin: 1rem;
 
-  &__button {
-    width: 2.5rem;
-    height: 2.5rem;
-    margin-left: -3rem;
-    margin-bottom: 0.5rem;
-    padding: 0.5rem;
+    .button--answer {
+      width: 2.5rem;
+      height: 2.5rem;
+      margin-left: -3rem;
+      margin-bottom: 0.5rem;
+      padding: 0.5rem;
 
-    svg { stroke: $white; }
+      svg { stroke: $white; }
 
-    &.isDisabled {
-      background: $greylightest;
+      &.isDisabled {
+        background: $greylightest;
 
-      svg { stroke: rgba($darkblue, 0.2); }
+        svg { stroke: rgba($darkblue, 0.2); }
+      }
+    }
+    .indicator {
+      position: absolute;
+      top: 0.75rem;
+      right: 1rem;
+      font-size: 0.875rem;
+      opacity: 0.3;
+      letter-spacing: 0.5px;
     }
   }
 }

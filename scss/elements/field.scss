@@ -34,8 +34,29 @@
   // Answer input field
   &--answer {
     padding: calc(0.75rem - 1px) 1rem;
+    padding-right: 3.5rem;
     font-size: 1.125rem;
     line-height: 2rem;
+
+    &.field--multiline {
+      width: 100%;
+      font-size: 1rem;
+      line-height: 1.375rem;
+    }
+
+    .card.isAnswered & {
+      border-color: transparent;
+      background: $blue;
+      color: $white;
+      pointer-events: none;
+
+      & + .button {
+        margin-left: 0;
+        margin-right: -2rem;
+        opacity: 0;
+        pointer-events: none;
+      }
+    }
   }
 
   // Large field

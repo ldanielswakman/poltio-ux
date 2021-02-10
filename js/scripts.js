@@ -203,11 +203,15 @@ $(document).ready(function() {
 
 // Open answer: Enable submit button
 $(document).ready(function() {
-  $('.card__answer--open input').keyup(function() {
-    if($(this).val().length > 0) {
-      $(this).parent().find('.button').removeClass('isDisabled');
-    } else {
-      $(this).parent().find('.button').addClass('isDisabled');
-    }
-  })
+  $('.card__answer--open input, .card__answer--open textarea').each(function() {
+    $(this).keyup(function() {
+      $length = $(this).val().length;
+      $(this).parent().find('.indicator .counter').html($length);
+      if($length > 0) {
+        $(this).parent().find('.button').removeClass('isDisabled');
+      } else {
+        $(this).parent().find('.button').addClass('isDisabled');
+      }
+    });
+  });
 });
