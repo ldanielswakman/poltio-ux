@@ -83,6 +83,45 @@ $(document).ready(function() {
 
 
 
+// Multipunch interaction
+$(document).ready(function() {
+  $('.button--multipunch').click(function() {
+
+    $(this).toggleClass('isSelected');
+
+    $card = $(this).closest('.card');
+    $countSelected = $card.find('.button--multipunch.isSelected').length;
+
+    switch($countSelected) {
+      case 1:
+        $card.find('.multipunch-info').html('Select up to 2 more answers');
+        break;
+      case 2:
+        $card.find('.multipunch-info').html('Select up to 1 more answer');
+        break;
+      case 3:
+      case 4:
+        $card.find('.multipunch-info').html('Maximum answers selected');
+        break;
+      default:
+        $card.find('.multipunch-info').html('Select up to 3 answers');
+    }
+
+    if($countSelected > 0) {
+      $card.find('.button.button--answer').removeClass('isDisabled');
+    } else {
+      $card.find('.button.button--answer').addClass('isDisabled');
+    }
+
+    if($countSelected > 3) {
+      $(this).removeClass('isSelected');
+    }
+    
+  });
+});
+
+
+
 // init Timer
 $(document).ready(function() {
 

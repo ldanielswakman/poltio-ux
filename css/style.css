@@ -334,6 +334,27 @@ section {
   transition: all 0.5s ease; }
   .button::-moz-focus-inner {
     border: 0; }
+  .button.isSelected {
+    background: #009eeb;
+    color: white; }
+    .button.isSelected.isDisabled .button__text {
+      color: white; }
+  .button--multipunch {
+    padding-top: 0.625rem;
+    padding-bottom: 0.625rem;
+    border: 2px solid transparent; }
+    .button--multipunch.isSelected {
+      background: white;
+      border-color: currentColor;
+      color: #009eeb; }
+      .button--multipunch.isSelected:after {
+        left: auto;
+        right: 0.5rem;
+        background: url("../images/icons/check_blue.svg");
+        transform: scale(1);
+        opacity: 1; }
+    .button--multipunch .ink {
+      background: rgba(0, 0, 0, 0.1); }
 
 .button:hover {
   background-color: white;
@@ -346,12 +367,6 @@ section {
 .isAnswered .button--answer:not(.isSelected) {
   background: rgba(0, 0, 0, 0.02);
   color: rgba(30, 61, 84, 0.75); }
-
-.button.isSelected {
-  background: #009eeb;
-  color: white; }
-  .button.isSelected.isDisabled .button__text {
-    color: white; }
 
 .button.button--answer {
   margin: 0.25rem;
@@ -497,11 +512,11 @@ section {
   opacity: 1; }
 
 .button.isDisabled {
-  background: rgba(0, 0, 0, 0.01);
+  background: rgba(0, 0, 0, 0.02);
   pointer-events: none; }
 
 .button.isDisabled .button__text {
-  color: rgba(30, 61, 84, 0.5); }
+  color: rgba(30, 61, 84, 0.25); }
 
 .button__text {
   display: inline-block;
@@ -1276,6 +1291,8 @@ a.link--icon.isActive img[src*="toggle"] {
 .card__answer--mctext {
   flex-direction: column;
   align-items: stretch; }
+  .card__answer--mctext .button {
+    margin: 0.5rem 1rem; }
 
 .card__answer--mctext > * {
   text-align: left; }
