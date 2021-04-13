@@ -90,6 +90,7 @@ $(document).ready(function() {
     $(this).toggleClass('isSelected');
 
     $card = $(this).closest('.card');
+    $max_answers = ($card.attr('data-max-answers') && $card.attr('data-max-answers').length > 0) ? parseInt($card.attr('data-max-answers')) : 100;
     $countSelected = $card.find('.button--multipunch.isSelected').length;
 
     switch($countSelected) {
@@ -106,6 +107,7 @@ $(document).ready(function() {
       default:
         $card.find('.multipunch-info').html('Select up to 3 answers');
     }
+    console.log($countSelected);
 
     if($countSelected > 0) {
       $card.find('.button.button--answer').removeClass('isDisabled');
@@ -113,7 +115,7 @@ $(document).ready(function() {
       $card.find('.button.button--answer').addClass('isDisabled');
     }
 
-    if($countSelected > 3) {
+    if($countSelected > $max_answers) {
       $(this).removeClass('isSelected');
     }
     
