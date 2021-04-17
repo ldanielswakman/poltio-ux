@@ -34,6 +34,17 @@
 }
 
 
+// Card Title not overlaid on image
+.card__title {
+  text-align: left;
+  padding: 1.5rem 1.5rem 0;
+
+  @media screen and (min-width: 30rem) {
+    padding-left: 2rem;
+  }
+}
+
+
 // Folloup animation image height adjustments
 .card.isAnswered .card__question .card__q-image {
   /* 6rem = height of 'follow up container' */
@@ -102,16 +113,19 @@
 }
 
 // Text style
-.card__question h3 {
+.card__question h3,
+.card__title h3 {
   margin: 0;
   letter-spacing: 0.02rem;
   font-size: 1.25rem;
   font-weight: 600;
   text-align: left;
 }
-.card__question h3.h3--small {
+.card__question h3.h3--small,
+.card__title h3.h3--small {
   font-size: 1.125rem;
 }
-.card__question h3.h3--large {
+.card__question h3.h3--large,
+.card__title h3.h3--large {
   font-size: 1.5rem;
 }
