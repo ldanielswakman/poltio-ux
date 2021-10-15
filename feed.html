@@ -1,0 +1,712 @@
+<!doctype html>
+
+<html lang="en">
+
+  <head>
+
+    <title>Poltio interaction test</title>
+
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+    <link rel="stylesheet" href="css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="css/style.css" />
+
+    <script src="js/jquery-3.2.1.slim.min.js"></script>
+    <script src="js/owl.carousel.min.js"></script>
+    <script src="js/scripts.js"></script>
+
+  </head>
+
+  <body style="background: #F0F8FF">
+
+    <nav>
+      <ul>
+        <li><a href="index.html">Sandbox</a></li>
+        <li><a href="embed.html">Embed</a></li>
+        <li class="hasDropdown">
+          <a href="javascript:void(0)">Other...</a>
+          <div class="dropdown" style="margin-top: -1rem; margin-right: 0.75rem;">
+            <ul>
+              <li><a href="feed.html" class="isActive">Social Feed</a></li>
+              <li><a href="embed-fullscreen.html">Fullscreen Embed</a></li>
+              <li><a href="trivia.html">Trivia Landing</a></li>
+              <li><a href="trivia-talkingdead.html">Talking Dead</a></li>
+              <li><a href="trivia-nbc.html">NBC</a></li>
+              <li><a href="trivia-wework.html">WeWork</a></li>
+              <li><a href="trivia-leaderboard.html">Leaderboard</a></li>
+              <li><a href="live-polling.html">Live Polling</a></li>
+            </ul>
+          </div>
+        </li>
+      </ul>
+    </nav>
+
+    <section>
+
+      <div class="card">
+
+        <div class="card__header">
+
+          <a href="#" class="author">
+            <div class="badge badge--small" style="margin-left: -0.25rem;">
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+            </div>
+            <span class="author__name">Vildan Ay</span>
+          </a>
+
+          <div class="card__header--right">
+            <span class="hasTooltip">
+              <a href="#" class="date">yesterday</a>
+              <small class="tooltip tooltip--onBottom">25 Nov 14:53</small>
+            </span>
+            <span class="badge badge--end-date hasTooltip">
+              <img src="images/icons/clock_outline_yellow.svg" alt="" /> 19 hours
+              <small class="tooltip tooltip--onBottom">Poll ends on 28 Nov 9:00</small>
+            </span>
+            <div class="hasDropdown">
+
+              <a href="#" class="link--icon">
+                <img src="images/icons/more.svg" alt="" />
+              </a>
+
+              <div class="dropdown">
+                <ul>
+                  <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
+                  <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
+                  <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
+                  <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
+                  <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
+                </ul>
+              </div>
+
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card__category" style="background: #83D38C;"></div>
+
+        <div class="card__question">
+          <a href="javascript:void(0)" class="card__question--toggle">
+            <img src="images/icons/arrow_updown_white.svg" alt="" style="display: inline-block; width: 1.5rem; vertical-align: middle;" />
+            <img src="images/icons/cross_white.svg" alt="" style="display: none; width: 1.5rem; vertical-align: middle;" class="close" />
+          </a>
+          <figure class="card__q-image">
+            <img src="images/content/question-sports-image.png" alt="" />
+          </figure>
+          <div class="card__q-title">
+            <div class="card__q-title__content">
+              <h3 class="h3--small">Başakşehir karşılaşmasında kötü bir performans sergilediği için taraftar tarafından ıslıklanan Volkan Demirel'in Fenerbahçe'den ayrılma kararı aldığı belirtildi. Bu ayrılışı destekliyor musunuz?</h3>
+            </div>
+          </div>
+        </div>
+
+        <div class="card__answer card__answer--yn">
+
+          <button class="button button--answer">
+            <span class="button__text">Evet</span>
+            <span class="button__stat">
+              <span style="width: 69%"></span>
+              <b>69%</b>
+            </span>
+          </button>
+          <button class="button button--answer">
+            <span class="button__text">Hayır</span>
+            <span class="button__stat">
+              <span style="width: 31%"></span>
+              <b>31%</b>
+            </span>
+          </button>
+
+        </div>
+
+
+        <div class="card__followup">
+          <div class="card__followup--content">
+            <div class="card__followup--content--left">
+              <strong>31% thinks the same!</strong><br>
+              <small style="opacity: 0.25;">Discuss your vote below</small>
+            </div>
+            <div class="card__followup--actions">
+              <button class="button button--facebook">
+                <img src="images/icons/facebook_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+                Share
+              </button>
+              <button class="button button--twitter">
+                <img src="images/icons/twitter_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+                Share
+              </button>
+              <span class="hasTooltip">
+                <button class="button button--outline button--square">
+                  <img src="images/icons/link.svg" alt="" style="display: block; width: 1.25rem;" />
+                </button>
+                <span class="tooltip">Copy link</span>
+              </span>
+              <span class="hasTooltip">
+                <button class="button button--outline button--square">
+                  <img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+                </button>
+                <span class="tooltip">View Geo Split</span>
+              </span>
+            </div>
+          </div>
+        </div>
+
+
+        <div class="card__footer">
+          <div>
+            <a href="#" class="link--icon">
+              <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
+              <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
+              <span class="value">18</span>
+            </a>
+            <a href="#" class="link--icon">
+              <img src="images/icons/comment_outline.svg" alt="" />
+              <span class="value">3</span>
+            </a>
+            <a href="#" class="link--icon">
+              <img src="images/icons/share_outline.svg" alt="" />
+              <span class="value">7</span>
+            </a>
+          </div>
+          <div>
+            <span class="hasTooltip">
+              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
+                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
+                <div class="badge badge--tiny">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
+              </div>
+
+                <span class="value">+4976</span>
+              </a>
+              <span class="tooltip">Vote count</span>
+            </span>
+          </div>
+        </div>
+
+      </div>
+
+
+
+
+      <div class="owl-carousel">
+
+        <div class="card">
+
+          <div class="card__header">
+
+            <a href="#" class="author">
+              <div class="badge badge--small" style="margin-left: -0.25rem;">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <span class="author__name">Vildan Ay</span>
+            </a>
+
+            <div class="card__header--right">
+              <a href="#" class="date">2 weeks ago</a>
+              <div class="hasDropdown">
+
+                <a href="#" class="link--icon">
+                  <img src="images/icons/more.svg" alt="" />
+                </a>
+
+                <div class="dropdown">
+                  <ul>
+                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="card__category" style="background: #7F9BE2;"></div>
+
+          <div class="card__question">
+            <figure class="card__q-image">
+              <img src="images/content/question-food-image.png" alt="" />
+            </figure>
+            <div class="card__q-title">
+              <div class="card__q-title__content">
+                <h3>Sizce sağlıklı bir hayat için en doğru beslenme biçimi hangisi ya da hangileri?</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__answer card__answer--mctext">
+
+            <button class="button button--answer">
+              <span class="button__text">Vejetaryen (her türlü et yasak)</span>
+              <span class="button__stat">
+                <span style="width: 18%"></span>
+                <b>18%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Vegan (her türlü hayvansal gıda...</span>
+              <span class="button__stat">
+                <span style="width: 25%"></span>
+                <b>25%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Pesketeryan (balık dışında diğer tüm etler yasak)</span>
+              <span class="button__stat">
+                <span style="width: 7%"></span>
+                <b>7%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Paleo diyeti (glutensiz - şekersiz)</span>
+              <span class="button__stat">
+                <span style="width: 42%"></span>
+                <b>42%</b>
+              </span>
+            </button>
+
+          </div>
+
+          <div class="card__footer">
+            <div>
+              <a href="#" class="link--icon">
+                <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
+                <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
+                <span class="value">67</span>
+              </a>
+              <a href="#" class="link--icon">
+                <img src="images/icons/comment_outline.svg" alt="" />
+                <span class="value">0</span>
+              </a>
+              <a href="#" class="link--icon">
+                <img src="images/icons/share_outline.svg" alt="" />
+                <span class="value"> 1</span>
+              </a>
+            </div>
+            <div>
+              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
+                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
+                <div class="badge badge--tiny">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
+              </div>
+                <span class="value">900K</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="card__header">
+
+            <a href="#" class="author">
+              <div class="badge badge--small" style="margin-left: -0.25rem;">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <span class="author__name">Vildan Ay</span>
+            </a>
+
+            <div class="card__header--right">
+              <a href="#" class="date">2 weeks ago</a>
+              <div class="hasDropdown">
+
+                <a href="#" class="link--icon">
+                  <img src="images/icons/more.svg" alt="" />
+                </a>
+
+                <div class="dropdown">
+                  <ul>
+                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="card__category" style="background: #7F9BE2;"></div>
+
+          <div class="card__question">
+            <figure class="card__q-image">
+              <img src="images/content/question-food-image.png" alt="" />
+            </figure>
+            <div class="card__q-title">
+              <div class="card__q-title__content">
+                <h3>Sizce sağlıklı bir hayat için en doğru beslenme biçimi hangisi ya da hangileri?</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__answer card__answer--mctext">
+
+            <button class="button button--answer">
+              <span class="button__text">Vejetaryen (her türlü et yasak)</span>
+              <span class="button__stat">
+                <span style="width: 18%"></span>
+                <b>18%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Vegan (her türlü hayvansal gıda...</span>
+              <span class="button__stat">
+                <span style="width: 25%"></span>
+                <b>25%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Pesketeryan (balık dışında diğer tüm etler yasak)</span>
+              <span class="button__stat">
+                <span style="width: 7%"></span>
+                <b>7%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Paleo diyeti (glutensiz - şekersiz)</span>
+              <span class="button__stat">
+                <span style="width: 42%"></span>
+                <b>42%</b>
+              </span>
+            </button>
+
+          </div>
+
+          <div class="card__footer">
+            <div>
+              <a href="#" class="link--icon">
+                <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
+                <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
+                <span class="value">67</span>
+              </a>
+              <a href="#" class="link--icon">
+                <img src="images/icons/comment_outline.svg" alt="" />
+                <span class="value">0</span>
+              </a>
+            </div>
+            <div>
+              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
+                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
+                <div class="badge badge--tiny">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
+              </div>
+                <span class="value">900K</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+        <div class="card">
+
+          <div class="card__header">
+
+            <a href="#" class="author">
+              <div class="badge badge--small" style="margin-left: -0.25rem;">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <span class="author__name">Vildan Ay</span>
+            </a>
+
+            <div class="card__header--right">
+              <a href="#" class="date">2 weeks ago</a>
+              <div class="hasDropdown">
+
+                <a href="#" class="link--icon">
+                  <img src="images/icons/more.svg" alt="" />
+                </a>
+
+                <div class="dropdown">
+                  <ul>
+                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
+                  </ul>
+                </div>
+
+              </div>
+            </div>
+
+          </div>
+
+          <div class="card__category" style="background: #7F9BE2;"></div>
+
+          <div class="card__question">
+            <figure class="card__q-image">
+              <img src="images/content/question-food-image.png" alt="" />
+            </figure>
+            <div class="card__q-title">
+              <div class="card__q-title__content">
+                <h3>Sizce sağlıklı bir hayat için en doğru beslenme biçimi hangisi ya da hangileri?</h3>
+              </div>
+            </div>
+          </div>
+
+          <div class="card__answer card__answer--mctext">
+
+            <button class="button button--answer">
+              <span class="button__text">Vejetaryen (her türlü et yasak)</span>
+              <span class="button__stat">
+                <span style="width: 18%"></span>
+                <b>18%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Vegan (her türlü hayvansal gıda...</span>
+              <span class="button__stat">
+                <span style="width: 25%"></span>
+                <b>25%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Pesketeryan (balık dışında diğer tüm etler yasak)</span>
+              <span class="button__stat">
+                <span style="width: 7%"></span>
+                <b>7%</b>
+              </span>
+            </button>
+
+            <button class="button button--answer">
+              <span class="button__text">Paleo diyeti (glutensiz - şekersiz)</span>
+              <span class="button__stat">
+                <span style="width: 42%"></span>
+                <b>42%</b>
+              </span>
+            </button>
+
+          </div>
+
+          <div class="card__footer">
+            <div>
+              <a href="#" class="link--icon">
+                <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
+                <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
+                <span class="value">67</span>
+              </a>
+              <a href="#" class="link--icon">
+                <img src="images/icons/comment_outline.svg" alt="" />
+                <span class="value">0</span>
+              </a>
+            </div>
+            <div>
+              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
+                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
+                <div class="badge badge--tiny">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
+              </div>
+                <span class="value">900K</span>
+              </a>
+            </div>
+          </div>
+
+        </div>
+
+      </div><!-- end card -->
+
+
+
+      <div class="card">
+
+        <div class="card__header">
+
+          <a href="#" class="author">
+            <div class="badge badge--small" style="margin-left: -0.25rem;">
+              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+            </div>
+            <span class="author__name">Vildan Ay</span>
+          </a>
+
+          <div class="card__header--right">
+            <a href="#" class="date">3 months ago</a>
+              <div class="hasDropdown">
+
+                <a href="#" class="link--icon">
+                  <img src="images/icons/more.svg" alt="" />
+                </a>
+
+                <div class="dropdown">
+                  <ul>
+                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
+                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
+                  </ul>
+                </div>
+
+              </div>
+          </div>
+
+        </div>
+
+        <div class="card__category" style="background: #70D0D6;"></div>
+
+        <div class="card__question">
+          <figure class="card__q-image">
+            <img src="images/content/question-entertainment-image.jpg" alt="" />
+          </figure>
+          <div class="card__q-title">
+              <div class="card__q-title__content">
+                <h3>Kendinizi politik ve sosyal açıdan en çok hangisiyle tarif edersiniz?</h3>
+              </div>
+          </div>
+        </div>
+
+        <div class="card__answer card__answer--mcimage mcimage--3col">
+
+          <button class="button button--answer button--image">
+            <figure>
+              <img src="images/content/answer-option-1.jpg" alt="" />
+            </figure>
+            <span class="button__stat">
+              <span style="width: 18%"></span>
+              <b>18%</b>
+            </span>
+          </button>
+
+          <button class="button button--answer button--image">
+            <figure>
+              <img src="images/content/answer-option-2.jpg" alt="" />
+            </figure>
+            <span class="button__stat">
+              <span style="width: 25%"></span>
+              <b>25%</b>
+            </span>
+          </button>
+
+          <button class="button button--answer button--image">
+            <figure>
+              <img src="images/content/answer-option-placeholder.jpg" alt="" />
+            </figure>
+            <span class="button__stat">
+              <span style="width: 7%"></span>
+              <b>7%</b>
+            </span>
+          </button>
+
+          <button class="button button--answer button--image">
+            <figure>
+              <img src="images/content/answer-option-3.jpg" alt="" />
+            </figure>
+            <span class="button__stat">
+              <span style="width: 42%"></span>
+              <b>42%</b>
+            </span>
+          </button>
+
+          <button class="button button--answer button--image">
+            <figure>
+              <img src="images/content/answer-option-4.jpg" alt="" />
+            </figure>
+            <span class="button__stat">
+              <span style="width: 42%"></span>
+              <b>42%</b>
+            </span>
+          </button>
+
+          <button class="button button--answer button--image">
+            <figure>
+              <img src="images/content/answer-option-5.jpg" alt="" />
+            </figure>
+            <span class="button__stat">
+              <span style="width: 42%"></span>
+              <b>42%</b>
+            </span>
+          </button>
+
+        </div>
+
+        <div class="card__footer">
+          <div>
+            <a href="#" class="link--icon">
+              <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
+              <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
+              <span class="value">67</span>
+            </a>
+            <a href="#" class="link--icon">
+              <img src="images/icons/comment_outline.svg" alt="" />
+              <span class="value">0</span>
+            </a>
+          </div>
+          <div>
+            <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
+              <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
+              <div class="badge badge--tiny">
+                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
+              </div>
+              <div class="badge badge--tiny badge--overlap">
+                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
+              </div>
+              <span class="value">7</span>
+            </a>
+          </div>
+        </div>
+
+      </div><!-- end card -->
+
+      <div id="loading" style="background: rgba(30, 61, 84, 0.03); width: 100%; max-width: 36rem; padding: 5rem 0; border-radius: 0.5rem;">
+        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block;" width="5rem" height="5rem" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
+          <circle cx="17" cy="46.1078" r="5" fill="#ffc000">
+            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.6s"></animate>
+          </circle> <circle cx="39" cy="56" r="5" fill="#ff6644">
+            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.45s"></animate>
+          </circle> <circle cx="61" cy="56" r="5" fill="#009eec">
+            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.3s"></animate>
+          </circle> <circle cx="83" cy="56" r="5" fill="#d66ddd">
+            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.15s"></animate>
+          </circle>
+        </svg>
+      </div>
+
+    </section>
+
+  </body>
+
+</html>

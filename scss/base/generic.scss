@@ -1,37 +1,35 @@
 // Generic: Font file definitions
 @font-face {
-	font-family: 'Averta';
-	font-weight: normal;
-	font-style: normal;
-	src: url('../fonts/Averta-Regular.eot');
-	src: url('../fonts/Averta-Regular.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/Averta-Regular.woff2') format('woff2'),
-			 url('../fonts/Averta-Regular.woff') format('woff'),
-			 url('../fonts/Averta-Regular.ttf') format('truetype');
+  font-family: "Averta";
+  font-weight: normal;
+  font-style: normal;
+  src: url("../fonts/Averta-Regular.eot");
+  src: url("../fonts/Averta-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Averta-Regular.woff2") format("woff2"), url("../fonts/Averta-Regular.woff") format("woff"),
+    url("../fonts/Averta-Regular.ttf") format("truetype");
 }
 @font-face {
-	font-family: 'Averta';
-	font-weight: 600;
-	font-style: normal;
-	src: url('../fonts/Averta-SemiBold.eot');
-	src: url('../fonts/Averta-SemiBold.eot?#iefix') format('embedded-opentype'),
-			 url('../fonts/Averta-SemiBold.woff2') format('woff2'),
-			 url('../fonts/Averta-SemiBold.woff') format('woff'),
-			 url('../fonts/Averta-SemiBold.ttf') format('truetype');
-} 
+  font-family: "Averta";
+  font-weight: 600;
+  font-style: normal;
+  src: url("../fonts/Averta-SemiBold.eot");
+  src: url("../fonts/Averta-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Averta-SemiBold.woff2") format("woff2"), url("../fonts/Averta-SemiBold.woff") format("woff"),
+    url("../fonts/Averta-SemiBold.ttf") format("truetype");
+}
 @font-face {
-	font-family: 'Averta';
-	font-weight: bold;
-	font-style: normal;
-	src: url('../fonts/Averta-Bold.eot');
-	src: url('../fonts/Averta-Bold.eot?#iefix') format('embedded-opentype'),
-	     url('../fonts/Averta-Bold.woff2') format('woff2'),
-	     url('../fonts/Averta-Bold.woff') format('woff'),
-	     url('../fonts/Averta-Bold.ttf') format('truetype');
+  font-family: "Averta";
+  font-weight: bold;
+  font-style: normal;
+  src: url("../fonts/Averta-Bold.eot");
+  src: url("../fonts/Averta-Bold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Averta-Bold.woff2") format("woff2"), url("../fonts/Averta-Bold.woff") format("woff"),
+    url("../fonts/Averta-Bold.ttf") format("truetype");
 }
 
 // Generic: Base style definitions
-body, html {
+body,
+html {
   width: 100%;
   min-height: 100%;
   margin: 0;
@@ -45,8 +43,9 @@ body, html {
   -moz-osx-font-smoothing: grayscale;
 }
 
-
-* { box-sizing: border-box; }
+* {
+  box-sizing: border-box;
+}
 
 a {
   color: inherit;
@@ -72,8 +71,6 @@ figure img {
 .u-hide {
   display: none !important;
 }
-
-
 
 // Generic: Mockup navigation
 nav > ul {
@@ -109,10 +106,6 @@ nav a.isActive {
   opacity: 1;
 }
 
-
-
-
-
 section {
   min-height: 100%;
   width: 100%;
@@ -123,13 +116,16 @@ section {
   padding: 0.5rem;
   text-align: center;
 
-  @include phoneAndUp() { padding: 0.75rem; }
-  @include tabletAndUp() { padding: 1rem; }
-  @include dekstopAndUp() { padding: 1rem 10vh; }
+  @include phoneAndUp() {
+    padding: 0.75rem;
+  }
+  @include tabletAndUp() {
+    padding: 1rem;
+  }
+  @include dekstopAndUp() {
+    padding: 1rem 10vh;
+  }
 }
-
-
-
 
 /* Owl Carousel: Spacing */
 .owl-carousel {
@@ -191,10 +187,6 @@ section {
   background: rgba($darkerblue, 0.5);
 }
 
-
-
-
-
 .sequence__progress {
   background: rgba($darkerblue, 0.05);
 }
@@ -209,9 +201,6 @@ section {
   width: 18.6667%;
 }
 
-
-
-
 .text--medium {
   color: inherit;
   opacity: 0.6;
@@ -221,33 +210,56 @@ section {
   opacity: 0.25;
 }
 
-
-
-
-
 @keyframes ripple {
   /*scale the element to 250% to safely cover the entire link and fade it out*/
-  100% {opacity: 0; transform: scale(2.5);}
+  100% {
+    opacity: 0;
+    transform: scale(2.5);
+  }
 }
 @keyframes activeBump {
-    0% { -webkit-transform: scale(1); }
-   50% { -webkit-transform: scale(1.05); }
-  100% { -webkit-transform: scale(1); }
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.05);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
 }
 @keyframes activeBumpLarge {
-    0% { -webkit-transform: scale(1); }
-   50% { -webkit-transform: scale(1.2); }
-  100% { -webkit-transform: scale(1); }
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(1.2);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
 }
 @keyframes inActiveBump {
-    0% { -webkit-transform: scale(1); }
-   50% { -webkit-transform: scale(0.85); }
-  100% { -webkit-transform: scale(1); }
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.85);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
 }
 @keyframes inActiveBumpLarge {
-    0% { -webkit-transform: scale(1); }
-   50% { -webkit-transform: scale(0.8); }
-  100% { -webkit-transform: scale(1); }
+  0% {
+    -webkit-transform: scale(1);
+  }
+  50% {
+    -webkit-transform: scale(0.8);
+  }
+  100% {
+    -webkit-transform: scale(1);
+  }
 }
 
 .embed-fs {
@@ -271,5 +283,18 @@ section {
   // Positions all children above overlay
   &-bg > * {
     position: relative;
+  }
+}
+
+// Tailwind-inspired code for some simple responsive show/hide logic
+.hidden {
+  display: none;
+}
+@media (min-width: 480px) {
+  .sm\:hidden {
+    display: none;
+  }
+  .sm\:show {
+    display: inherit;
   }
 }

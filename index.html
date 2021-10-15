@@ -2,710 +2,1924 @@
 
 <html lang="en">
 
-  <head>
-
-    <title>Poltio interaction test</title>
-
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-
-    <link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
-    <link rel="stylesheet" href="css/owl.carousel.min.css" />
-    <link rel="stylesheet" href="css/style.css" />
-
-    <script src="js/jquery-3.2.1.slim.min.js"></script>
-    <script src="js/owl.carousel.min.js"></script>
-    <script src="js/scripts.js"></script>
-
-  </head>
-
-  <body style="background: #F0F8FF">
-
-    <nav>
-      <ul>
-        <li><a href="index.html" class="isActive">Feed</a></li>
-        <li><a href="embed.html">Embeds</a></li>
-        <li class="hasDropdown">
-          <a href="javascript:void(0)">Other...</a>
-          <div class="dropdown" style="margin-top: -1rem; margin-right: 0.75rem;">
-            <ul>
-              <li><a href="embed-fullscreen.html">Fullscreen Embed</a></li>
-              <li><a href="trivia.html">Trivia Landing</a></li>
-              <li><a href="trivia-talkingdead.html">Talking Dead</a></li>
-              <li><a href="trivia-nbc.html">NBC</a></li>
-              <li><a href="trivia-wework.html">WeWork</a></li>
-              <li><a href="trivia-leaderboard.html">Leaderboard</a></li>
-              <li><a href="live-polling.html">Live Polling</a></li>
-            </ul>
-          </div>
-        </li>
-      </ul>
-    </nav>
-
-    <section>
-
-      <div class="card">
-
-        <div class="card__header">
-
-          <a href="#" class="author">
-            <div class="badge badge--small" style="margin-left: -0.25rem;">
-              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-            </div>
-            <span class="author__name">Vildan Ay</span>
-          </a>
-
-          <div class="card__header--right">
-            <span class="hasTooltip">
-              <a href="#" class="date">yesterday</a>
-              <small class="tooltip tooltip--onBottom">25 Nov 14:53</small>
-            </span>
-            <span class="badge badge--end-date hasTooltip">
-              <img src="images/icons/clock_outline_yellow.svg" alt="" /> 19 hours
-              <small class="tooltip tooltip--onBottom">Poll ends on 28 Nov 9:00</small>
-            </span>
-            <div class="hasDropdown">
-
-              <a href="#" class="link--icon">
-                <img src="images/icons/more.svg" alt="" />
-              </a>
-
-              <div class="dropdown">
-                <ul>
-                  <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
-                  <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
-                  <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
-                  <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
-                  <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
-                </ul>
-              </div>
-
-            </div>
-          </div>
-
-        </div>
-
-        <div class="card__category" style="background: #83D38C;"></div>
-
-        <div class="card__question">
-          <a href="javascript:void(0)" class="card__question--toggle">
-            <img src="images/icons/arrow_updown_white.svg" alt="" style="display: inline-block; width: 1.5rem; vertical-align: middle;" />
-            <img src="images/icons/cross_white.svg" alt="" style="display: none; width: 1.5rem; vertical-align: middle;" class="close" />
-          </a>
-          <figure class="card__q-image">
-            <img src="images/content/question-sports-image.png" alt="" />
-          </figure>
-          <div class="card__q-title">
-            <div class="card__q-title__content">
-              <h3 class="h3--small">Başakşehir karşılaşmasında kötü bir performans sergilediği için taraftar tarafından ıslıklanan Volkan Demirel'in Fenerbahçe'den ayrılma kararı aldığı belirtildi. Bu ayrılışı destekliyor musunuz?</h3>
-            </div>
-          </div>
-        </div>
-
-        <div class="card__answer card__answer--yn">
-
-          <button class="button button--answer">
-            <span class="button__text">Evet</span>
-            <span class="button__stat">
-              <span style="width: 69%"></span>
-              <b>69%</b>
-            </span>
-          </button>
-          <button class="button button--answer">
-            <span class="button__text">Hayır</span>
-            <span class="button__stat">
-              <span style="width: 31%"></span>
-              <b>31%</b>
-            </span>
-          </button>
-
-        </div>
-
-
-        <div class="card__followup">
-          <div class="card__followup--content">
-            <div class="card__followup--content--left">
-              <strong>31% thinks the same!</strong><br>
-              <small style="opacity: 0.25;">Discuss your vote below</small>
-            </div>
-            <div class="card__followup--actions">
-              <button class="button button--facebook">
-                <img src="images/icons/facebook_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
-                Share
-              </button>
-              <button class="button button--twitter">
-                <img src="images/icons/twitter_white.svg" alt="" style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
-                Share
-              </button>
-              <span class="hasTooltip">
-                <button class="button button--outline button--square">
-                  <img src="images/icons/link.svg" alt="" style="display: block; width: 1.25rem;" />
-                </button>
-                <span class="tooltip">Copy link</span>
-              </span>
-              <span class="hasTooltip">
-                <button class="button button--outline button--square">
-                  <img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
-                </button>
-                <span class="tooltip">View Geo Split</span>
-              </span>
-            </div>
-          </div>
-        </div>
-
-
-        <div class="card__footer">
-          <div>
-            <a href="#" class="link--icon">
-              <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
-              <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
-              <span class="value">18</span>
-            </a>
-            <a href="#" class="link--icon">
-              <img src="images/icons/comment_outline.svg" alt="" />
-              <span class="value">3</span>
-            </a>
-            <a href="#" class="link--icon">
-              <img src="images/icons/share_outline.svg" alt="" />
-              <span class="value">7</span>
-            </a>
-          </div>
-          <div>
-            <span class="hasTooltip">
-              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
-                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
-                <div class="badge badge--tiny">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
-              </div>
-
-                <span class="value">+4976</span>
-              </a>
-              <span class="tooltip">Vote count</span>
-            </span>
-          </div>
-        </div>
-
-      </div>
-
-
-
-
-      <div class="owl-carousel">
-
-        <div class="card">
-
-          <div class="card__header">
-
-            <a href="#" class="author">
-              <div class="badge badge--small" style="margin-left: -0.25rem;">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <span class="author__name">Vildan Ay</span>
-            </a>
-
-            <div class="card__header--right">
-              <a href="#" class="date">2 weeks ago</a>
-              <div class="hasDropdown">
-
-                <a href="#" class="link--icon">
-                  <img src="images/icons/more.svg" alt="" />
-                </a>
-
-                <div class="dropdown">
-                  <ul>
-                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-
-          <div class="card__category" style="background: #7F9BE2;"></div>
-
-          <div class="card__question">
-            <figure class="card__q-image">
-              <img src="images/content/question-food-image.png" alt="" />
-            </figure>
-            <div class="card__q-title">
-              <div class="card__q-title__content">
-                <h3>Sizce sağlıklı bir hayat için en doğru beslenme biçimi hangisi ya da hangileri?</h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="card__answer card__answer--mctext">
-
-            <button class="button button--answer">
-              <span class="button__text">Vejetaryen (her türlü et yasak)</span>
-              <span class="button__stat">
-                <span style="width: 18%"></span>
-                <b>18%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Vegan (her türlü hayvansal gıda...</span>
-              <span class="button__stat">
-                <span style="width: 25%"></span>
-                <b>25%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Pesketeryan (balık dışında diğer tüm etler yasak)</span>
-              <span class="button__stat">
-                <span style="width: 7%"></span>
-                <b>7%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Paleo diyeti (glutensiz - şekersiz)</span>
-              <span class="button__stat">
-                <span style="width: 42%"></span>
-                <b>42%</b>
-              </span>
-            </button>
-
-          </div>
-
-          <div class="card__footer">
-            <div>
-              <a href="#" class="link--icon">
-                <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
-                <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
-                <span class="value">67</span>
-              </a>
-              <a href="#" class="link--icon">
-                <img src="images/icons/comment_outline.svg" alt="" />
-                <span class="value">0</span>
-              </a>
-              <a href="#" class="link--icon">
-                <img src="images/icons/share_outline.svg" alt="" />
-                <span class="value"> 1</span>
-              </a>
-            </div>
-            <div>
-              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
-                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
-                <div class="badge badge--tiny">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
-              </div>
-                <span class="value">900K</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="card">
-
-          <div class="card__header">
-
-            <a href="#" class="author">
-              <div class="badge badge--small" style="margin-left: -0.25rem;">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <span class="author__name">Vildan Ay</span>
-            </a>
-
-            <div class="card__header--right">
-              <a href="#" class="date">2 weeks ago</a>
-              <div class="hasDropdown">
-
-                <a href="#" class="link--icon">
-                  <img src="images/icons/more.svg" alt="" />
-                </a>
-
-                <div class="dropdown">
-                  <ul>
-                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-
-          <div class="card__category" style="background: #7F9BE2;"></div>
-
-          <div class="card__question">
-            <figure class="card__q-image">
-              <img src="images/content/question-food-image.png" alt="" />
-            </figure>
-            <div class="card__q-title">
-              <div class="card__q-title__content">
-                <h3>Sizce sağlıklı bir hayat için en doğru beslenme biçimi hangisi ya da hangileri?</h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="card__answer card__answer--mctext">
-
-            <button class="button button--answer">
-              <span class="button__text">Vejetaryen (her türlü et yasak)</span>
-              <span class="button__stat">
-                <span style="width: 18%"></span>
-                <b>18%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Vegan (her türlü hayvansal gıda...</span>
-              <span class="button__stat">
-                <span style="width: 25%"></span>
-                <b>25%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Pesketeryan (balık dışında diğer tüm etler yasak)</span>
-              <span class="button__stat">
-                <span style="width: 7%"></span>
-                <b>7%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Paleo diyeti (glutensiz - şekersiz)</span>
-              <span class="button__stat">
-                <span style="width: 42%"></span>
-                <b>42%</b>
-              </span>
-            </button>
-
-          </div>
-
-          <div class="card__footer">
-            <div>
-              <a href="#" class="link--icon">
-                <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
-                <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
-                <span class="value">67</span>
-              </a>
-              <a href="#" class="link--icon">
-                <img src="images/icons/comment_outline.svg" alt="" />
-                <span class="value">0</span>
-              </a>
-            </div>
-            <div>
-              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
-                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
-                <div class="badge badge--tiny">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
-              </div>
-                <span class="value">900K</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-        <div class="card">
-
-          <div class="card__header">
-
-            <a href="#" class="author">
-              <div class="badge badge--small" style="margin-left: -0.25rem;">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <span class="author__name">Vildan Ay</span>
-            </a>
-
-            <div class="card__header--right">
-              <a href="#" class="date">2 weeks ago</a>
-              <div class="hasDropdown">
-
-                <a href="#" class="link--icon">
-                  <img src="images/icons/more.svg" alt="" />
-                </a>
-
-                <div class="dropdown">
-                  <ul>
-                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
-                  </ul>
-                </div>
-
-              </div>
-            </div>
-
-          </div>
-
-          <div class="card__category" style="background: #7F9BE2;"></div>
-
-          <div class="card__question">
-            <figure class="card__q-image">
-              <img src="images/content/question-food-image.png" alt="" />
-            </figure>
-            <div class="card__q-title">
-              <div class="card__q-title__content">
-                <h3>Sizce sağlıklı bir hayat için en doğru beslenme biçimi hangisi ya da hangileri?</h3>
-              </div>
-            </div>
-          </div>
-
-          <div class="card__answer card__answer--mctext">
-
-            <button class="button button--answer">
-              <span class="button__text">Vejetaryen (her türlü et yasak)</span>
-              <span class="button__stat">
-                <span style="width: 18%"></span>
-                <b>18%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Vegan (her türlü hayvansal gıda...</span>
-              <span class="button__stat">
-                <span style="width: 25%"></span>
-                <b>25%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Pesketeryan (balık dışında diğer tüm etler yasak)</span>
-              <span class="button__stat">
-                <span style="width: 7%"></span>
-                <b>7%</b>
-              </span>
-            </button>
-
-            <button class="button button--answer">
-              <span class="button__text">Paleo diyeti (glutensiz - şekersiz)</span>
-              <span class="button__stat">
-                <span style="width: 42%"></span>
-                <b>42%</b>
-              </span>
-            </button>
-
-          </div>
-
-          <div class="card__footer">
-            <div>
-              <a href="#" class="link--icon">
-                <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
-                <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
-                <span class="value">67</span>
-              </a>
-              <a href="#" class="link--icon">
-                <img src="images/icons/comment_outline.svg" alt="" />
-                <span class="value">0</span>
-              </a>
-            </div>
-            <div>
-              <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
-                <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
-                <div class="badge badge--tiny">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
-              </div>
-                <span class="value">900K</span>
-              </a>
-            </div>
-          </div>
-
-        </div>
-
-      </div><!-- end card -->
-
-
-
-      <div class="card">
-
-        <div class="card__header">
-
-          <a href="#" class="author">
-            <div class="badge badge--small" style="margin-left: -0.25rem;">
-              <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-            </div>
-            <span class="author__name">Vildan Ay</span>
-          </a>
-
-          <div class="card__header--right">
-            <a href="#" class="date">3 months ago</a>
-              <div class="hasDropdown">
-
-                <a href="#" class="link--icon">
-                  <img src="images/icons/more.svg" alt="" />
-                </a>
-
-                <div class="dropdown">
-                  <ul>
-                    <li class="date--onmobile"><a><small>Posted on 25 Nov 14:53</small></a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/link.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Copy Link</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/code.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Embed</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/flag_outline.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> Report</a></li>
-                    <li><a href="javascript:alert('action')"><img src="images/icons/globe.svg" alt="" style="display: inline-block; width: 1rem; vertical-align: middle;" /> View Geo Split</a></li>
-                  </ul>
-                </div>
-
-              </div>
-          </div>
-
-        </div>
-
-        <div class="card__category" style="background: #70D0D6;"></div>
-
-        <div class="card__question">
-          <figure class="card__q-image">
-            <img src="images/content/question-entertainment-image.jpg" alt="" />
-          </figure>
-          <div class="card__q-title">
-              <div class="card__q-title__content">
-                <h3>Kendinizi politik ve sosyal açıdan en çok hangisiyle tarif edersiniz?</h3>
-              </div>
-          </div>
-        </div>
-
-        <div class="card__answer card__answer--mcimage mcimage--3col">
-
-          <button class="button button--answer button--image">
-            <figure>
-              <img src="images/content/answer-option-1.jpg" alt="" />
-            </figure>
-            <span class="button__stat">
-              <span style="width: 18%"></span>
-              <b>18%</b>
-            </span>
-          </button>
-
-          <button class="button button--answer button--image">
-            <figure>
-              <img src="images/content/answer-option-2.jpg" alt="" />
-            </figure>
-            <span class="button__stat">
-              <span style="width: 25%"></span>
-              <b>25%</b>
-            </span>
-          </button>
-
-          <button class="button button--answer button--image">
-            <figure>
-              <img src="images/content/answer-option-placeholder.jpg" alt="" />
-            </figure>
-            <span class="button__stat">
-              <span style="width: 7%"></span>
-              <b>7%</b>
-            </span>
-          </button>
-
-          <button class="button button--answer button--image">
-            <figure>
-              <img src="images/content/answer-option-3.jpg" alt="" />
-            </figure>
-            <span class="button__stat">
-              <span style="width: 42%"></span>
-              <b>42%</b>
-            </span>
-          </button>
-
-          <button class="button button--answer button--image">
-            <figure>
-              <img src="images/content/answer-option-4.jpg" alt="" />
-            </figure>
-            <span class="button__stat">
-              <span style="width: 42%"></span>
-              <b>42%</b>
-            </span>
-          </button>
-
-          <button class="button button--answer button--image">
-            <figure>
-              <img src="images/content/answer-option-5.jpg" alt="" />
-            </figure>
-            <span class="button__stat">
-              <span style="width: 42%"></span>
-              <b>42%</b>
-            </span>
-          </button>
-
-        </div>
-
-        <div class="card__footer">
-          <div>
-            <a href="#" class="link--icon">
-              <img src="images/icons/like_outline.svg" class="icon icon__inactive" alt="" />
-              <!-- <img src="images/icons/like.svg" class="icon icon__active" alt="" /> -->
-              <span class="value">67</span>
-            </a>
-            <a href="#" class="link--icon">
-              <img src="images/icons/comment_outline.svg" alt="" />
-              <span class="value">0</span>
-            </a>
-          </div>
-          <div>
-            <a href="javascript:alert('Opens modal listing people voted for item, friends first.')" class="link--icon">
-              <!-- <img src="images/icons/person_vote_outline.svg" alt="" /> -->
-              <div class="badge badge--tiny">
-                <img src="https://randomuser.me/api/portraits/women/43.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/women/29.jpg" alt="">
-              </div>
-              <div class="badge badge--tiny badge--overlap">
-                <img src="https://randomuser.me/api/portraits/men/17.jpg" alt="">
-              </div>
-              <span class="value">7</span>
-            </a>
-          </div>
-        </div>
-
-      </div><!-- end card -->
-
-      <div id="loading" style="background: rgba(30, 61, 84, 0.03); width: 100%; max-width: 36rem; padding: 5rem 0; border-radius: 0.5rem;">
-        <svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" style="margin: auto; display: block;" width="5rem" height="5rem" viewBox="0 0 100 100" preserveAspectRatio="xMidYMid">
-          <circle cx="17" cy="46.1078" r="5" fill="#ffc000">
-            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.6s"></animate>
-          </circle> <circle cx="39" cy="56" r="5" fill="#ff6644">
-            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.45s"></animate>
-          </circle> <circle cx="61" cy="56" r="5" fill="#009eec">
-            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.3s"></animate>
-          </circle> <circle cx="83" cy="56" r="5" fill="#d66ddd">
-            <animate attributeName="cy" calcMode="spline" keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite" values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.15s"></animate>
-          </circle>
-        </svg>
-      </div>
-
-    </section>
-
-  </body>
+<head>
+
+	<title>Poltio interaction test</title>
+
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+
+	<link href="https://fonts.googleapis.com/css?family=Fira+Sans:400,500,700" rel="stylesheet">
+	<link rel="stylesheet" href="css/owl.carousel.min.css" />
+	<link rel="stylesheet" href="css/style.css" />
+
+	<script src="js/jquery-3.2.1.slim.min.js"></script>
+	<script src="js/owl.carousel.min.js"></script>
+	<script src="js/scripts.js"></script>
+
+	<style>
+		.card-context {
+			width: 100%;
+			max-width: 36rem;
+			margin-top: -1rem;
+			margin-bottom: 4rem;
+			opacity: 0.25;
+			text-align: left;
+		}
+
+		.u-mb3 {
+			margin-bottom: 3rem !important;
+		}
+	</style>
+
+</head>
+
+<body>
+
+	<nav>
+		<ul>
+			<li><a href="index.html" class="isActive">Sandbox</a></li>
+			<li><a href="embed.html">Embed</a></li>
+			<li class="hasDropdown">
+				<a href="javascript:void(0)">Other...</a>
+				<div class="dropdown" style="margin-top: -1rem; margin-right: 0.75rem;">
+					<ul>
+						<li><a href="feed.html">Social Feed</a></li>
+						<li><a href="embed-fullscreen.html">Fullscreen Embed</a></li>
+						<li><a href="trivia.html">Trivia Landing</a></li>
+						<li><a href="trivia-talkingdead.html">Talking Dead</a></li>
+						<li><a href="trivia-nbc.html">NBC</a></li>
+						<li><a href="trivia-wework.html">WeWork</a></li>
+						<li><a href="trivia-leaderboard.html">Leaderboard</a></li>
+						<li><a href="live-polling.html">Live Polling</a></li>
+					</ul>
+				</div>
+			</li>
+		</ul>
+	</nav>
+
+	<section>
+
+
+		<div class="card card--embed">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image" style="max-height: 100vh;">
+					<img class="sm:hidden" src="images/content/question-16by10.jpg" alt="" />
+					<img class="hidden sm:show" src="images/content/question-5by2.jpg" alt="" />
+				</figure>
+			</div>
+
+			<div class="card__title">
+				<h3 class="h3--large">How often do you cook at home?</h3>
+			</div>
+
+			<div class="card__answer card__answer--mctext">
+
+				<button class="button button--answer">
+					<span class="button__text">Almost every day</span>
+					<span class="button__stat">
+						<span style="width: 28%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">Only when I have guests</span>
+					<span class="button__stat">
+						<span style="width: 27%"></span>
+						<b>31%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">Never</span>
+					<span class="button__stat">
+						<span style="width: 12%"></span>
+						<b>12%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">Other - Tell us about it below!</span>
+					<span class="button__stat">
+						<span style="width: 33%"></span>
+						<b>28%</b>
+					</span>
+				</button>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<strong class="card__hidexs">24% thinks the same!<br></strong>
+						<!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+						<div class="hasDropdown">
+
+							<a href="#" style="padding: 0;" class="link--icon">
+								<img src="images/icons/toggle_outline.svg" alt=""
+									style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+								<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours
+										left)</span></small>
+							</a>
+
+							<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+								<div style="display: flex;">
+									<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+									<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									<!-- <a href="javascript:toggleNotify($(this))">
+											<img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+										</a> -->
+								</div>
+								<input class="field--checkbox" type="checkbox" id="notify_email_tnc"
+									name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the
+									<a href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card__followup--actions">
+						<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div>
+
+					<span class="badge badge--end-date hasTooltip">
+						<img src="images/icons/clock_outline_yellow.svg" alt="" /> 19 hours
+						<small class="tooltip">Poll ends on 28 Nov 9:00</small>
+					</span>
+
+					<span class="hasTooltip">
+						<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Şu ana kadar</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+						<span class="tooltip">Vote count</span>
+					</span>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title + Cover image<br>
+				Answer types: MC Text<br>
+				Options: End date NO, Hidden NO, Show vote count YES, Display percentages YES
+			</small>
+		</div>
+
+
+		<div id="multipunch" class="card card--embed" data-max-answers="3">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--large">Which of the following industries do you belong to?</h3>
+						<p class="description">Select up to 3 answers</p>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--mctext">
+
+				<button class="button button--multipunch">
+					<span class="button__text">Agriculture, Forestry, Fishing and Hunting</span>
+				</button>
+				<button class="button button--multipunch">
+					<span class="button__text">Computer and Electronics Manufacturing</span>
+				</button>
+				<button class="button button--multipunch">
+					<span class="button__text">Transportation and Warehousing</span>
+				</button>
+				<button class="button button--multipunch">
+					<span class="button__text">Telecommunications</span>
+				</button>
+				<button class="button button--multipunch">
+					<span class="button__text">Software/Tech</span>
+				</button>
+				<div style="text-align: right;">
+					<button type="submit" class="button button--primary button--answer isDisabled">
+						<span class="button__text" style="padding-bottom: 0.25rem">Submit</span>
+					</button>
+				</div>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<strong class="card__hidexs">24% thinks the same!<br></strong>
+						<!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+						<div class="hasDropdown">
+
+							<a href="#" style="padding: 0;" class="link--icon">
+								<img src="images/icons/toggle_outline.svg" alt=""
+									style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+								<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours
+										left)</span></small>
+							</a>
+
+							<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+								<div style="display: flex;">
+									<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+									<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									<!-- <a href="javascript:toggleNotify($(this))">
+										<img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+									</a> -->
+								</div>
+								<input class="field--checkbox" type="checkbox" id="notify_email_tnc"
+									name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the
+									<a href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card__followup--actions">
+						<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: MC Text Multipunch<br>
+			</small>
+		</div>
+
+
+		<div id="multipunch-image" class="card card--embed">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--large">Choose your favourite city</h3>
+						<p class="description">Select as many as you want</p>
+					</div>
+				</div>
+			</div>
+
+
+			<div class="card__answer card__answer--mcimage mcimage--3col">
+
+				<button class="button button--image button--multipunch">
+					<figure>
+						<img src="https://d2bgjx2gb489de.cloudfront.net/gbb-blogs/wp-content/uploads/2018/04/11184524/Istanbul-T%C3%BCrkei.jpg"
+							alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Istanbul</span>
+				</button>
+
+				<button class="button button--image button--multipunch">
+					<figure>
+						<img src="https://www.hogapage.de/media/thumbs/magazin/post/277/201903-Amsterdam.jpg.1200x0_q90_upscale.jpg"
+							alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Amsterdam</span>
+				</button>
+
+				<button class="button button--image button--multipunch">
+					<figure>
+						<img src="https://upload.wikimedia.org/wikipedia/commons/6/6c/Aerial_view_of_Berlin_%2832881394137%29.jpg"
+							alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Berlin</span>
+				</button>
+
+				<button class="button button--image button--multipunch">
+					<figure>
+						<img src="https://www.lowyinstitute.org/sites/default/files/14195355069_40bf85674c_k%20copy.jpg"
+							alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Hong Kong</span>
+				</button>
+
+				<button class="button button--image button--multipunch">
+					<figure>
+						<img src="https://www.lonelyplanet.de/fileadmin/media/lp/Magazin/Reportagen/Goldmann_Artikel/New-York-billig/shutterstockRF_152295734.jpg"
+							alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">New York City</span>
+				</button>
+
+				<button class="button button--image button--multipunch">
+					<figure>
+						<img src="https://daily.sevenfifty.com/app/uploads/2017/11/SFD_48hrs_Vancouver2_CR_iStock_2520x1420.jpg"
+							alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Vancouver</span>
+				</button>
+
+				<div style="flex: 100%; text-align: right; margin-right: -0.5rem;">
+					<button type="submit" class="button button--primary button--answer isDisabled">
+						<span class="button__text" style="padding-bottom: 0.25rem">Submit</span>
+					</button>
+				</div>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<strong class="card__hidexs">24% thinks the same!<br></strong>
+						<!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+						<div class="hasDropdown">
+
+							<a href="#" style="padding: 0;" class="link--icon">
+								<img src="images/icons/toggle_outline.svg" alt=""
+									style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+								<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours
+										left)</span></small>
+							</a>
+
+							<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+								<div style="display: flex;">
+									<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+									<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									<!-- <a href="javascript:toggleNotify($(this))">
+										<img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+									</a> -->
+								</div>
+								<input class="field--checkbox" type="checkbox" id="notify_email_tnc"
+									name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the
+									<a href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card__followup--actions">
+						<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: MC Image Multipunch<br>
+			</small>
+		</div>
+
+
+
+
+		<div class="card card--embed">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3>Sizce Reza Zarrab'ın davası Ebru Gündeş'in kariyerini etkiler mi?</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--yn">
+
+				<button class="button button--answer button--nostats">
+					<span class="button__text">Evet</span>
+				</button>
+				<button class="button button--answer button--nostats">
+					<span class="button__text">Hayır</span>
+				</button>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<!-- <strong>[followup text]</strong><br> -->
+						<!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+						<div class="hasDropdown">
+
+							<a href="#" style="padding: 0;" class="link--icon">
+								<img src="images/icons/toggle_outline.svg" alt=""
+									style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+								<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours
+										left)</span></small>
+							</a>
+
+							<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+								<div style="display: flex;">
+									<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+									<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									<!-- <a href="javascript:toggleNotify($(this))">
+										<img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+									</a> -->
+								</div>
+								<input class="field--checkbox" type="checkbox" id="notify_email_tnc"
+									name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the
+									<a href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card__followup--actions">
+						<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: Yes/No<br>
+				Options: End date NO, Hidden NO, Show vote count NO, Display percentages NO
+			</small>
+		</div>
+
+
+
+		<div class="sequence-container-wrapper">
+
+			<div class="sequence__timer">
+				<div class="sequence__timer--label">0:06</div>
+			</div>
+
+			<div class="sequence-container">
+
+				<div class="card-context" style="margin-bottom: 1rem;">
+					<h4>Test/Quiz: start, question &amp; end cards</h4>
+				</div>
+
+				<div class="card card--embed card--sequence u-mb3">
+					<!-- start card -->
+
+					<div class="card__question">
+						<figure class="card__q-image">
+							<img src="images/content/question-oscars.jpg" alt="" />
+						</figure>
+						<div class="card__q-title">
+							<div class="card__q-title__content">
+								<h3>Which Oscar Nominees do you think will go home with the price?</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="card__answer">
+						<div>
+							<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum
+								has been the industry's standard dummy text ever since the 1500s, when an unknown
+								printer took a galley of type and scrambled it to make a type specimen book.</p>
+							<p>
+								<button class="button button--primary button--large">Start Quiz</button>
+							</p>
+						</div>
+					</div>
+
+					<div class="card__followup">
+						<div class="card__followup--content">
+							<div class="card__followup--content--left">
+								<div class="card__colophon">
+									Next question:
+								</div>
+								<div class="card__followup-timer">
+									<div class="card__followup-timerbar"></div>
+								</div>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--outline button--small js-pausecontinue-toggle">
+									Pause
+								</a>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--primary button--small js-pausecontinue-toggle u-hide">
+									Continue
+								</a>
+							</div>
+							<div class="card__followup--actions">
+							</div>
+						</div>
+					</div>
+
+					<div class="sequence__progress hasTooltip">
+						<div class="sequence__progress-bar sequence__progress-bar" style="width: 3%;"></div>
+						<div class="tooltip tooltip--onLeft tooltip--onBottom"
+							style="margin-left: 0.5rem; margin-top: 1rem;">
+							Question 1/8
+						</div>
+					</div>
+
+					<div class="card__footer">
+						<div>
+							<a href="https://poltio.com" target="_blank"
+								style="display: block; padding: 0.675rem 0.75rem 0rem;"><img
+									src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+						</div>
+						<div>
+							<span class="hasTooltip">
+								<small style="display: inline-block; margin-top: 0.25rem;"><a href="#"
+										class="link--icon">
+										<span class="card__hidexs">Şu ana kadar</span>
+										<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+										kez oylandı.
+									</a></small>
+								<span class="tooltip">Vote count</span>
+							</span>
+						</div>
+					</div>
+
+				</div><!-- end card -->
+
+
+
+				<div class="card card--embed card--sequence u-mb3">
+					<!-- start card -->
+
+					<div class="card__question">
+						<figure class="card__q-image">
+						</figure>
+						<div class="card__q-title">
+							<div class="card__q-title__content">
+								<h3 class="h3--large">En iyi film?</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="card__answer card__answer--mcimage mcimage--3col">
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487594791.006638.jpg" alt="" />
+								<span class="button__stat">
+									<span style="width: 18%"></span>
+									<b>18%</b>
+								</span>
+							</figure>
+							<span class="button__text">Arrival</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487594791.61878.61878.png" alt="" />
+								<span class="button__stat">
+									<span style="width: 18%"></span>
+									<b>18%</b>
+								</span>
+							</figure>
+							<span class="button__text">Arrival is only a matter of delay in the end...<span
+									style="display: block; opacity: 0.25;"> (long title)</span></span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487594791.243982.png" alt="" />
+								<span class="button__stat">
+									<span style="width: 18%"></span>
+									<b>18%</b>
+								</span>
+							</figure>
+						</button>
+
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487594791.362685.png" alt="" />
+								<span class="button__stat">
+									<span style="width: 18%"></span>
+									<b>18%</b>
+								</span>
+							</figure>
+							<span class="button__text">Hacksaw Ridge</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487594791.458291.png" alt="" />
+								<span class="button__stat">
+									<span style="width: 18%"></span>
+									<b>18%</b>
+								</span>
+							</figure>
+							<span class="button__text">Hell or High Water</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487594791.508849.png" alt="" />
+								<span class="button__stat">
+									<span style="width: 18%"></span>
+									<b>18%</b>
+								</span>
+							</figure>
+							<span class="button__text">Hidden Figures</span>
+						</button>
+
+					</div>
+
+					<div class="card__followup">
+						<div class="card__followup--content">
+							<div class="card__followup--content--left">
+								<div class="card__colophon">
+									Next question:
+								</div>
+								<div class="card__followup-timer">
+									<div class="card__followup-timerbar"></div>
+								</div>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--outline button--small js-pausecontinue-toggle">
+									Pause
+								</a>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--primary button--small js-pausecontinue-toggle u-hide">
+									Continue
+								</a>
+							</div>
+							<div class="card__followup--actions">
+							</div>
+						</div>
+					</div>
+
+					<div class="sequence__progress hasTooltip">
+						<div class="sequence__progress-bar sequence__progress-bar"></div>
+						<div class="tooltip tooltip--onLeft tooltip--onBottom"
+							style="margin-left: 0.5rem; margin-top: 1rem;">
+							Question 1/8
+						</div>
+					</div>
+
+					<div class="card__footer">
+						<div>
+							<a href="https://poltio.com" target="_blank"
+								style="display: block; padding: 0.675rem 0.75rem 0rem;"><img
+									src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+						</div>
+						<div>
+							<span class="hasTooltip">
+								<small style="display: inline-block; margin-top: 0.25rem;"><a href="#"
+										class="link--icon">
+										<span class="card__hidexs">Şu ana kadar</span>
+										<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+										kez oylandı.
+									</a></small>
+								<span class="tooltip">Vote count</span>
+							</span>
+						</div>
+					</div>
+
+				</div><!-- end card -->
+
+				<div class="card card--embed card--sequence card--sequence-active u-mb3">
+					<!-- start card -->
+
+					<div class="card__question">
+						<figure class="card__q-image">
+						</figure>
+						<div class="card__q-title">
+							<div class="card__q-title__content">
+								<h3 class="h3--large">En iyi erkek oyuncu?</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="card__answer card__answer--mcimage mcimage--3col">
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487848521.638176.png" alt="" />
+							</figure>
+							<span class="button__text">Casey Affleck - Manchester By The Sea</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487848582.02018.png" alt="" />
+							</figure>
+							<span class="button__text">Andrew Garfield - Hacksaw Ridge</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487595305.216388.png" alt="" />
+							</figure>
+							<span class="button__text">Ryan Gosling - La La Land</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487848630.4481.png" alt="" />
+							</figure>
+							<span class="button__text">Viggo Mortensen - Captain Fantastic</span>
+						</button>
+
+						<button class="button button--answer button--image">
+							<figure>
+								<img src="images/content/movies/1487595305.346825.png" alt="" />
+							</figure>
+							<span class="button__text">Denzel Washington - Fences</span>
+						</button>
+
+					</div>
+
+					<div class="card__followup">
+						<div class="card__followup--content">
+							<div class="card__followup--content--left">
+								<div class="card__colophon">
+									Next question:
+								</div>
+								<div class="card__followup-timer">
+									<div class="card__followup-timerbar"></div>
+								</div>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--outline button--small js-pausecontinue-toggle">
+									Pause
+								</a>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--primary button--small js-pausecontinue-toggle u-hide">
+									Continue
+								</a>
+							</div>
+							<div class="card__followup--actions">
+							</div>
+						</div>
+					</div>
+
+					<div class="sequence__progress hasTooltip">
+						<div class="sequence__progress-bar sequence__progress-bar"></div>
+						<div class="tooltip tooltip--onLeft" style="margin-left: 0.5rem">
+							Question 1/8
+						</div>
+					</div>
+
+					<div class="card__footer">
+						<div>
+							<a href="https://poltio.com" target="_blank"
+								style="display: block; padding: 0.675rem 0.75rem 0rem;"><img
+									src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+						</div>
+						<div>
+							<span class="hasTooltip">
+								<small style="display: inline-block; margin-top: 0.25rem;"><a href="#"
+										class="link--icon">
+										<span class="card__hidexs">Şu ana kada</span>
+										<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+										kez oylandı.
+									</a></small>
+								<span class="tooltip">Vote count</span>
+							</span>
+						</div>
+					</div>
+
+				</div><!-- end card -->
+
+
+
+				<div class="card card--embed card--sequence card--sequence-active u-mb3">
+					<!-- start card -->
+
+					<div class="card__question">
+						<figure class="card__q-image">
+							<img src="images/content/question-oscars.jpg" alt="" />
+						</figure>
+						<div class="card__q-title">
+							<div class="card__q-title__content">
+								<h3>Congratulations!</h3>
+							</div>
+						</div>
+					</div>
+
+					<div class="card__answer">
+						<div style="width: 100%;">
+							<p><strong>6/8</strong> answers correct.</p>
+							<p>...</p>
+							<p>
+								<button class="button button--primary button--large">Followup link!</button>
+							</p>
+						</div>
+					</div>
+
+					<div class="card__followup">
+						<div class="card__followup--content">
+							<div class="card__followup--content--left">
+								<div class="card__colophon">
+									Next question:
+								</div>
+								<div class="card__followup-timer">
+									<div class="card__followup-timerbar"></div>
+								</div>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--outline button--small js-pausecontinue-toggle">
+									Pause
+								</a>
+								<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+									class="button button--primary button--small js-pausecontinue-toggle u-hide">
+									Continue
+								</a>
+							</div>
+							<div class="card__followup--actions">
+							</div>
+						</div>
+					</div>
+
+					<div class="sequence__progress hasTooltip">
+						<div class="sequence__progress-bar sequence__progress-bar sequence__progress-bar"
+							style="width: 100%"></div>
+						<div class="tooltip tooltip--onLeft tooltip--onBottom"
+							style="margin-left: 0.5rem; margin-top: 1rem;">
+							Question 8/8
+						</div>
+					</div>
+
+					<div class="card__footer">
+						<div>
+							<a href="https://poltio.com" target="_blank"
+								style="display: block; padding: 0.675rem 0.75rem 0rem;"><img
+									src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
+						</div>
+						<div>
+							<span class="hasTooltip">
+								<small style="display: inline-block; margin-top: 0.25rem;"><a href="#"
+										class="link--icon">
+										<span class="card__hidexs">Şu ana kadar</span>
+										<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+										kez oylandı.
+									</a></small>
+								<span class="tooltip">Vote count</span>
+							</span>
+						</div>
+					</div>
+
+				</div><!-- end card -->
+
+			</div>
+		</div>
+
+		<div class="card-context">
+			<small>
+				Card type: Quiz<br>
+				Question type: Title only<br>
+				Answer types: MC Image<br>
+				Options: End date NO, Hidden NO, Show vote count YES, Display percentages YES
+			</small>
+		</div>
+
+
+
+
+		<div class="card card--embed card--hasLead">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+					<img src="images/content/question-trump.jpg" alt="" />
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--small">How would you score Trump's First 100 Days In Office? How would you score
+							Trump's First 100 Days In Office? How would you score Trump's First 100 Days In Office?
+							(Small question text)</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--score">
+
+				<button class="button button--answer">
+					<span class="button__text">1</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">2</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">3</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">4</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">5</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<strong>[followup text]</strong><br>
+						<!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+						<div class="hasDropdown">
+
+							<a href="#" style="padding: 0;" class="link--icon">
+								<img src="images/icons/toggle_outline.svg" alt=""
+									style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+								<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours
+										left)</span></small>
+							</a>
+
+							<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+								<div style="display: flex;">
+									<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+									<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									<!-- <a href="javascript:toggleNotify($(this))">
+										<img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+									</a> -->
+								</div>
+								<input class="field--checkbox" type="checkbox" id="notify_email_tnc"
+									name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the
+									<a href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card__followup--actions">
+						<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div></div>
+			</div>
+
+			<!-- Optional: card__overlay only present if 'lead response' -->
+			<div class="card__overlay">
+
+				<div class="card__overlay--content">
+
+					<h4>Doğru cevap! Murat Başoğlu ile ensest skandalına adı karışan yeğeni Burcu Kabadayı’nın eşi,
+						boşanma davası açmıştı. Bu davayı ilk kez duyuran Aziz Özen imzalı haberi 1.3 milyon kişi okudu.
+					</h4>
+
+					<img src="images/content/question-kelebek.jpg" />
+
+					<br><br>
+
+					<button class="button button--primary">Haberin Tamamı İçin Tıkla!</button>
+
+				</div>
+
+				<a href="#" class="card__overlay--close">&times;</a>
+
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: Yes/No<br>
+				Options: End date NO, Hidden NO, Show vote count NO, Display percentages NO
+			</small>
+		</div>
+
+		<div id="open_answer" class="card card--embed card--sequence card--sequence-active u-mb3">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--large">What is the answer to the Life, the Universe, and Everything?</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--open">
+				<div class="answer-group">
+					<input type="number" class="field field--answer" placeholder="A number, please" value="" />
+					<button type="submit" class="button button--primary button--answer isDisabled">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 12H19" stroke="inherit" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+							<path d="M12 5L19 12L12 19" stroke="inherit" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</button>
+				</div>
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<div class="card__colophon">
+							Next question:
+						</div>
+						<div class="card__followup-timer">
+							<div class="card__followup-timerbar"></div>
+						</div>
+						<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+							class="button button--outline button--small js-pausecontinue-toggle">
+							Pause
+						</a>
+						<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+							class="button button--primary button--small js-pausecontinue-toggle u-hide">
+							Continue
+						</a>
+					</div>
+					<div class="card__followup--actions">
+					</div>
+				</div>
+			</div>
+
+			<div class="sequence__progress hasTooltip">
+				<div class="sequence__progress-bar sequence__progress-bar"></div>
+				<div class="tooltip tooltip--onLeft" style="margin-left: 0.5rem">
+					Question 1/8
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div>
+					<span class="hasTooltip">
+						<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Şu ana kada</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+						<span class="tooltip">Vote count</span>
+					</span>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: Open, number<br>
+			</small>
+		</div>
+
+		<div class="card card--embed card--sequence card--sequence-active u-mb3">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--large">What is the answer to the Life, the Universe, and Everything?</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--open">
+				<div class="answer-group">
+					<textarea type="text" rows="3" class="field field--answer field--multiline"
+						placeholder="Type away, m'boy" value=""></textarea>
+					<button type="submit" class="button button--primary button--answer isDisabled">
+						<svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+							<path d="M5 12H19" stroke="inherit" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+							<path d="M12 5L19 12L12 19" stroke="inherit" stroke-width="2" stroke-linecap="round"
+								stroke-linejoin="round" />
+						</svg>
+					</button>
+					<div class="indicator"><span class="counter">0</span>/255</div>
+				</div>
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<div class="card__colophon">
+							Next question:
+						</div>
+						<div class="card__followup-timer">
+							<div class="card__followup-timerbar"></div>
+						</div>
+						<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+							class="button button--outline button--small js-pausecontinue-toggle">
+							Pause
+						</a>
+						<a href="javascript:$('.js-pausecontinue-toggle').toggleClass('u-hide');"
+							class="button button--primary button--small js-pausecontinue-toggle u-hide">
+							Continue
+						</a>
+					</div>
+					<div class="card__followup--actions">
+					</div>
+				</div>
+			</div>
+
+			<div class="sequence__progress hasTooltip">
+				<div class="sequence__progress-bar sequence__progress-bar"></div>
+				<div class="tooltip tooltip--onLeft" style="margin-left: 0.5rem">
+					Question 1/8
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div>
+					<span class="hasTooltip">
+						<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Şu ana kada</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+						<span class="tooltip">Vote count</span>
+					</span>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card type: Poll<br>
+				Question type: Title only<br>
+				Answer types: Open, text<br>
+			</small>
+		</div>
+
+
+
+
+		<div class="card card--embed card--hasLead">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+					<img src="images/content/question-trump.jpg" alt="" />
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--small">How would you score Trump's First 100 Days In Office? How would you score
+							Trump's First 100 Days In Office? How would you score Trump's First 100 Days In Office?
+							(Small question text)</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--score">
+
+				<button class="button button--answer">
+					<span class="button__text">1</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">2</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">3</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">4</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<button class="button button--answer">
+					<span class="button__text">5</span>
+					<span class="button__stat">
+						<span style="width: 20%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<strong>[followup text]</strong><br>
+						<!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+						<div class="hasDropdown">
+
+							<a href="#" style="padding: 0;" class="link--icon">
+								<img src="images/icons/toggle_outline.svg" alt=""
+									style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+								<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours
+										left)</span></small>
+							</a>
+
+							<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+								<div style="display: flex;">
+									<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+									<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									<!-- <a href="javascript:toggleNotify($(this))">
+										<img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+									</a> -->
+								</div>
+								<input class="field--checkbox" type="checkbox" id="notify_email_tnc"
+									name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the
+									<a href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card__followup--actions">
+						<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div></div>
+			</div>
+
+			<!-- Optional: card__overlay only present if 'lead response' -->
+			<div class="card__overlay isActive">
+
+				<div class="card__overlay--content">
+
+					<h4>Excellent! Now fill in this form for some reason.</h4>
+
+					<p>Success crowdsource hypotheses non-disclosure agreement prototype network effects. Client venture
+						social proof branding infographic gen-z responsive web design business plan. Analytics termsheet
+						graphical user interface. Marketing user experience infographic hackathon startup success ramen
+						disruptive client alpha business-to-consumer influencer responsive web design. Termsheet alpha
+						gen-z growth hacking beta business model canvas social proof low hanging fruit paradigm shift
+						equity buyer assets. Partner network launch party gen-z seed round. Startup angel investor
+						prototype incubator launch party customer. Paradigm shift freemium iPad startup success beta
+						iteration pivot venture seed money. Founders beta assets lean startup business-to-consumer
+						backing. Pivot client accelerator handshake traction crowdsource marketing A/B testing partner
+						network alpha seed money founders equity.</p>
+
+					<div class="card__overlay--form">
+
+						<input class="field" required placeholder="Name" name="name" type="text" value="" />
+						<input class="field" required placeholder="E-mail" name="email" type="email" value="" />
+						<input class="field" required placeholder="Telephone" name="tel" type="tel" value="" />
+						<textarea class="field" required placeholder="Comment" name="comment"></textarea>
+						<!-- <input class="field" required placeholder="Comment" name="comment" type="text" value="" /> -->
+
+						<div>
+							<input class="field--checkbox" type="checkbox" id="leadoverlay_tnc"
+								name="leadoverlay_tnc" /><label for="leadoverlay_tnc">I have read and accept the <a
+									href="https://en.wikipedia.org/wiki/Contractual_term"
+									target="_blank">T&amp;C</a></label>
+						</div>
+
+						<br>
+
+						<button class="button button--primary">Submit</button>
+
+					</div>
+
+				</div>
+
+				<a href="#" class="card__overlay--close">&times;</a>
+
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card with form lead as overlay
+			</small>
+		</div>
+
+
+
+
+
+		<div class="card card--embed isAnswered">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title">
+					<div class="card__q-title__content">
+						<h3 class="h3--large">What's the capital of Norway?</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--mctext">
+
+				<button class="button button--answer">
+					<span class="button__text">Some Nordic City</span>
+					<span class="button__stat">
+						<span style="width: 28%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<small style="margin-left: 1rem; opacity: 0.25;">(Button is not clicked, no answer feedback)</small>
+				<button class="button button--answer isSelected">
+					<span class="button__text">Some Nordic City</span>
+					<span class="button__stat">
+						<span style="width: 28%"></span>
+						<b>24%</b>
+					</span>
+				</button>
+				<small style="margin-left: 1rem; opacity: 0.25;">(Button is clicked, no answer feedback)</small>
+				<button class="button button--answer isSelected isCorrect">
+					<span class="button__text">Oslo</span>
+					<span class="button__stat">
+						<span style="width: 27%"></span>
+						<b>31%</b>
+					</span>
+				</button>
+				<small style="margin-left: 1rem; opacity: 0.25;">(Button is clicked, answer correct)</small>
+				<button class="button button--answer isCorrect">
+					<span class="button__text">Oslo</span>
+					<span class="button__stat">
+						<span style="width: 12%"></span>
+						<b>12%</b>
+					</span>
+				</button>
+				<small style="margin-left: 1rem; opacity: 0.25;">(Button is not clicked, but is correct answer)</small>
+
+				<button class="button button--answer isSelected isWrong">
+					<span class="button__text">Tromsø</span>
+					<span class="button__stat">
+						<span style="width: 12%"></span>
+						<b>12%</b>
+					</span>
+				</button>
+				<small style="margin-left: 1rem; opacity: 0.25;">(Button is clicked, answer wrong)</small>
+
+				<button class="button button--answer isDisabled">
+					<span class="button__text">None of the above</span>
+					<span class="button__stat">
+						<span style="width: 12%"></span>
+						<b>12%</b>
+					</span>
+				</button>
+				<small style="margin-left: 1rem; opacity: 0.25;">(Button is clicked, answer wrong)</small>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--content--left">
+						<strong class="card__hidexs">24% thinks the same!<br></strong>
+						<!-- <a href="https://poltio.com" class="card__colophon" target="_blank">powered by <img src="images/poltio-logo-monochrome.svg" alt="" /></a> -->
+						<div class="hasDropdown">
+
+							<a href="#" style="padding: 0;" class="link--icon">
+								<img src="images/icons/toggle_outline.svg" alt=""
+									style="display: inline-block; width: 2rem; vertical-align: middle; margin-right: 0.125rem; margin-left: -0.125rem; opacity: 0.5;" />
+								<small>Notify me of the final result <span style="opacity: 0.5;">(19 hours
+										left)</span></small>
+							</a>
+
+							<div class="dropdown dropdown--onTopLeft" style="padding: 0.5rem;">
+								<div style="display: flex;">
+									<input class="field" placeholder="E-mail" value="" style="margin-right: 0.5rem" />
+									<a href="javascript:toggleNotify($(this))" class="button">Send</a>
+									<!-- <a href="javascript:toggleNotify($(this))">
+											<img src="images/icons/cross.svg" alt="" style="display: inline-block; width: 1.5rem; margin-left: 0.4rem; margin-top: 0.4rem; opacity: 0.25;" />
+										</a> -->
+								</div>
+								<input class="field--checkbox" type="checkbox" id="notify_email_tnc"
+									name="notify_email_tnc" /><label for="notify_email_tnc">I have read and accept the
+									<a href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+						</div>
+
+					</div>
+					<div class="card__followup--actions">
+						<span style="display: inline-block; margin-top: 0.5rem;">Share:</span>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div>
+					<span class="hasTooltip">
+						<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Şu ana kadar</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+						<span class="tooltip">Vote count</span>
+					</span>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card indicating answer button states
+			</small>
+		</div>
+
+
+
+
+
+		<div class="card isAnswered isEnded">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+					<img src="images/content/question-norway.jpg" alt="" />
+				</figure>
+				<div class="card__q-title">
+
+					<div class="badge badge--poll-ended">POLL ENDED</div>
+
+					<div class="card__q-title__content">
+						<h3 class="h3--large">What is your favourite town in Norway?</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--mctext">
+
+				<button class="button button--answer isDisabled isWinner">
+					<span class="button__text">
+						Ålesund
+						<span class="button__winnerbadge">MOST VOTED ANSWER</span>
+					</span>
+					<span class="button__stat">
+						<span style="width: 34%"></span>
+						<b style="font-size: 1.5rem;">34%</b>
+					</span>
+				</button>
+
+			</div>
+
+			<div class="card__answer card__answer--mctext js-toggle-result-options u-hide" style="padding-top: 0;">
+				<button class="button button--answer isDisabled">
+					<span class="button__text">Trondheim</span>
+					<span class="button__stat">
+						<span style="width: 29%"></span>
+						<b>29%</b>
+					</span>
+				</button>
+				<button class="button button--answer isDisabled">
+					<span class="button__text">Stavanger</span>
+					<span class="button__stat">
+						<span style="width: 21%"></span>
+						<b>281</b>
+					</span>
+				</button>
+				<button class="button button--answer isDisabled">
+					<span class="button__text">Bergen</span>
+					<span class="button__stat">
+						<span style="width: 12%"></span>
+						<b>12%</b>
+					</span>
+				</button>
+				<button class="button button--answer isDisabled">
+					<span class="button__text">Tromsø</span>
+					<span class="button__stat">
+						<span style="width: 10%"></span>
+						<b>10%</b>
+					</span>
+				</button>
+				<button class="button button--answer isDisabled">
+					<span class="button__text">None of the above</span>
+					<span class="button__stat">
+						<span style="width: 8%"></span>
+						<b>8%</b>
+					</span>
+				</button>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--actions">
+						<button class="button button--outline js-toggle-result-options"
+							onclick="$('.js-toggle-result-options').toggleClass('u-hide')">+ Show all answers</button>
+						<button class="button button--outline js-toggle-result-options u-hide"
+							onclick="$('.js-toggle-result-options').toggleClass('u-hide')">— Hide other answers</button>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+							Share
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+							Share
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div>
+					<span class="hasTooltip">
+						<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Şu ana kadar</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+						<span class="tooltip">Vote count</span>
+					</span>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+		<div class="card-context">
+			<small>
+				Card for ended poll
+			</small>
+		</div>
+
+
+
+
+
+		<div class="card card--embed u-mb3 isAnswered isEnded">
+			<!-- start card -->
+
+			<div class="card__question">
+				<figure class="card__q-image">
+				</figure>
+				<div class="card__q-title" style="min-height: 7rem;">
+
+					<div class="badge badge--poll-ended">POLL ENDED</div>
+
+					<div class="card__q-title__content">
+						<h3 class="h3--large">What's the best film of 2017?</h3>
+					</div>
+				</div>
+			</div>
+
+			<div class="card__answer card__answer--mcimage mcimage--3col">
+
+				<button class="button button--answer button--image isDisabled isWinner">
+					<figure>
+						<img src="images/content/movies/1487594791.006638.jpg" alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">
+						Arrival<br>
+						<span class="button__winnerbadge">MOST VOTED ANSWER</span>
+					</span>
+				</button>
+
+			</div>
+
+			<div class="card__answer card__answer--mcimage mcimage--3col js-toggle-imgresult-options u-hide"
+				style="padding-top: 0;">
+
+				<button class="button button--answer button--image isDisabled">
+					<figure>
+						<img src="images/content/movies/1487594791.61878.61878.png" alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Arrival is only a matter of delay in the end...<span
+							style="display: block; opacity: 0.25;"> (long title)</span></span>
+				</button>
+
+				<button class="button button--answer button--image isDisabled">
+					<figure>
+						<img src="images/content/movies/1487594791.243982.png" alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+				</button>
+
+				<button class="button button--answer button--image isDisabled">
+					<figure>
+						<img src="images/content/movies/1487594791.362685.png" alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Hacksaw Ridge</span>
+				</button>
+
+				<button class="button button--answer button--image isDisabled">
+					<figure>
+						<img src="images/content/movies/1487594791.458291.png" alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Hell or High Water</span>
+				</button>
+
+				<button class="button button--answer button--image isDisabled">
+					<figure>
+						<img src="images/content/movies/1487594791.508849.png" alt="" />
+						<span class="button__stat">
+							<span style="width: 18%"></span>
+							<b>18%</b>
+						</span>
+					</figure>
+					<span class="button__text">Hidden Figures</span>
+				</button>
+
+			</div>
+
+			<div class="card__followup">
+				<div class="card__followup--content">
+					<div class="card__followup--actions">
+						<button class="button button--outline js-toggle-imgresult-options"
+							onclick="$('.js-toggle-imgresult-options').toggleClass('u-hide')">+ Show all
+							answers</button>
+						<button class="button button--outline js-toggle-imgresult-options u-hide"
+							onclick="$('.js-toggle-imgresult-options').toggleClass('u-hide')">— Hide other
+							answers</button>
+						<button class="button button--square button--facebook">
+							<img src="images/icons/facebook_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+							Share
+						</button>
+						<button class="button button--square button--twitter">
+							<img src="images/icons/twitter_white.svg" alt=""
+								style="display: inline-block; width: 1.25rem; vertical-align: middle;" />
+							Share
+						</button>
+						<span class="hasTooltip">
+							<button class="button button--outline button--square">
+								<img src="images/icons/globe.svg" alt="" style="display: block; width: 1.25rem;" />
+							</button>
+							<span class="tooltip">View Geo Split</span>
+						</span>
+					</div>
+				</div>
+			</div>
+
+			<div class="sequence__progress hasTooltip">
+				<div class="sequence__progress-bar sequence__progress-bar"></div>
+				<div class="tooltip tooltip--onLeft tooltip--onBottom" style="margin-left: 0.5rem; margin-top: 1rem;">
+					Question 1/8
+				</div>
+			</div>
+
+			<div class="card__footer">
+				<div>
+					<a href="https://poltio.com" target="_blank"
+						style="display: block; padding: 0.675rem 0.75rem 0rem;"><img src="images/poltio-logo.svg" alt=""
+							style="height: 1.5rem;" /></a>
+				</div>
+				<div>
+					<span class="hasTooltip">
+						<small style="display: inline-block; margin-top: 0.25rem;"><a href="#" class="link--icon">
+								<span class="card__hidexs">Şu ana kadar</span>
+								<strong class="value" style="color: inherit; margin: 0 0.25rem;">4976</strong>
+								kez oylandı.
+							</a></small>
+						<span class="tooltip">Vote count</span>
+					</span>
+				</div>
+			</div>
+
+		</div><!-- end card -->
+
+	</section>
+
+</body>
 
 </html>

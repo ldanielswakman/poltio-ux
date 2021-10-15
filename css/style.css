@@ -1,25 +1,26 @@
 @font-face {
-  font-family: 'Averta';
+  font-family: "Averta";
   font-weight: normal;
   font-style: normal;
   src: url("../fonts/Averta-Regular.eot");
   src: url("../fonts/Averta-Regular.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Regular.woff2") format("woff2"), url("../fonts/Averta-Regular.woff") format("woff"), url("../fonts/Averta-Regular.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Averta';
+  font-family: "Averta";
   font-weight: 600;
   font-style: normal;
   src: url("../fonts/Averta-SemiBold.eot");
   src: url("../fonts/Averta-SemiBold.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-SemiBold.woff2") format("woff2"), url("../fonts/Averta-SemiBold.woff") format("woff"), url("../fonts/Averta-SemiBold.ttf") format("truetype"); }
 
 @font-face {
-  font-family: 'Averta';
+  font-family: "Averta";
   font-weight: bold;
   font-style: normal;
   src: url("../fonts/Averta-Bold.eot");
   src: url("../fonts/Averta-Bold.eot?#iefix") format("embedded-opentype"), url("../fonts/Averta-Bold.woff2") format("woff2"), url("../fonts/Averta-Bold.woff") format("woff"), url("../fonts/Averta-Bold.ttf") format("truetype"); }
 
-body, html {
+body,
+html {
   width: 100%;
   min-height: 100%;
   margin: 0;
@@ -237,6 +238,15 @@ section {
 
 .embed-fs-bg > * {
   position: relative; }
+
+.hidden {
+  display: none; }
+
+@media (min-width: 480px) {
+  .sm\:hidden {
+    display: none; }
+  .sm\:show {
+    display: inherit; } }
 
 /* Element - Badge */
 .badge {
@@ -716,7 +726,7 @@ section {
   min-width: 10rem;
   background-color: white;
   box-shadow: 0 0 1rem rgba(20, 36, 51, 0.1);
-  border-radius: 0.25rem;
+  border-radius: 0.75rem;
   max-height: 0;
   opacity: 0;
   transition: all 0.3s ease;
@@ -746,7 +756,7 @@ section {
   border-top-color: white; }
 
 .hasDropdown.isActive .dropdown {
-  max-height: 12rem;
+  max-height: 20rem;
   opacity: 1;
   pointer-events: all; }
 
