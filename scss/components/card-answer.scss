@@ -60,7 +60,6 @@
 .card__answer--mcimage .button .button__text {
   text-align: left;
   padding: 0.5rem;
-  font-weight: normal;
   letter-spacing: 0;
   line-height: 1.125rem;
 }
@@ -120,4 +119,9 @@
       letter-spacing: 0.5px;
     }
   }
+}
+
+// Submit button
+.button[type="submit"] {
+  padding-bottom: 0.5rem;
 }
