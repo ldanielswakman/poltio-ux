@@ -41,6 +41,11 @@
 			color: #009EEC;
 			font-size: 0.875rem;
 			font-weight: 600;
+			cursor: pointer;
+		}
+
+		.undo:hover {
+			background: rgba(0, 158, 236, 0.2);
 		}
 
 		.card__footer {
@@ -48,6 +53,7 @@
 			bottom: 0;
 			flex-direction: column;
 			background: white;
+			box-shadow: 0px -4px 16px rgba(20, 36, 51, 0.1);
 		}
 
 		.card__footer .sequence__progress {
@@ -70,6 +76,63 @@
 				padding-left: 0.5rem;
 			}
 		}
+
+		.footer__centre {
+			position: relative;
+			overflow: hidden;
+			padding: 0 1rem;
+		}
+
+		.footer__centre .loading {
+			position: absolute;
+			top: -1.25rem;
+			left: 1rem;
+		}
+
+		.load-out {
+			animation: loadOut 2s ease-in-out forwards;
+		}
+		.load-in {
+			opacity: 0;
+			animation: loadIn 2s ease-in-out forwards;
+		}
+
+		@keyframes loadOut {
+			0% {
+				opacity: 1;
+			}
+
+			70% {
+				opacity: 1;
+				transform: translateY(0);
+			}
+
+			100% {
+				opacity: 0;
+				transform: translateY(2rem);
+			}
+		}
+
+		@keyframes loadIn {
+			0% {
+				opacity: 0;
+			}
+
+			80% {
+				opacity: 0;
+				transform: scale(0.75);
+			}
+
+			92% {
+				opacity: 1;
+				transform: scale(1.05);
+			}
+
+			100% {
+				opacity: 1;
+				transform: scale(1);
+			}
+		}
 	</style>
 
 </head>
@@ -83,8 +146,7 @@
 
 			<div class="card__question">
 				<figure class="card__q-image" style="max-height: 100vh;">
-					<img class="sm:hidden" src="images/content/question-16by10.jpg" alt="" />
-					<img class="hidden sm:show" src="images/content/question-5by2.jpg" alt="" />
+					<img src="images/content/question-5by2.jpg" alt="" />
 				</figure>
 			</div>
 
@@ -167,7 +229,7 @@
 					<span class="button__text">Vancouver</span>
 				</button>
 
-				<div style="flex: 100%; text-align: right; margin-right: -0.5rem;">
+				<div style="flex: 100%;">
 					<button type="submit" class="button button--primary button--answer isDisabled">
 						<span class="button__text" style="padding-bottom: 0.25rem">Submit</span>
 					</button>
@@ -236,7 +298,7 @@
 				</div>
 
 				<div class="footer__content">
-					<div class="undo">
+					<div class="undo load-in" onClick="javscript:alert('Will take you back to the previous question, with answer filled')">
 						<svg width="16" height="16" viewBox="0 0 16 16" fill="none" xmlns="http://www.w3.org/2000/svg">
 							<path d="M5.99935 9.33335L2.66602 6.00002L5.99935 2.66669" stroke="#009EEC"
 								stroke-width="1.33333" stroke-linecap="round" stroke-linejoin="round" />
@@ -248,10 +310,40 @@
 
 						Undo
 					</div>
-					<a href="https://poltio.com" target="_blank" style="display: block; padding: 0.675rem 0 0rem;"><img
-							src="images/poltio-logo.svg" alt="" style="height: 1.5rem;" /></a>
-							
-					<span class="hasTooltip">
+					<div class="footer__centre">
+						<a href="https://poltio.com" target="_blank" class="logo load-in"
+							style="display: block; padding: 0.675rem 0 0rem;"><img src="images/poltio-logo.svg" alt=""
+								style="height: 1.5rem;" /></a>
+
+						<div class="loading load-out">
+							<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink"
+								style="margin: auto; display: block;" width="5rem" height="5rem" viewBox="0 0 100 100"
+								preserveAspectRatio="xMidYMid">
+								<circle cx="17" cy="46.1078" r="5" fill="#ffc000">
+									<animate attributeName="cy" calcMode="spline"
+										keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite"
+										values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.6s"></animate>
+								</circle>
+								<circle cx="39" cy="56" r="5" fill="#ff6644">
+									<animate attributeName="cy" calcMode="spline"
+										keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite"
+										values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.45s"></animate>
+								</circle>
+								<circle cx="61" cy="56" r="5" fill="#009eec">
+									<animate attributeName="cy" calcMode="spline"
+										keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite"
+										values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.3s"></animate>
+								</circle>
+								<circle cx="83" cy="56" r="5" fill="#d66ddd">
+									<animate attributeName="cy" calcMode="spline"
+										keySplines="0 0.5 0.5 1;0.5 0 1 0.5;0.5 0.5 0.5 0.5" repeatCount="indefinite"
+										values="56;44;56;56" keyTimes="0;0.3;0.6;1" dur="1s" begin="-0.15s"></animate>
+								</circle>
+							</svg>
+						</div>
+					</div>
+
+					<span class="hasTooltip load-in">
 						<small style="display: inline-block; margin-top: 0.25rem; opacity: 0.25;"><a href="#">
 								<strong>4976</strong>
 								votes
