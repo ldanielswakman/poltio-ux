@@ -42,6 +42,102 @@
   }
 }
 
+.card__pretitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem;
+
+  .pretitle--link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #009EEB;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.05rem;
+
+    @include tabletAndUp() {
+      font-size: 0.875rem;
+    }
+
+    img {
+      opacity: 0.25;
+    }
+
+    &:hover {
+      color: #0089CC;
+
+      img { opacity: 1; }
+    }
+    
+  }
+
+  .dots {
+    display: flex;
+    
+    a {
+      display: inline-block;
+      padding: 0.25rem;
+    }
+
+    .dot {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 0.25rem;
+      background: #DDE7EB;
+
+      &.isActive {
+        background: #009EEB;
+      }
+    }
+  }
+}
+
+// Cover image nav arrows
+.nav-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -1.25rem;
+  padding: 0 1rem;
+
+  .arrow {
+    display: inline-block;
+    padding: 0.5rem;
+    background: rgba(30, 61, 84, 0.2);
+    border-radius: 1.25rem;
+
+    &--prev img {
+      transform: translateX(-1px);
+    }
+    &--next img {
+      transform: translateX(1px);
+    }
+
+    &.isDisabled {
+      opacity: 0.2;
+      pointer-events: none;
+    }
+
+    &:hover {
+      background: rgba(30, 61, 84, 0.3);
+    }
+    &:active {
+      background: rgba(30, 61, 84, 0.6);
+    }
+
+    img {display: block; }
+  }
+}
+
 // Folloup animation image height adjustments
 .card.isAnswered .card__question .card__q-image {
   /* 6rem = height of 'follow up container' */

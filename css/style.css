@@ -1245,6 +1245,73 @@ a.link--icon.isActive img[src*="toggle"] {
     .card__title {
       padding-left: 2rem; } }
 
+.card__pretitle {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 0.5rem;
+  margin-bottom: 1rem; }
+  .card__pretitle .pretitle--link {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    color: #009EEB;
+    font-weight: bold;
+    font-size: 0.75rem;
+    line-height: 1.25rem;
+    letter-spacing: 0.05rem; }
+    @media screen and (min-width: 30rem) {
+      .card__pretitle .pretitle--link {
+        font-size: 0.875rem; } }
+    .card__pretitle .pretitle--link img {
+      opacity: 0.25; }
+    .card__pretitle .pretitle--link:hover {
+      color: #0089CC; }
+      .card__pretitle .pretitle--link:hover img {
+        opacity: 1; }
+  .card__pretitle .dots {
+    display: flex; }
+    .card__pretitle .dots a {
+      display: inline-block;
+      padding: 0.25rem; }
+    .card__pretitle .dots .dot {
+      display: inline-block;
+      width: 0.5rem;
+      height: 0.5rem;
+      border-radius: 0.25rem;
+      background: #DDE7EB; }
+      .card__pretitle .dots .dot.isActive {
+        background: #009EEB; }
+
+.nav-arrows {
+  position: absolute;
+  top: 50%;
+  left: 0;
+  z-index: 3;
+  display: flex;
+  justify-content: space-between;
+  width: 100%;
+  margin-top: -1.25rem;
+  padding: 0 1rem; }
+  .nav-arrows .arrow {
+    display: inline-block;
+    padding: 0.5rem;
+    background: rgba(30, 61, 84, 0.2);
+    border-radius: 1.25rem; }
+    .nav-arrows .arrow--prev img {
+      transform: translateX(-1px); }
+    .nav-arrows .arrow--next img {
+      transform: translateX(1px); }
+    .nav-arrows .arrow.isDisabled {
+      opacity: 0.2;
+      pointer-events: none; }
+    .nav-arrows .arrow:hover {
+      background: rgba(30, 61, 84, 0.3); }
+    .nav-arrows .arrow:active {
+      background: rgba(30, 61, 84, 0.6); }
+    .nav-arrows .arrow img {
+      display: block; }
+
 .card.isAnswered .card__question .card__q-image {
   /* 6rem = height of 'follow up container' */
   min-height: 0;
