@@ -53,14 +53,18 @@
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    color: #009EEB;
-    font-weight: bold;
-    font-size: 0.75rem;
-    line-height: 1.25rem;
-    letter-spacing: 0.05rem;
 
-    @include tabletAndUp() {
-      font-size: 0.875rem;
+    h4 {
+      margin: 0;
+      color: #009EEB;
+      font-weight: bold;
+      font-size: 0.75rem;
+      line-height: 1.25rem;
+      letter-spacing: 0.05rem;
+
+      @include tabletAndUp() {
+        font-size: 0.875rem;
+      }
     }
 
     img {

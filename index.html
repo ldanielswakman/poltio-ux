@@ -60,7 +60,7 @@
 
 	<section>
 
-		<div id="multiple-results" class="card card--embed u-mb3">
+		<div id="multiple-results" class="card card--embed card--leadActive u-mb3">
 			<!-- start card -->
 
 			<div class="card__question">
@@ -80,7 +80,7 @@
 			<div class="card__title">
 				<div class="card__pretitle">
 					<a href="javascript:alert('info popup')" class="pretitle--link">
-						OUR RECOMMENDATION
+						<h4>OUR RECOMMENDATION</h4>
 						<img src="images/icons/info.svg" alt="" style="display: inline-block; width: 1.25rem;" />
 					</a>
 					<div class="dots">
@@ -92,6 +92,56 @@
 				<h3 class="h3--large">Reebok Men's Classic Leather ATI Shoes</h3>
 
 				<p style="margin-bottom: 1.5rem; color: #8392A6;">Live life out loud. These men's shoes put a progressive spin on archival style. Inspired by the concept of transparency, they feature a see-through ripstop layer over the leather upper.</p>
+			</div>
+
+
+			<!-- Optional: Lead Gen Modal -->
+			<div class="card__overlay-container">
+				<div class="card__overlay-blur"></div>
+				<div class="card__overlay">
+
+					<div class="card__overlay--header" onclick="$(this).closest('.card').toggleClass('card--leadActive')">
+						<h4>RECEIVE MONTHLY RECOMMENDATIONS?</h4>
+						<span class="icon">
+							<img class="chevron" src="images/icons/chevron-up.svg" alt="" />
+							<img class="close" src="images/icons/x.svg" alt="" />
+						</span>
+					</div>
+
+					<div class="card__overlay--content">
+
+						<h3>Get your customised sneaker updates!</h3>
+
+						<p>For if you never want to miss a thing. No spam.</p>
+
+						<br />
+
+						<input class="field" required placeholder="E-mail" name="email" type="email" value="" />
+
+						<!-- <div class="card__overlay--form">
+
+							<input class="field" required placeholder="Name" name="name" type="text" value="" />
+							<input class="field" required placeholder="E-mail" name="email" type="email" value="" />
+							<input class="field" required placeholder="Telephone" name="tel" type="tel" value="" />
+							<textarea class="field" required placeholder="Comment" name="comment"></textarea>
+							<input class="field" required placeholder="Comment" name="comment" type="text" value="" />
+
+							<div>
+								<input class="field--checkbox" type="checkbox" id="leadoverlay_tnc"
+									name="leadoverlay_tnc" /><label for="leadoverlay_tnc">I have read and accept the <a
+										href="https://en.wikipedia.org/wiki/Contractual_term"
+										target="_blank">T&amp;C</a></label>
+							</div>
+
+							<br>
+
+							<button class="button button--primary">Submit</button>
+
+						</div> -->
+
+					</div>
+
+				</div>
 			</div>
 
 			<div class="sequence__progress">
