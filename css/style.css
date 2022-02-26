@@ -548,7 +548,7 @@ section {
   opacity: 1; }
 
 .button.isDisabled {
-  background: rgba(0, 0, 0, 0.02);
+  background: rgba(0, 0, 0, 0.03);
   pointer-events: none; }
 
 .button.isDisabled .button__text {
@@ -778,13 +778,13 @@ section {
   appearance: none;
   display: inline-block;
   min-width: 12rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border: 1px solid rgba(30, 61, 84, 0.2);
   border-radius: 0.5rem;
   background: #fff;
-  line-height: 1.5rem;
   font: inherit;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  line-height: calc(1.5rem - 2px) !important;
   transition: all 0.5s ease;
   resize: none; }
   .field:focus {
@@ -829,20 +829,42 @@ section {
     font-size: 1rem;
     transition: all 0.5s ease; }
   .field--checkbox {
+    position: absolute;
+    left: -9999px;
     display: inline-block;
     margin-top: 0.5rem; }
   .field--checkbox + label {
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-left: 0.25rem;
-    color: #B8C6CC;
-    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    background: rgba(30, 61, 84, 0.05);
+    color: rgba(30, 61, 84, 0.5);
     cursor: pointer;
     user-select: none; }
-  .field--checkbox:checked + label {
-    color: #009eeb; }
+  .field--checkbox + label:before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: 1px solid rgba(30, 61, 84, 0.2); }
+  .field--checkbox + label:hover:before {
+    border-color: #009EEB; }
+  .field--checkbox + label:hover {
+    color: #009EEB; }
   .field--checkbox + label a {
     text-decoration: underline; }
+  .field--checkbox:checked + label {
+    background: white;
+    border-color: rgba(30, 61, 84, 0.2);
+    color: #1E3D54; }
+  .field--checkbox:checked + label:before {
+    background: #009EEB;
+    border-color: transparent; }
   .field--underline {
     border: none;
     border-radius: 0;
@@ -1708,20 +1730,21 @@ a.link--icon.isActive img[src*="toggle"] {
   background: white;
   box-shadow: 0px -4px 16px rgba(20, 36, 51, 0.1);
   text-align: left;
-  overflow: hidden;
   transform: translateY(0);
-  transition: all 0.3s ease; }
+  transition: all 0.3s ease;
+  overflow: auto; }
   .card__overlay--header {
     position: sticky;
     top: 0;
     display: flex;
     align-items: center;
-    padding: 0.5rem 1rem;
+    padding: 0.75rem 1rem;
     background: white;
+    box-shadow: 0px 0.25rem 1rem rgba(20, 36, 51, 0.1);
     cursor: pointer; }
     @media screen and (min-width: 30rem) {
       .card__overlay--header {
-        padding: 0.5rem 2rem; } }
+        padding: 0.75rem 2rem; } }
     .card__overlay--header h4 {
       flex: 1; }
     .card__overlay--header .icon {
@@ -1761,10 +1784,23 @@ a.link--icon.isActive img[src*="toggle"] {
       margin: 0;
       color: #8392A6; }
     .card__overlay--content img {
-      max-width: 75%;
-      max-height: 20rem; }
+      max-height: 20rem;
+      margin-top: 0.75rem;
+      border-radius: 0.5rem; }
+  .card__overlay--footer {
+    position: sticky;
+    bottom: 0;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding: 0.75rem 1rem;
+    background: white;
+    box-shadow: 0px -0.25rem 1rem rgba(20, 36, 51, 0.1); }
+    @media screen and (min-width: 30rem) {
+      .card__overlay--footer {
+        padding: 0.75rem 2rem; } }
   .card.card--leadActive .card__overlay {
-    max-height: 20rem;
+    max-height: 24rem;
     opacity: 1;
     pointer-events: all; }
     .card.card--leadActive .card__overlay .close {

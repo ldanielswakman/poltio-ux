@@ -241,6 +241,45 @@ $(document).ready(function() {
 
 
 
+// Lead Gen Modal scroll trigger
+$(document).ready(function() {
+  $('.card__overlay').each(function() {
+    leadGenScroll($(this));
+  });  
+  $('.card__overlay').scroll(function() {
+    leadGenScroll($(this));
+  });
+});
+function leadGenScroll($overlay) {
+  $header = $overlay.find('.card__overlay--header');
+  $footer = $overlay.find('.card__overlay--footer');
+  scroll = $overlay.scrollTop();
+  contentHeight = $overlay[0].scrollHeight;
+  if(scroll < 48) {
+    value = scroll/48 * 0.2;
+    $header.css('box-shadow', '0px 4px 16px rgba(20, 36, 51, ' + value + ')');
+  } else {
+    $header.css('box-shadow', '0px 4px 16px rgba(20, 36, 51, 0.2)');
+  }
+  if((scroll + $overlay.outerHeight()) > (contentHeight - 48)) {
+    value = (contentHeight - scroll - $overlay.outerHeight())/48 * 0.2;
+    $footer.css('box-shadow', '0px -4px 16px rgba(20, 36, 51, ' + value + ')');
+  } else {
+    $footer.css('box-shadow', '0px -4px 16px rgba(20, 36, 51, 0.2)');
+  }
+  if((scroll + $overlay.outerHeight()) > (contentHeight - 16)) {
+    $footer.find('.button--primary').removeClass('isDisabled');
+    $footer.find('.button .hint').hide();
+    $footer.find('.button .action').show();
+  } else {
+    $footer.find('.button--primary').addClass('isDisabled');
+    $footer.find('.button .hint').show();
+    $footer.find('.button .action').hide();
+  }
+}
+
+
+
 
 // Open answer: Enable submit button
 $(document).ready(function() {

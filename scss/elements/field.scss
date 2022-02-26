@@ -3,13 +3,13 @@
   appearance: none;
   display: inline-block;
   min-width: 12rem;
-  padding: 0.5rem;
+  padding: 0.5rem 1rem;
   border: 1px solid rgba($darkblue, 0.2);
   border-radius: 0.5rem;
   background: $white;
-  line-height: 1.5rem;
   font: inherit;
-  font-size: 0.875rem;
+  font-size: 1rem;
+  line-height: calc(1.5rem - 2px) !important; // subtract 2px for border
   transition: all 0.5s ease;
   resize: none; // For textarea
   
@@ -74,23 +74,49 @@
 
   // Checkbox
   &--checkbox {
+    position: absolute;
+    left: -9999px;
     display: inline-block;
     margin-top: 0.5rem;
   }
   &--checkbox + label {
-    display: inline-block;
-    margin-top: 0.5rem;
-    margin-left: 0.25rem;
-    color: #B8C6CC;
-    font-size: 0.75rem;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem;
+    border: 1px solid transparent;
+    border-radius: 0.5rem;
+    background: rgba($darkblue, 0.05);
+    color: rgba($darkblue, 0.5);
     cursor: pointer;
     user-select: none;
   }
-  &--checkbox:checked + label {
-    color: rgba($blue, 1);
+  &--checkbox + label:before {
+    content: "";
+    display: inline-block;
+    width: 1.5rem;
+    height: 1.5rem;
+    background: white;
+    border-radius: 0.5rem;
+    border: 1px solid rgba($darkblue, 0.2);
+  }
+  &--checkbox + label:hover:before {
+    border-color: $blue;
+  }
+  &--checkbox + label:hover {
+    color: $blue;
   }
   &--checkbox + label a {
     text-decoration: underline;
+  }
+  &--checkbox:checked + label {
+    background: white;
+    border-color: rgba($darkblue, 0.2);
+    color: $darkblue;
+  }
+  &--checkbox:checked + label:before {
+    background: $blue;
+    border-color: transparent;
   }
 
   &--underline {
