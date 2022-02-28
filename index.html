@@ -60,7 +60,7 @@
 
 	<section>
 
-		<div id="multiple-results" class="card card--embed card--leadActive u-mb3">
+		<div id="multiple-results" class="card card--embed u-mb3">
 			<!-- start card -->
 
 			<div class="card__question">
@@ -111,7 +111,7 @@
 
 			<!-- Optional: Lead Gen Modal -->
 			<div class="card__overlay">
-				<div class="card__overlay-blur"></div>
+				<div onclick="$(this).closest('.card').toggleClass('card--leadActive')" class="card__overlay--blur"></div>
 
 				<div class="card__overlay--header" onclick="$(this).closest('.card').toggleClass('card--leadActive')">
 					<h4>OUR RECOMMENDATION</h4>
@@ -139,28 +139,6 @@
 						<span>I sincerely promise I filled <a href="https://en.wikipedia.org/wiki/Contractual_term" target="_blank">this stuff</a> out truthfully</span>
 					</label>
 
-
-					<!-- <div class="card__overlay--form">
-
-						<input class="field" required placeholder="Name" name="name" type="text" value="" />
-						<input class="field" required placeholder="E-mail" name="email" type="email" value="" />
-						<input class="field" required placeholder="Telephone" name="tel" type="tel" value="" />
-						<textarea class="field" required placeholder="Comment" name="comment"></textarea>
-						<input class="field" required placeholder="Comment" name="comment" type="text" value="" />
-
-						<div>
-							<input class="field--checkbox" type="checkbox" id="leadoverlay_tnc"
-								name="leadoverlay_tnc" /><label for="leadoverlay_tnc">I have read and accept the <a
-									href="https://en.wikipedia.org/wiki/Contractual_term"
-									target="_blank">T&amp;C</a></label>
-						</div>
-
-						<br>
-
-						<button class="button button--primary">Submit</button>
-
-					</div> -->
-
 				</div>
 
 				<div class="card__overlay--footer">
@@ -173,7 +151,14 @@
 			</div>
 			<!-- Lead Gen Modal end -->
 
-		</div><!-- end card -->
+		</div>
+		<script>
+		setTimeout(function() {
+			$('#multiple-results').addClass('card--leadActive');
+			leadGenScroll($('#multiple-results').find('.card__overlay'));
+		}, 1000);
+		</script>
+		<!-- end card -->
 
 		<div class="card card--embed">
 			<!-- start card -->

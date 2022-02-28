@@ -196,7 +196,7 @@
 /* end sequence effect (mockup only) */
 
 .card.card--countdown {
-  box-shadow: 0 0 1rem rgba(20, 36, 51, 0.25); /* because of white bg */
+  box-shadow: 0 0.25rem 1rem rgba(20, 36, 51, 0.25); /* because of white bg */
 }
 .card.card--countdown.isAnswered {
   background-color: #f5f6f7;
