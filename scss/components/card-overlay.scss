@@ -14,36 +14,38 @@
 	height: 100%;
 	max-height: 3rem;
 	z-index: 5;
-	// box-shadow: 0px -4px 16px rgba(20, 36, 51, 0.1);
 	text-align: left;
+	background: rgba(255, 255, 255, 0);
 
 	transform: translateY(0);
 	transition: all 0.3s ease;
 	overflow: auto;
 
 	.card.card--leadActive & {
+		display: flex;
+		flex-direction: column;
+		justify-content: flex-end;
 		max-height: 100%;
+		backdrop-filter: blur(0.25rem);
+		background: rgba(255, 255, 255, 0.5);
 
 		.close { display: block; }
 		.chevron { display: none; }
 	}
 
-	&--blur {
+	&--spacer {
 		display: none;
 		width: 100%;
-		height: 10rem;
+		min-height: 20rem;
 		z-index: 4;
 		background: white;
 		opacity: 0;
 		transition: all 0.3s ease;
-		transform-origin: top center;
-		transform: scaleY(3) translateY(-10rem);
 		cursor: pointer;
 
 		.card.card--leadActive & {
 			display: block;
-			opacity: 0.5;
-			transform: translateY(0);
+			min-height: 10rem;
 			transition-delay: 1s;
 
 			&:hover {
@@ -155,12 +157,6 @@
 		}
 	}
 }
-.card.card--leadActive .card__question,
-.card.card--leadActive .card__title,
-.card.card--leadActive .card__answer {
-	filter: blur(0.25rem);
-}
-
 
 .card__overlay--form {
 	display: flex;

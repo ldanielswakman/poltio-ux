@@ -111,41 +111,45 @@
 
 			<!-- Optional: Lead Gen Modal -->
 			<div class="card__overlay">
-				<div onclick="$(this).closest('.card').toggleClass('card--leadActive')" class="card__overlay--blur"></div>
+				<div onclick="$(this).closest('.card').toggleClass('card--leadActive')" class="card__overlay--spacer"></div>
 
-				<div class="card__overlay--header" onclick="$(this).closest('.card').toggleClass('card--leadActive')">
-					<h4>OUR RECOMMENDATION</h4>
-					<span class="icon">
-						<img class="chevron" src="images/icons/chevron-up.svg" alt="" />
-						<img class="close" src="images/icons/x.svg" alt="" />
-					</span>
-				</div>
+				<div class="card__overlay--inner" style="max-height: calc(100% - 10rem);">
 
-				<div class="card__overlay--content">
+					<div class="card__overlay--header" onclick="$(this).closest('.card').toggleClass('card--leadActive')">
+						<h4>OUR RECOMMENDATION</h4>
+						<span class="icon">
+							<img class="chevron" src="images/icons/chevron-up.svg" alt="" />
+							<img class="close" src="images/icons/x.svg" alt="" />
+						</span>
+					</div>
 
-					<h3>What did I ever do with the gift of sight?</h3>
+					<div class="card__overlay--content">
 
-					<p style="margin-top: 0.25rem">We affirm that the world’s magnificence has been enriched by a new beauty: the beauty of speed, & the feeling that one is on the edge of many things.</p>
+						<h3>What did I ever do with the gift of sight?</h3>
 
-					<img src="images/content/lead-gen-1.jpg" alt="" />
+						<p style="margin-top: 0.25rem">We affirm that the world’s magnificence has been enriched by a new beauty: the beauty of speed, & the feeling that one is on the edge of many things.</p>
 
-					<p style="margin-top: 1rem">Now don't be a stranger...</p>
+						<img src="images/content/lead-gen-1.jpg" alt="" />
 
-					<input autocomplete="off" class="field" required placeholder="Full name" name="name" type="text" value="" style="margin-top: 0.5rem" />
-					<input autocomplete="off" class="field" required placeholder="E-mail" name="email" type="email" value="" style="margin-top: 0.5rem" />
+						<p style="margin-top: 1rem">Now don't be a stranger...</p>
+
+						<input autocomplete="off" class="field" required placeholder="Full name" name="name" type="text" value="" style="margin-top: 0.5rem" />
+						<input autocomplete="off" class="field" required placeholder="E-mail" name="email" type="email" value="" style="margin-top: 0.5rem" />
+						
+						<input class="field--checkbox" type="checkbox" id="leadoverlay_tnc" name="leadoverlay_tnc" />
+						<label for="leadoverlay_tnc" style="margin-top: 0.5rem">
+							<span>I sincerely promise I filled <a href="https://en.wikipedia.org/wiki/Contractual_term" target="_blank">this stuff</a> out truthfully</span>
+						</label>
+
+					</div>
+
+					<div class="card__overlay--footer">
+						<button class="button button--primary button--large isDisabled">
+							<span class="button__text hint">Scroll down to continue</span>
+							<span class="button__text action">Continue</span>
+						</button>
+					</div>
 					
-					<input class="field--checkbox" type="checkbox" id="leadoverlay_tnc" name="leadoverlay_tnc" />
-					<label for="leadoverlay_tnc" style="margin-top: 0.5rem">
-						<span>I sincerely promise I filled <a href="https://en.wikipedia.org/wiki/Contractual_term" target="_blank">this stuff</a> out truthfully</span>
-					</label>
-
-				</div>
-
-				<div class="card__overlay--footer">
-					<button class="button button--primary button--large isDisabled">
-						<span class="button__text hint">Scroll down to continue</span>
-						<span class="button__text action">Continue</span>
-					</button>
 				</div>
 
 			</div>
