@@ -851,7 +851,12 @@ section {
     height: 1.5rem;
     background: white;
     border-radius: 0.5rem;
-    border: 1px solid rgba(30, 61, 84, 0.2); }
+    border: 1px solid rgba(30, 61, 84, 0.2);
+    background-image: url("../images/icons/check_white.svg");
+    background-size: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: 1.5rem;
+    transition: background-position 0.3s cubic-bezier(0, 0, 0.2, 1); }
   .field--checkbox + label:hover:before {
     border-color: #009EEB; }
   .field--checkbox + label:hover {
@@ -863,7 +868,8 @@ section {
     border-color: rgba(30, 61, 84, 0.2);
     color: #1E3D54; }
   .field--checkbox:checked + label:before {
-    background: #009EEB;
+    background-color: #009EEB;
+    background-position: 0.125rem;
     border-color: transparent; }
   .field--underline {
     border: none;

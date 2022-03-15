@@ -99,6 +99,11 @@
     background: white;
     border-radius: 0.5rem;
     border: 1px solid rgba($darkblue, 0.2);
+    background-image: url('../images/icons/check_white.svg');
+    background-size: 1.25rem;
+    background-repeat: no-repeat;
+    background-position: 1.5rem;
+    transition: background-position 0.3s cubic-bezier(0, 0, 0.2, 1);
   }
   &--checkbox + label:hover:before {
     border-color: $blue;
@@ -115,7 +120,8 @@
     color: $darkblue;
   }
   &--checkbox:checked + label:before {
-    background: $blue;
+    background-color: $blue;
+    background-position: 0.125rem;
     border-color: transparent;
   }
 
